@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sch: <http://schema.org/> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix pep: <https://w3id.org/pep/>.
+@prefix td: <http://www.w3.org/ns/td#> .
+
+@base <file:///d:/wot-cloud/> .
+
+<seas-wot> a owl:Ontology ;
+   rdfs:comment "See 'Planned ETSI SAREF Extensions based on the W3C&OGC SOSA/SSN-compatible SEAS Ontology Patterns', SIS-IoT 2017" ;
+   owl:imports td: ;
+   # owl:imports seas: ;
+   owl:imports seas:FeatureOfInterestOntology ;
+   owl:imports seas:EvaluationOntology ;
+   owl:imports seas:SystemOntology ;
+   owl:imports pep: ;
+   dcterms:creator <http://www.maxime-lefrancois.info/me#> ;
+   dcterms:contributor [
+      a sch:Person ;
+      sch:name "Victor Charpenay" ;
+      sch:email "victor.charpenay@siemens.com"
+   ] .
+
+# Section 5.2.3
+td:interaction rdfs:subPropertyOf pep:implements .
+td:InteractionPattern rdfs:subClassOf pep:Procedure .
+td:inputData rdfs:subPropertyOf pep:hasInput .
+td:outputData rdfs:subPropertyOf pep:hasOutput .

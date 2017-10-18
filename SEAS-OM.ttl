@@ -1,0 +1,38 @@
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sch: <http://schema.org/> .
+@prefix saref: <http://w3id.org/saref#> .
+@prefix om: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix pep: <https://w3id.org/pep/>.
+@prefix ssn: <http://www.w3.org/ns/ssn/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+
+@base <file:///d:/wot-cloud/> .
+
+<seas-om> a owl:Ontology ;
+   rdfs:comment "Alignment of OM (whose terms are referenced by SAREF) with SEAS. No reference but close to SEAS' QUDTAlignment. Not exhaustive." ;
+   #owl:imports om: ;
+   # owl:imports seas: ;
+   owl:imports seas:FeatureOfInterestOntology ;
+   dcterms:creator [
+      a sch:Person ;
+      sch:name "Victor Charpenay" ;
+      sch:email "victor.charpenay@siemens.com"
+   ] .
+   
+om:Quantity rdfs:subClassOf seas:Property .
+om:Phenomenon rdfs:subClassOf seas:FeatureOfInterest .
+
+# Stated in SAREF, as annotation
+saref:UnitOfMeasure rdfs:subClassOf om:Unit_of_measure .
+
+# Not stated but straightforward (no alignment for Smoke/Price/Occupancy/Motion/Humidity)
+saref:Energy rdfs:subClassOf om:Energy .
+saref:Light rdfs:subClassOf om:Illuminance .
+saref:Power rdfs:subClassOf om:Power .
+saref:Pressure rdfs:subClassOf om:Pressure .
+saref:Temperature rdfs:subClassOf om:Temperature .
+saref:Time rdfs:subClassOf om:Time .

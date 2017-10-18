@@ -1,0 +1,39 @@
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix saref: <http://w3id.org/saref/> .
+@prefix om: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix quantity: <http://qudt.org/vocab/quantity#> .
+@prefix unit: <http://qudt.org/1.1/vocab/unit#> .
+
+[] a owl:Ontology ;
+   rdfs:comment "Alignment of SAREF with QUDT. No reference but straightforward process. Not exhaustive." ;
+   owl:imports saref: ;
+   owl:imports qudt: ;
+   owl:imports quantity: ;
+   owl:imports unit: ;
+   dcterms:creator "Victor Charpenay <victor.charpenay@siemens.com>" .
+   
+saref:Unit rdfs:subClassOf qudt:Unit .
+
+saref:Currency rdfs:subClassOf unit:CurrencyUnit .
+saref:EnergyUnit rdfs:subClassOf unit:EnergyAndWorkUnit .
+saref:IlluminanceUnit rdfs:subClassOf unit:IlluminanceUnit .
+saref:PowerUnit rdfs:subClassOf unit:PowerUnit .
+saref:PressureUnit rdfs:subClassOf unit:PressureOrStressUnit .
+saref:TemperatureUnit rdfs:subClassOf unit:TemperatureUnit .
+
+om:United_States_dollar owl:sameAs unit:USDollar-SameDay . # Same day? Next days?
+om:pound_sterling owl:sameAs unit:PoundSterling .
+om:euro owl:sameAs unit:Euro .
+om:bar owl:sameAs unit:Bar .
+om:pascal owl:sameAs unit:Pascal .
+om:degree_Celsius  owl:sameAs unit:DegreeCelsius .
+om:degree_Fahrenheit owl:sameAs unit:DegreeFahrenheit .
+om:kelvin owl:sameAs unit:Kelvin .
+om:watt owl:sameAs unit:Watt .
+om:kilowatt owl:sameAs unit:Kilowatt .
+om:kilowatt_hour owl:sameAs unit:Kilowatthour .
+om:lux owl:sameAs unit:Lux .

@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sch: <http://schema.org/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix saref: <http://w3id.org/saref#> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix td: <http://www.w3.org/ns/td#> .
+
+@base <file:///d:/wot-cloud/> .
+@prefix : <file:///d:/wot-cloud/> .
+
+<wot-cloud> a owl:Ontology ;
+    owl:imports :SEAS-SAREF.ttl ;
+    owl:imports :SEAS-OM.ttl ;
+    owl:imports :SEAS-SSN.ttl ;
+    owl:imports :SSN-SAREF.ttl ;
+    owl:imports :SEAS-WoT.ttl ;
+    
+    owl:imports :IPSO.ttl ;
+    
+    owl:imports :IPSO-SAREF.ttl ;
+    .

@@ -1,0 +1,35 @@
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sch: <http://schema.org/> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix pep: <https://w3id.org/pep/>.
+@prefix ssn: <http://www.w3.org/ns/ssn/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+
+@base <file:///d:/wot-cloud/> .
+
+<seas-ssn> a owl:Ontology ;
+   rdfs:comment "See 'Planned ETSI SAREF Extensions based on the W3C&OGC SOSA/SSN-compatible SEAS Ontology Patterns', SIS-IoT 2017" ;
+   owl:imports pep:SSNAlignment ;
+   # owl:imports seas: ;
+   owl:imports seas:FeatureOfInterestOntology ;
+   owl:imports seas:EvaluationOntology ;
+   owl:imports seas:SystemOntology ;
+   owl:imports pep: ;
+   dcterms:creator <http://www.maxime-lefrancois.info/me#> ;
+   dcterms:contributor [
+      a sch:Person ;
+      sch:name "Victor Charpenay" ;
+      sch:email "victor.charpenay@siemens.com"
+   ] .
+   
+# not formalized in the paper
+seas:FeatureOfInterest rdfs:subClassOf sosa:FeatureOfInterest .
+seas:Property rdfs:subClassOf ssn:Property . # equivalent to oldssn:Property
+seas:hasProperty rdfs:subClassOf ssn:hasProperty .
+seas:System rdfs:subClassOf ssn:System .
+seas:hasSubSystem rdfs:subPropertyOf ssn:hasSubSystem .
+
+# seas:ProcedureExection vs. seas:Evaluation?

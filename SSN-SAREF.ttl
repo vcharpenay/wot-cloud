@@ -1,0 +1,47 @@
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sch: <http://schema.org/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix saref: <http://w3id.org/saref#> .
+
+@base <file:///d:/wot-cloud/> .
+
+<ssn-saref> a owl:Ontology ;
+   rdfs:comment "See 'Towards IoT platforms’ integration: Semantic Translations between W3C SSN and ETSI SAREF', SIS-IoT 2017" ;
+   owl:imports ssn: ;
+   owl:imports saref: ;
+   dcterms:creator [
+      a sch:Person ;
+      sch:name "Victor Charpenay" ;
+      sch:email "victor.charpenay@siemens.com"
+   ] .
+   
+# Note: the paper rather states the opposite relation SSN -> SAREF.
+# However, it also concludes with the observation that SAREF does not fully subsumes SSN
+# We state that the converse is true (up to few exceptions) and only axiomatize the alignment SAREF -> SSN.
+
+# Rule M01
+saref:Device rdfs:subClassOf ssn:System . # see also oldssn:
+saref:Sensor rdfs:subClassOf sosa:Sensor .
+saref:Actuator rdfs:subClassOf sosa:Actuator .
+
+# Rule M02
+ssn:hasSubSystem rdfs:subPropertyOf saref:consistsOf .
+# more precisely: every Device having a consistsOf-relation to another device has also a hasSubSystem-relation to that device
+
+# Rule M03
+saref:measuresProperty rdfs:subPropertyOf sosa:observes .
+saref:controlsProperty rdfs:subPropertyOf sosa:actsOnProperty .
+
+# Not stated in the paper
+saref:Measurement rdfs:subClassOf sosa:Observation . # TODO units, property, time, etc.
+saref:hasValue rdfs:subPropertyOf sosa:hasSimpleResult .
+saref:relatesToProperty rdfs:subPropertyOf sosa:observedProperty .
+saref:hasTimestamp rdfs:subPropertyOf sosa:resultTime .
+# note what about saref:isMeasuredIn? sosa:hasResult o qudt:unit?
+saref:Command rdfs:subClassOf sosa:Actuation .
+saref:actsUpon rdfs:subPropertyOf sosa:actsOnProperty .
+saref:hasFunction rdfs:subPropertyOf ssn:implements .

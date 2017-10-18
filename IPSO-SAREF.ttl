@@ -1,0 +1,204 @@
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sch: <http://schema.org/> .
+@prefix saref: <http://w3id.org/saref#> .
+@prefix om: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+
+@base <file:///d:/wot-cloud/> .
+
+<ipso-saref> a owl:Ontology ;
+   rdfs:comment "Alignment of IPSO with SAREF/OM." ;
+   #owl:imports om: ;
+   owl:imports saref: ;
+   dcterms:creator [
+      a sch:Person ;
+      sch:name "Victor Charpenay" ;
+      sch:email "victor.charpenay@siemens.com"
+   ] .
+   
+   
+####################################################################### Objects
+# TODO is the object itself a subclass of Sensor, Property, etc. ?
+
+<urn:oma:lwm2m:ext:3300> rdfs:subClassOf saref:Sensor .
+<urn:oma:lwm2m:ext:3303> rdfs:subClassOf saref:TemperatureSensor .
+<urn:oma:lwm2m:ext:3306> rdfs:subClassOf saref:Actuator .
+<urn:oma:lwm2m:ext:3342> rdfs:subClassOf saref:Switch .
+
+<urn:oma:lwm2m:ext:3301> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom saref:Light ;
+] .
+
+<urn:oma:lwm2m:ext:3304> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom saref:Humidity ;
+] .
+
+<urn:oma:lwm2m:ext:3305> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom saref:Power ;
+] .
+
+<urn:oma:lwm2m:ext:3313> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Acceleration ;
+] .
+
+# TODO only air pressure
+<urn:oma:lwm2m:ext:3315> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom saref:Pressure ;
+] .
+
+<urn:oma:lwm2m:ext:3316> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Potential_difference ;
+] .
+
+<urn:oma:lwm2m:ext:3317> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Electric_current ;
+] .
+
+<urn:oma:lwm2m:ext:3318> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Frequency ;
+] .
+
+<urn:oma:lwm2m:ext:3320> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Number ;
+] .
+
+<urn:oma:lwm2m:ext:3323> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom saref:Pressure ;
+] .
+
+# no unit in OM for sound volume (e.g. dB)
+<urn:oma:lwm2m:ext:3324> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Sound_power_level ;
+] .
+
+<urn:oma:lwm2m:ext:3325> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Amount_of_substance_fraction ;
+] .
+
+<urn:oma:lwm2m:ext:3326> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Acidity ;
+] .
+
+<urn:oma:lwm2m:ext:3327> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Electrical_conductance ;
+] .
+
+<urn:oma:lwm2m:ext:3328> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom saref:Power ;
+] .
+
+<urn:oma:lwm2m:ext:3330> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom om:Distance ;
+] .
+
+<urn:oma:lwm2m:ext:3331> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom saref:Energy ;
+] .
+
+# unit must be degree
+<urn:oma:lwm2m:ext:3332> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom [
+        rdfs:subClassOf om:Plane_angle, [
+            a owl:Restriction ;
+            owl:onProperty om:unit_of_measure_or_measurement_scale ;
+            owl:hasValue om:degree ;
+        ]
+    ] ;
+] .
+
+<urn:oma:lwm2m:ext:3333> rdfs:subClassOf saref:Sensor, [
+    a owl:Restriction ;
+    owl:onProperty saref:measuresProperty ;
+    owl:someValuesFrom saref:Time ;
+] .
+
+
+##################################################################### Resources
+
+<urn:oma:lwm2m:oma:res:5500> rdfs:subClassOf saref:State .
+<urn:oma:lwm2m:oma:res:5532> rdfs:subClassOf saref:State .
+<urn:oma:lwm2m:oma:res:5533> rdfs:subClassOf saref:State .
+<urn:oma:lwm2m:oma:res:5543> rdfs:subClassOf saref:State .
+<urn:oma:lwm2m:oma:res:5550> rdfs:subClassOf saref:State .
+<urn:oma:lwm2m:oma:res:5600> rdfs:subClassOf saref:State .
+
+<urn:oma:lwm2m:oma:res:5547> rdfs:subClassOf saref:MultiLevelState .
+<urn:oma:lwm2m:oma:res:5853> rdfs:subClassOf saref:MultiLevelState .
+
+# TODO Unix time
+<urn:oma:lwm2m:oma:res:5506> rdfs:subClassOf saref:Time .
+<urn:oma:lwm2m:oma:res:5507> rdfs:subClassOf saref:Time .
+
+# position uncertainty only (in m)
+<urn:oma:lwm2m:oma:res:5516> rdfs:subClassOf om:Distance .
+
+# Velocity as defined in 3GPP Geographic Area Description (GAD)
+# https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=742
+<urn:oma:lwm2m:oma:res:5517> rdfs:subClassOf om:Speed .
+
+<urn:oma:lwm2m:oma:res:5518> rdfs:subClassOf saref:Time .
+<urn:oma:lwm2m:oma:res:5824> rdfs:subClassOf saref:Time .
+<urn:oma:lwm2m:oma:res:5544> rdfs:subClassOf saref:Time, [
+    a owl:Restriction ;
+    owl:onProperty om:unit_of_measure_or_measurement_scale ;
+    owl:hasValue om:second-time ;
+] .
+
+<urn:oma:lwm2m:oma:res:5521> rdfs:subClassOf om:Duration .
+<urn:oma:lwm2m:oma:res:5524> rdfs:subClassOf om:Duration .
+<urn:oma:lwm2m:oma:res:5537> rdfs:subClassOf om:Duration .
+<urn:oma:lwm2m:oma:res:5538> rdfs:subClassOf om:Duration .
+
+<urn:oma:lwm2m:oma:res:5534> rdfs:subClassOf om:Number .
+<urn:oma:lwm2m:oma:res:5541> rdfs:subClassOf om:Number .
+<urn:oma:lwm2m:oma:res:5542> rdfs:subClassOf om:Number .
+<urn:oma:lwm2m:oma:res:5536> rdfs:subClassOf om:Percentage .
+<urn:oma:lwm2m:oma:res:5548> rdfs:subClassOf om:Percentage .
+
+<urn:oma:lwm2m:oma:res:5523> rdfs:subClassOf saref:StartCommand .
+
+<urn:oma:lwm2m:oma:res:5701> rdfs:subClassOf saref:UnitOfMeasure .
+
+<urn:oma:lwm2m:oma:res:5800> rdfs:subClassOf saref:Power .
+<urn:oma:lwm2m:oma:res:5805> rdfs:subClassOf saref:Power .
+<urn:oma:lwm2m:oma:res:5810> rdfs:subClassOf saref:Power .
+<urn:oma:lwm2m:oma:res:5815> rdfs:subClassOf saref:Power .
+

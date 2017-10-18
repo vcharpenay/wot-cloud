@@ -1,0 +1,39 @@
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sch: <http://schema.org/> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix pep: <https://w3id.org/pep/>.
+@prefix saref: <http://w3id.org/saref#> .
+
+@base <file:///d:/wot-cloud/> .
+
+<seas-saref> a owl:Ontology ;
+   rdfs:comment "See 'Planned ETSI SAREF Extensions based on the W3C&OGC SOSA/SSN-compatible SEAS Ontology Patterns', SIS-IoT 2017" ;
+   # owl:imports seas: ;
+   owl:imports seas:FeatureOfInterestOntology ;
+   owl:imports seas:EvaluationOntology ;
+   owl:imports seas:SystemOntology ;
+   owl:imports pep: ;
+   owl:imports saref: ;
+   dcterms:creator <http://www.maxime-lefrancois.info/me#> ;
+   dcterms:contributor [
+      a sch:Person ;
+      sch:name "Victor Charpenay" ;
+      sch:email "victor.charpenay@siemens.com"
+   ] .
+   
+# Section 4.2.2
+saref:Property rdfs:subClassOf seas:Property .
+saref:State rdfs:subClassOf seas:Property. # (not stated in the paper)
+
+# Section 5.2.2
+saref:Function rdfs:subClassOf pep:Procedure .
+saref:Service rdfs:subClassOf pep:Procedure .
+
+# See remark in section 5.2.2. (not formalized)
+# Command individuals are somewhat inconsistent: they act on the state of individual devices,
+# they therefore shouldn't be individuals...
+saref:Command rdfs:subClassOf pep:ProcedureExecution .
+saref:isCommandOf rdfs:subPropertyOf pep:usedProcedure . # note: pep:hasCommand refers to the command input, which is not materialized in SAREF
