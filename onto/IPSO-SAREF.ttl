@@ -10,7 +10,7 @@
 
 <ipso-saref> a owl:Ontology ;
    rdfs:comment "Alignment of IPSO with SAREF/OM." ;
-   #owl:imports om: ;
+   owl:imports om: ;
    owl:imports saref: ;
    dcterms:creator [
       a sch:Person ;

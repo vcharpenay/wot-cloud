@@ -19,7 +19,7 @@
     owl:imports :SSN-SAREF.ttl ;
     owl:imports :SEAS-WoT.ttl ;
     
-    owl:imports :IPSO.ttl ;
+    #owl:imports :IPSO.ttl ;
     
-    owl:imports :IPSO-SAREF.ttl ;
+    #owl:imports :IPSO-SAREF.ttl ;
     .

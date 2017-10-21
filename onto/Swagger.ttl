@@ -1,0 +1,198 @@
+@prefix : <http://swagger.io/v2/schema.json#> .
+@prefix td: <http://www.w3.org/ns/td#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sch: <http://schema.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://swagger.io/v2/schema.json> .
+
+<http://swagger.io/v2/schema.json> rdf:type owl:Ontology ;
+                                   
+                                   rdfs:comment "TODO: align with Swagger's meta-schema. Highly incomplete..." ,
+                                                "Includes an alignment between Swagger/OCF and the Thing Description model" ,
+                                                "note: alignment should be with OCF concepts rather than with Swagger" ;
+                                   
+                                   owl:imports td: ;
+                                   
+                                   dcterms:creator [ 
+                                      a sch:Person ;
+                                      sch:name "Victor Charpenay" ;
+                                      sch:email "victor.charpenay@siemens.com"
+                                   ] .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://swagger.io/v2/schema.json#operations
+
+:operations rdf:type owl:ObjectProperty .
+
+
+
+###  http://swagger.io/v2/schema.json#parameters
+
+:parameters rdf:type owl:ObjectProperty .
+
+
+
+###  http://swagger.io/v2/schema.json#paths
+
+:paths rdf:type owl:ObjectProperty .
+
+
+
+###  http://swagger.io/v2/schema.json#responses
+
+:responses rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://schema.org/Person
+
+sch:Person rdf:type owl:Class .
+
+
+
+###  http://swagger.io/v2/schema.json#GetOperation
+
+:GetOperation rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Operation .
+
+
+
+###  http://swagger.io/v2/schema.json#Operation
+
+:Operation rdf:type owl:Class ;
+           
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :parameters ;
+                             owl:allValuesFrom owl:Thing
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :responses ;
+                             owl:someValuesFrom owl:Thing
+                           ] .
+
+
+
+###  http://swagger.io/v2/schema.json#Path
+
+:Path rdf:type owl:Class ;
+      
+      rdfs:subClassOf td:InteractionPattern ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :operations ;
+                        owl:someValuesFrom :Operation
+                      ] .
+
+
+
+###  http://swagger.io/v2/schema.json#PostOperation
+
+:PostOperation rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Operation .
+
+
+
+###  http://swagger.io/v2/schema.json#PutOperation
+
+:PutOperation rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Operation .
+
+
+
+###  http://swagger.io/v2/schema.json#SwaggerAPI
+
+:SwaggerAPI rdf:type owl:Class ;
+            
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :paths ;
+                              owl:someValuesFrom :Path
+                            ] .
+
+
+
+[ rdf:type sch:Person
+] .
+[ rdf:type sch:Person
+] .
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Class ;
+                    owl:intersectionOf ( td:Property
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty td:writable ;
+                                           owl:hasValue "true"^^xsd:boolean
+                                         ]
+                                       )
+                  ] ;
+  owl:intersectionOf ( :Path
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :operations ;
+                         owl:someValuesFrom :PutOperation
+                       ]
+                     )
+] .
+[ rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Class ;
+                    owl:unionOf ( td:Action
+                                  [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( td:Property
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty td:writable ;
+                                                           owl:hasValue "true"^^xsd:boolean
+                                                         ]
+                                                       )
+                                  ]
+                                )
+                  ] ;
+  owl:intersectionOf ( :Path
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :operations ;
+                         owl:someValuesFrom :PostOperation
+                       ]
+                     )
+] .
+[ rdf:type owl:Class ;
+  rdfs:subClassOf td:Property ;
+  owl:intersectionOf ( :Path
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :operations ;
+                         owl:someValuesFrom :GetOperation
+                       ]
+                     )
+] .
+
+
+
+
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+

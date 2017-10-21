@@ -14,7 +14,7 @@
 
 <seas-om> a owl:Ontology ;
    rdfs:comment "Alignment of OM (whose terms are referenced by SAREF) with SEAS. No reference but close to SEAS' QUDTAlignment. Not exhaustive." ;
-   #owl:imports om: ;
+   owl:imports om: ;
    # owl:imports seas: ;
    owl:imports seas:FeatureOfInterestOntology ;
    dcterms:creator [
@@ -30,6 +30,7 @@ om:Phenomenon rdfs:subClassOf seas:FeatureOfInterest .
 saref:UnitOfMeasure rdfs:subClassOf om:Unit_of_measure .
 
 # Not stated but straightforward (no alignment for Smoke/Price/Occupancy/Motion/Humidity)
+saref:Measurement rdfs:subClassOf om:Measure .
 saref:Energy rdfs:subClassOf om:Energy .
 saref:Light rdfs:subClassOf om:Illuminance .
 saref:Power rdfs:subClassOf om:Power .

@@ -1,0 +1,465 @@
+@prefix : <http://openmobilealliance.org/tech/profiles/LWM2M#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sch: <http://schema.org/> .
+@prefix td: <http://www.w3.org/ns/td#> .
+@base <http://openmobilealliance.org/tech/profiles/LWM2M> .
+
+<http://openmobilealliance.org/tech/profiles/LWM2M> rdf:type owl:Ontology ;
+                                                    
+                                                    rdfs:comment "includes an alignment between LWM2M/IPSO and the Thing Description model" ;
+                                                    
+                                                    rdfs:seeAlso <http://openmobilealliance.org/tech/profiles/LWM2M.xsd> ;
+                                                    
+                                                    owl:imports <http://www.w3.org/ns/td#> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#description
+
+:description rdf:type owl:AnnotationProperty ;
+             
+             rdfs:domain :Resource ;
+             
+             rdfs:subPropertyOf rdfs:comment .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#description1
+
+:description1 rdf:type owl:AnnotationProperty ;
+              
+              rdfs:domain :Object ;
+              
+              rdfs:subPropertyOf rdfs:comment .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#description2
+
+:description2 rdf:type owl:AnnotationProperty ;
+              
+              rdfs:domain :Object ;
+              
+              rdfs:subPropertyOf rdfs:comment .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#objectID
+
+:objectID rdf:type owl:AnnotationProperty ;
+          
+          rdfs:domain :Object ;
+          
+          rdfs:range xsd:unsignedShort .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#resourceID
+
+:resourceID rdf:type owl:AnnotationProperty ;
+            
+            rdfs:domain :Resource ;
+            
+            rdfs:range xsd:unsignedShort .
+
+
+
+
+
+#################################################################
+#
+#    Datatypes
+#
+#################################################################
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Boolean
+
+:Boolean rdf:type rdfs:Datatype ;
+         
+         owl:equivalentClass xsd:boolean .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Float
+
+:Float rdf:type rdfs:Datatype ;
+       
+       owl:equivalentClass xsd:float .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Integer
+
+:Integer rdf:type rdfs:Datatype ;
+         
+         owl:equivalentClass xsd:integer .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Objlnk
+
+:Objlnk rdf:type rdfs:Datatype ;
+        
+        rdfs:comment "The object link is used to refer an Instance of a given Object. An Object link value is composed of two concatenated 16-bits unsigned integers following the Network Byte Order convention. (Should it actually be modeled as a data type?)" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Opaque
+
+:Opaque rdf:type rdfs:Datatype ;
+        
+        owl:equivalentClass rdfs:Literal ;
+        
+        rdfs:comment "A sequence of binary octets, the minimum and/or maximum length of the String MAY be defined. (Not exactly equivalent to Literal.)" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#String
+
+:String rdf:type rdfs:Datatype ;
+        
+        owl:equivalentClass xsd:string .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Time
+
+:Time rdf:type rdfs:Datatype ;
+      
+      owl:equivalentClass xsd:dateTime ;
+      
+      rdfs:comment "Unix Time. A signed integer representing the number of seconds since Jan 1st, 1970 in the UTC time zone. (Not exactly eqiuivalent to dateTime.)" .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#e
+
+:e rdf:type owl:ObjectProperty ;
+   
+   rdfs:label "resource" ;
+   
+   rdfs:domain :Object ;
+   
+   rdfs:range :Resource .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#object
+
+:object rdf:type owl:ObjectProperty ;
+        
+        rdfs:domain :Client ;
+        
+        rdfs:range :Object .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#operation
+
+:operation rdf:type owl:ObjectProperty ;
+           
+           rdfs:range :Operation ;
+           
+           rdfs:domain :Resource ;
+           
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#bn
+
+:bn rdf:type owl:DatatypeProperty ;
+    
+    rdfs:label "base name" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#bt
+
+:bt rdf:type owl:DatatypeProperty ;
+    
+    rdfs:label "base time" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#bv
+
+:bv rdf:type owl:DatatypeProperty ;
+    
+    rdfs:label "boolean value" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#n
+
+:n rdf:type owl:DatatypeProperty ;
+   
+   rdfs:label "name" ;
+   
+   rdfs:comment "TODO: relative to base name.." .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#ov
+
+:ov rdf:type owl:DatatypeProperty ;
+    
+    rdfs:label "objectLink value" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#sv
+
+:sv rdf:type owl:DatatypeProperty ;
+    
+    rdfs:label "string value" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#t
+
+:t rdf:type owl:DatatypeProperty ;
+   
+   rdfs:label "time" ;
+   
+   rdfs:comment "TODO: time in second and relative to base time..." .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#unit
+
+:unit rdf:type owl:DatatypeProperty .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#v
+
+:v rdf:type owl:DatatypeProperty ;
+   
+   rdfs:label "float value" .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Client
+
+:Client rdf:type owl:Class ;
+        
+        rdfs:label "LWM2M Client" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#IPSOObject
+
+:IPSOObject rdf:type owl:Class ;
+            
+            rdfs:label "IPSO Object" ;
+            
+            rdfs:subClassOf :Object .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#IPSOResource
+
+:IPSOResource rdf:type owl:Class ;
+              
+              rdfs:label "IPSO Resource" ;
+              
+              rdfs:subClassOf :Resource .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Object
+
+:Object rdf:type owl:Class ;
+        
+        rdfs:label "LWM2M Object" ;
+        
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :bn ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :bt ;
+                          owl:allValuesFrom xsd:dateTime
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :e ;
+                          owl:someValuesFrom :Resource
+                        ] .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Operation
+
+:Operation rdf:type owl:Class ;
+           
+           owl:equivalentClass [ rdf:type owl:Class ;
+                                 owl:oneOf ( :W
+                                             :R
+                                             :E
+                                             :RW
+                                           )
+                               ] .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#Resource
+
+:Resource rdf:type owl:Class ;
+          
+          rdfs:label "LWM2M Resource" ;
+          
+          rdfs:subClassOf [ rdf:type owl:Class ;
+                            owl:unionOf ( [ rdf:type owl:Restriction ;
+                                            owl:onProperty :bv ;
+                                            owl:someValuesFrom :Boolean
+                                          ]
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :ov ;
+                                            owl:someValuesFrom :Objlnk
+                                          ]
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :sv ;
+                                            owl:someValuesFrom :String
+                                          ]
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :v ;
+                                            owl:someValuesFrom :Float
+                                          ]
+                                        )
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :t ;
+                            owl:allValuesFrom xsd:dateTime
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :n ;
+                            owl:allValuesFrom xsd:string
+                          ] .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#E
+
+:E rdf:type :Operation ,
+            owl:NamedIndividual ;
+   
+   rdfs:label "Execute" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#R
+
+:R rdf:type :Operation ,
+            owl:NamedIndividual ;
+   
+   rdfs:label "Read" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#RW
+
+:RW rdf:type :Operation ,
+             owl:NamedIndividual ;
+    
+    rdfs:label "Read/Write" .
+
+
+
+###  http://openmobilealliance.org/tech/profiles/LWM2M#W
+
+:W rdf:type :Operation ,
+            owl:NamedIndividual ;
+   
+   rdfs:label "Write" .
+
+
+
+
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+
+[]
+  owl:intersectionOf (
+    :IPSOResource
+    [ a owl:Restriction ; owl:onProperty :operation ; owl:hasValue :E ]
+  ) ;
+  rdfs:subClassOf td:Action
+ .
+
+
+# (IPSOResource and operation only R) subClassOf (Property and writable false)
+
+[]
+  owl:intersectionOf (
+    :IPSOResource
+    [ a owl:Restriction ; owl:onProperty :operation ; owl:hasValue :R ]
+  ) ;
+  rdfs:subClassOf [
+    owl:intersectionOf (
+      td:Property
+      [ a owl:Restriction ; owl:onProperty td:writable ; owl:hasValue "false"^^xsd:boolean ]
+    )
+  ] 
+ .
+
+# (IPSOResource and operation only RW) subClassOf (Property and writable true)
+
+[]
+  owl:intersectionOf (
+    :IPSOResource
+    [ a owl:Restriction ; owl:onProperty :operation ; owl:hasValue :RW ]
+  ) ;
+  rdfs:subClassOf [
+    owl:intersectionOf (
+      td:Property
+      [ a owl:Restriction ; owl:onProperty td:writable ; owl:hasValue "true"^^xsd:boolean ]
+    )
+  ]
+  .

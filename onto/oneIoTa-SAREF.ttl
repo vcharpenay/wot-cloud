@@ -1,0 +1,314 @@
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sch: <http://schema.org/> .
+@prefix saref: <http://w3id.org/saref#> .
+@prefix om: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix ocf: <http://openconnectivity.org/iotdatamodels/schemas/> .
+@prefix sosa: <http://www.w3.org/ns/ssn/systems/> .
+#@prefix sys: <http://www.w3.org/ns/ssn/systems/> .
+
+@base <file:///d:/wot-cloud/> .
+
+<oneiota-saref> a owl:Ontology ;
+   rdfs:comment "Alignment of IPSO with SAREF/OM." ;
+   owl:imports om: ;
+   owl:imports saref: ;
+   #owl:imports sys: ;
+   owl:imports <oneiota/Swagger-WoT.ttl> ;
+   owl:imports <oneiota/oneIoTa.ttl> ;
+   dcterms:creator [
+      a sch:Person ;
+      sch:name "Victor Charpenay" ;
+      sch:email "victor.charpenay@siemens.com"
+   ] .
+   
+############################################################ Generic properties
+
+# every payload sent by an OCF device can be seen as an sosa:Observation
+# semantics of swg:responses is not clear, then... Should be changed
+
+# ocf:precision | sys:Precision # or sys:Accuracy?
+# ocf:step | sys:Resolution
+# ocf:range | sys:MeasurementRange
+
+ocf:value rdfs:subPropertyOf sosa:hasSimpleResult .
+
+
+################################################################## JSON Schemas
+
+# all roughly follow the same pattern: the Observation relates to some (OM) Property
+# and the JSON field gives the result of the observation
+
+<http://openconnectivity.org/iotdatamodels/schemas/AirFlowResURI.swagger.json#/definitions/AirFlow> rdfs:SubClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom om:Volumetric_flow_rate
+] .
+ocf:speed rdfs:subPropertyOf om:numerical_value .
+
+<http://openconnectivity.org/iotdatamodels/schemas/HumidityResURI.swagger.json#/definitions/Humidity> rdfs:subClassOf [
+  owl:unionOf ([
+    a owl:Restriction ;
+    owl:onProperty sosa:observedProperty ;
+    owl:someValuesFrom saref:Humidity
+  ] [
+    a owl:Restriction ;
+    owl:onProperty sosa:actsOnProperty ;
+    owl:someValuesFrom saref:Humidity
+  ])
+].
+ocf:humidity rdfs:subPropertyOf om:numerical_value .
+ocf:desiredHumidity rdfs:subPropertyOf sosa:hasSimpleResult .
+
+<http://openconnectivity.org/iotdatamodels/schemas/HeightResURI.swagger.json#/definitions/Height> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom om:Height
+].
+ocf:height rdfs:subPropertyOf om:numerical_value .
+
+<http://openconnectivity.org/iotdatamodels/schemas/BinarySwitchResURI.swagger.json#/definitions/BinarySwitch> rdfs:subClassOf [
+  owl:unionOf ( saref:GetCommand saref:OnCommand saref:OffCommand )
+] .
+
+<http://openconnectivity.org/iotdatamodels/schemas/PresenceResURI.swagger.json#/definitions/Presence> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom saref:Occupancy
+] .
+
+<http://openconnectivity.org/iotdatamodels/schemas/ColourTemperatureResURI.swagger.json#/definitions/ColourTemp> rdfs:subClassOf [
+  owl:unionOf ([
+    a owl:Restriction ;
+    owl:onProperty sosa:observedProperty ;
+    owl:someValuesFrom om:Colour_temperature
+  ] [
+    a owl:Restriction ;
+    owl:onProperty sosa:actsOnProperty ;
+    owl:someValuesFrom om:Colour_temperature
+  ])
+] .
+ocf:ct rdfs:subPropertyOf om:numerical_value .
+
+<http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/definitions/Consumption> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom saref:Energy
+] .
+ocf:energy rdfs:subPropertyOf om:numerical_value .
+# TODO power also in the payload
+
+<http://openconnectivity.org/iotdatamodels/schemas/OpenLevelResURI.swagger.json#/definitions/OpenLevel> rdfs:subClassOf [
+  owl:unionOf ([
+    a owl:Restriction ;
+    owl:onProperty sosa:observedProperty ;
+    owl:someValuesFrom saref:MultiLevelState
+  ] [
+    a owl:Restriction ;
+    owl:onProperty sosa:actsOnProperty ;
+    owl:someValuesFrom saref:MultiLevelState
+  ]) 
+].
+ocf:openLevel rdfs:subPropertyOf om:numerical_value .
+# note: 'increment' also in the payload but deprecated
+
+<http://openconnectivity.org/iotdatamodels/schemas/ConsumableResURI.swagger.json#/definitions/consumable> rdfs:subClassOf [
+  owl:intersectionOf (
+    sosa:Sampling
+    [
+      a owl:Restriction ;
+      owl:onProperty sosa:observedProperty ;
+      owl:someValuesFrom om:Percentage
+    ]
+  )
+] .
+ocf:remaining rdfs:subPropertyOf om:numerical_value .
+# TODO orderpercentage?
+
+<http://openconnectivity.org/iotdatamodels/schemas/BrightnessResURI.swagger.json#/definitions/Brightness> rdfs:subClassOf [
+  owl:unionOf ([
+    a owl:Restriction ;
+    owl:onProperty sosa:observedProperty ;
+    owl:someValuesFrom saref:Light
+  ] [
+    a owl:Restriction ;
+    owl:onProperty sosa:actsOnProperty ;
+    owl:someValuesFrom saref:Light
+  ])
+]  .
+ocf:brightness rdfs:subPropertyOf om:numerical_value .
+
+<http://openconnectivity.org/iotdatamodels/schemas/EnergyGenerationResURI.swagger.json#/definitions/EnergyGeneration> rdfs:subClassOf [
+  owl:intersectionOf ([
+    a owl:Restriction ;
+    owl:onProperty sosa:madeBySensor ;
+    owl:someValuesFrom saref:Generator
+  ] [
+    a owl:Restriction ;
+    owl:onProperty om:unit_of_measure_or_measurement_scale ;
+    owl:hasValue saref:watt_hour
+  ])
+] .
+ocf:energygenerated rdfs:subPropertyOf om:numerical_value .
+
+<http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/definitions/Energy> rdfs:subClassOf [
+  owl:unionOf ([
+    a owl:Restriction ;
+    owl:onProperty sosa:observedProperty ;
+    owl:someValuesFrom [
+      owl:intersectionOf (
+        om:Frequency
+        [
+          a owl:Restriction ;
+          owl:onProperty om:unit_of_measure_or_measurement_scale ;
+          owl:hasValue saref:hertz
+        ]
+      )
+    ]
+  ] [
+    a owl:Restriction ;
+    owl:onProperty sosa:actsOnProperty ;
+    owl:someValuesFrom [
+      owl:intersectionOf (
+        om:Frequency
+        [
+          a owl:Restriction ;
+          owl:onProperty om:unit_of_measure_or_measurement_scale ;
+          owl:hasValue om:hertz
+        ]
+      )
+    ]
+  ])
+]  .
+# TODO voltage and current as well...
+
+<http://openconnectivity.org/iotdatamodels/schemas/WeightResURI.swagger.json#/definitions/Weight> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom om:Mass
+] .
+ocf:weight rdfs:subPropertyOf om:numerical_value .
+
+<http://openconnectivity.org/iotdatamodels/schemas/DoorResURI.swagger.json#/definitions/Door> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom saref:OpenCloseState
+] .
+ocf:openState rdfs:subPropertyOf om:numerical_value .
+
+# DoorUpdate? No concept for alarm?
+
+<http://openconnectivity.org/iotdatamodels/schemas/AtmosphericPressureResURI.swagger.json#/definitions/atmosphericPressure> rdfs:subClassOf [
+  owl:intersectionOf ([
+    a owl:Restriction ;
+    owl:onProperty sosa:observedProperty ;
+    owl:someValuesFrom saref:Pressure
+  ] [
+    a owl:Restriction ;
+    owl:onProperty om:unit_of_measure_or_measurement_scale ;
+    owl:hasValue om:hectopascal
+  ])
+] .
+ocf:atmosphericPressure rdfs:subPropertyOf om:numerical_value .
+
+<http://openconnectivity.org/iotdatamodels/schemas/SelectableLevelsResURI.swagger.json#/definitions/SelectableLevels> rdfs:subClassOf saref:SetAbsoluteLevelCommand .
+ocf:targetlevel rdfs:subPropertyOf sosa:hasSimpleResult .
+# TODO targetlevel is in fact command input
+
+<http://openconnectivity.org/iotdatamodels/schemas/SmokeSensorResURI.swagger.json#/definitions/smoke> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom saref:Smoke
+] .
+
+<http://openconnectivity.org/iotdatamodels/schemas/MotionResURI.swagger.json#/definitions/Motion> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom saref:Motion
+] .
+
+<http://openconnectivity.org/iotdatamodels/schemas/AccelerationResURI.swagger.json#/definitions/acceleration> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom om:Acceleration
+] .
+ocf:acceleration rdfs:subPropertyOf om:numerical_value .
+# unit is g: acceleration should be a ration
+
+<http://openconnectivity.org/iotdatamodels/schemas/OperationalStateResURI.swagger.json#/definitions/Operation> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom saref:State
+] .
+ocf:currentMachineState rdfs:subPropertyOf sosa:hasSimpleResult .
+
+<http://openconnectivity.org/iotdatamodels/schemas/OperationalStateResURI.swagger.json#/definitions/OperationUpdate> rdfs:subClassOf [
+  owl:intersectionOf (
+    saref:Command
+    [
+      a owl:Restriction ;
+      owl:onProperty sosa:actsOnProperty ;
+      owl:someValuesFrom saref:State
+    ]
+  )
+] .
+
+<http://openconnectivity.org/iotdatamodels/schemas/TemperatureResURI.swagger.json#/definitions/Temperature> rdfs:subClassOf [
+  owl:unionOf ([
+    a owl:Restriction ;
+    owl:onProperty sosa:observedProperty ;
+    owl:someValuesFrom saref:Temperature
+  ] [
+    a owl:Restriction ;
+    owl:onProperty sosa:actsOnProperty ;
+    owl:someValuesFrom saref:Temperature
+  ])
+] .
+ocf:temperature rdfs:subPropertyOf om:numerical_value .
+# ocf:units rdfs:subPropertyOf om:unit_of_measure_or_measurement_scale .
+# TODO makes the KB inconsistent: units is a datatype property
+
+<http://openconnectivity.org/iotdatamodels/schemas/LiquidLevelResURI.swagger.json#/definitions/LiquidLevel> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:observedProperty ;
+  owl:someValuesFrom om:Percentage
+] .
+ocf:curentLevel rdfs:subPropertyOf om:numerical_value .
+
+<http://openconnectivity.org/iotdatamodels/schemas/LiquidLevelResURI.swagger.json#/definitions/LiquidLevelUpdate> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:actsOnProperty ;
+  owl:someValuesFrom om:Percentage
+] .
+ocf:desiredLevel rdfs:subPropertyOf om:numerical_value .
+
+# VehicleConnector with 3 fields?
+
+<http://openconnectivity.org/iotdatamodels/schemas/BatteryResURI.swagger.json#/definitions/Battery> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:actsOnProperty ;
+  owl:someValuesFrom om:Percentage
+] .
+ocf:charge rdfs:subPropertyOf om:numerical_value .
+# TODO capacity, charging status also in the payload
+
+<http://openconnectivity.org/iotdatamodels/schemas/IlluminanceSensorResURI.swagger.json#/definitions/Illuminance> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:actsOnProperty ;
+  owl:someValuesFrom saref:Light
+] .
+ocf:illuminance rdfs:subPropertyOf om:numerical_value .
+
+<http://openconnectivity.org/iotdatamodels/schemas/GenericSensorResURI.swagger.json#/definitions/Sensor> rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sosa:madeBySensor ;
+  owl:someValuesFrom saref:Sensor
+] .
+
+# TODO TimePeriod? Align with sosa:PhenomenonTime?
+
+######################################################### Swagger specification
+
+# TODO any alignment here?
