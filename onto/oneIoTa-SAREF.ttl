@@ -9,15 +9,16 @@
 @prefix sosa: <http://www.w3.org/ns/ssn/systems/> .
 #@prefix sys: <http://www.w3.org/ns/ssn/systems/> .
 
-@base <file:///d:/wot-cloud/> .
+@base <file:///d:/wot-cloud/onto/> .
+@prefix : <file:///d:/wot-cloud/onto/> .
 
-<oneiota-saref> a owl:Ontology ;
+<oneIoTa-SAREF.ttl> a owl:Ontology ;
    rdfs:comment "Alignment of IPSO with SAREF/OM." ;
    owl:imports om: ;
    owl:imports saref: ;
    #owl:imports sys: ;
-   owl:imports <oneiota/Swagger-WoT.ttl> ;
-   owl:imports <oneiota/oneIoTa.ttl> ;
+   owl:imports :Swagger.ttl ;
+   owl:imports :oneIoTa.ttl ;
    dcterms:creator [
       a sch:Person ;
       sch:name "Victor Charpenay" ;

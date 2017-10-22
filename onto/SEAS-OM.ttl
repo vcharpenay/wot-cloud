@@ -10,9 +10,9 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/>.
 @prefix sosa: <http://www.w3.org/ns/sosa/>.
 
-@base <file:///d:/wot-cloud/> .
+@base <file:///d:/wot-cloud/onto/> .
 
-<seas-om> a owl:Ontology ;
+<SEAS-OM.ttl> a owl:Ontology ;
    rdfs:comment "Alignment of OM (whose terms are referenced by SAREF) with SEAS. No reference but close to SEAS' QUDTAlignment. Not exhaustive." ;
    owl:imports om: ;
    # owl:imports seas: ;

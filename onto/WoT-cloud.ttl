@@ -9,17 +9,16 @@
 @prefix seas: <https://w3id.org/seas/> .
 @prefix td: <http://www.w3.org/ns/td#> .
 
-@base <file:///d:/wot-cloud/> .
-@prefix : <file:///d:/wot-cloud/> .
+@base <file:///d:/wot-cloud/onto/> .
+@prefix : <file:///d:/wot-cloud/onto/> .
 
-<wot-cloud> a owl:Ontology ;
+<WoT-cloud.ttl> a owl:Ontology ;
     owl:imports :SEAS-SAREF.ttl ;
     owl:imports :SEAS-OM.ttl ;
     owl:imports :SEAS-SSN.ttl ;
     owl:imports :SSN-SAREF.ttl ;
     owl:imports :SEAS-WoT.ttl ;
     
-    #owl:imports :IPSO.ttl ;
-    
-    #owl:imports :IPSO-SAREF.ttl ;
+    owl:imports :IPSO-SAREF.ttl ;
+    owl:imports :oneIoTa-SAREF.ttl ;
     .

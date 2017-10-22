@@ -6,12 +6,15 @@
 @prefix saref: <http://w3id.org/saref#> .
 @prefix om: <http://www.wurvoc.org/vocabularies/om-1.8/> .
 
-@base <file:///d:/wot-cloud/> .
+@base <file:///d:/wot-cloud/onto/> .
+@prefix : <file:///d:/wot-cloud/onto/> .
 
-<ipso-saref> a owl:Ontology ;
+<IPSO-SAREF.ttl> a owl:Ontology ;
    rdfs:comment "Alignment of IPSO with SAREF/OM." ;
    owl:imports om: ;
    owl:imports saref: ;
+   owl:imports :LWM2M.ttl ;
+   owl:imports :IPSO.ttl ;
    dcterms:creator [
       a sch:Person ;
       sch:name "Victor Charpenay" ;

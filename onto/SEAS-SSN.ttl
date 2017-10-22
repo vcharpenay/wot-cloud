@@ -8,9 +8,9 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/>.
 @prefix sosa: <http://www.w3.org/ns/sosa/>.
 
-@base <file:///d:/wot-cloud/> .
+@base <file:///d:/wot-cloud/onto/> .
 
-<seas-ssn> a owl:Ontology ;
+<SEAS-SSN.ttl> a owl:Ontology ;
    rdfs:comment "See 'Planned ETSI SAREF Extensions based on the W3C&OGC SOSA/SSN-compatible SEAS Ontology Patterns', SIS-IoT 2017" ;
    owl:imports pep:SSNAlignment ;
    # owl:imports seas: ;

@@ -7,9 +7,9 @@
 @prefix pep: <https://w3id.org/pep/>.
 @prefix saref: <http://w3id.org/saref#> .
 
-@base <file:///d:/wot-cloud/> .
+@base <file:///d:/wot-cloud/onto/> .
 
-<seas-saref> a owl:Ontology ;
+<SEAS-SAREF.ttl> a owl:Ontology ;
    rdfs:comment "See 'Planned ETSI SAREF Extensions based on the W3C&OGC SOSA/SSN-compatible SEAS Ontology Patterns', SIS-IoT 2017" ;
    # owl:imports seas: ;
    owl:imports seas:FeatureOfInterestOntology ;

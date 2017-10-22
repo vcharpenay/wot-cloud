@@ -7,9 +7,9 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/>.
 @prefix saref: <http://w3id.org/saref#> .
 
-@base <file:///d:/wot-cloud/> .
+@base <file:///d:/wot-cloud/onto/> .
 
-<ssn-saref> a owl:Ontology ;
+<SSN-SAREF.ttl> a owl:Ontology ;
    rdfs:comment "See 'Towards IoT platforms’ integration: Semantic Translations between W3C SSN and ETSI SAREF', SIS-IoT 2017" ;
    owl:imports ssn: ;
    owl:imports saref: ;
