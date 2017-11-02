@@ -1,0 +1,65 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix base: <http://www.onem2m.org/ontology/Base_Ontology#> .
+@prefix sdt: <http://www.onem2m.org/ontology/SDT#> .
+
+# Source: "oneM2M Home Appliances Information Model and Mapping"
+# TS-0023-V-2.0.0
+
+# Note: In RESTful technologies the Service (i.e. the electronic
+# representation of a Functionality in a network) is implicitly
+# bound to its Functionality by the naming of the used resources
+# (e.g. the Functionality of ModuleClass "AudioVolume" is
+# implemented as a Service through CRUD operations on a
+# [audioVolume] <flexContainer> specialization).
+
+sdt:Device rdfs:subClassOf base:Device .
+
+# The base ontology allows a Device to consist of (sub-)Devices
+sdt:SubDevice rdfs:subClassOf base:Device .
+
+sdt:Action rdfs:subClassOf base:Operation .
+
+sdt:Args # (of an Action)
+rdfs:subClassOf base:OperationInput .
+
+sdt:ReturnType rdfs:subClassOf base:OperationOutput .
+
+sdt:Event rdfs:subClassOf base:Operation .
+
+sdt:Data # (of an Event)
+rdfs:subClassOf base:OutputDataPoint .
+
+# The base ontology allows a Service to have subServices.
+# Each SDT:Module implements one SDT:ModuleClass. Therefore
+# SDT:Module can be considered a subclass of SDT:ModuleClass
+# and therefore subclass of oneM2M:Service.
+# See note.
+sdt:Module rdfs:subClassOf base:Service .
+
+# See note
+sdt:ModuleClass rdfs:subClassOf base:Service .
+
+sdt:UnitOfMeasure rdfs:subClassOf base:MetaData .
+
+# if sdt:DataPoint is writable
+sdt:DataPoint rdfs:subClassOf base:InputDataPoint .
+# if sdt:DataPoint is readable
+sdt:DataPoint rdfs:subClassOf base:OutputDataPoint .
+
+sdt:Property # (of a Device)
+rdfs:subClassOf base:ThingProperty .
+
+# Aspect (of the Functionality)
+sdt:Property # (of a ModuleClass)
+rdfs:subClassOf base:Aspect .
+
+# The base ontology's SimpleTypeVariable class has
+# data properties:
+# • hasDataType
+# • hasDataRestriction
+sdt:SimpleType rdfs:subPropertyOf base:hasDataType .
+
+sdt:Constraint rdfs:subPropertyOf base:hasDataRestriction .

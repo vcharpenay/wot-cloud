@@ -1,0 +1,88 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix base: <http://www.onem2m.org/ontology/Base_Ontology#> .
+@prefix sdt: <http://www.onem2m.org/ontology/SDT#> .
+@prefix hd: <http://www.onem2m.org/ontology/HD#> .
+
+# Source: "oneM2M Home Appliances Information Model and Mapping"
+# TS-0023-V-2.0.0
+
+<urn:org.onem2m.home.device.deviceAirConditioner> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceClothesWasher> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceElectricVehicleCharger> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceLight> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceMicrogeneration> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceOven> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceRefrigerator> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceRobotCleaner> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceSmartElectricMeter> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceStorageBattery> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceTelevision> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceThermostat> rdfs:subClassOf sdt:Device .
+<urn:org.onem2m.home.device.deviceWaterHeater> rdfs:subClassOf sdt:Device .
+
+<urn:org.onem2m.home.moduleclass.alarmSpeaker> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.audioVideoInput> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.audioVolume> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.battery> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.binarySwitch> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.boiler> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.brightness> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.clock> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.colour> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.colourSaturation> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.customTemperature> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.doorStatus> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.electricVehicleConnector> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.energyConsumption> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.energyGeneration> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.faultDetection> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.freshTemperature> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.frozenTemperature> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.height> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.hotWaterSupply> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.keypad> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.motionSensor> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.oximeter> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.powerSave> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.pushButton> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.recorder> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.refrigeration> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.relativeHumidity> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.rinseLevel> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.runMode> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.signalStrength> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.smokeSensor> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.spinLevel> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.televisionChannel> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.temperature> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.temperatureAlarm> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.timer> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.turbo> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.waterFlow> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.waterLevel> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.waterSensor> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.weight> rdf:type sdt:ModuleClass .
+<urn:org.onem2m.home.moduleclass.wind> rdf:type sdt:ModuleClass .
+
+<urn:org.onem2m.home.moduleclass.timer.activateclocktimer> rdfs:subClassOf sdt:Action .
+<urn:org.onem2m.home.moduleclass.timer.deactivateclocktimer> rdfs:subClassOf sdt:Action .
+<urn:org.onem2m.home.moduleclass.televisionchannel.downchannel> rdfs:subClassOf sdt:Action .
+<urn:org.onem2m.home.moduleclass.audiovolume.downvolume> rdfs:subClassOf sdt:Action .
+<urn:org.onem2m.home.moduleclass.binaryswitch.timer> rdfs:subClassOf sdt:Action .
+<urn:org.onem2m.home.moduleclass.televisionchannel.upchannel> rdfs:subClassOf sdt:Action .
+
+<urn:org.onem2m.home.moduleclass.alarmSpeaker> sdt:Data [
+    rdfs:label "tone" ;
+    rdfs:range hd:tone ;
+    sdt:readable "true"^^xsd:boolean ;
+    sdt:writable "true"^^xsd:boolean ;
+    sdt:writable "true"^^xsd:boolean ;
+    rdfs:description "Representing the tones of the alarm" 
+] ; sdt:Data [] .
+
+
+# TODO link to XSD definitions for devices/modules

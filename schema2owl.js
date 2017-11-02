@@ -8,7 +8,9 @@ const ctx = {
     'xsd': 'http://www.w3.org/2001/XMLSchema#',
     'boolean': 'xsd:boolean',
     'integer': 'xsd:integer',
-    'number': 'xsd:double', // TODO fix this
+    // TODO fix this: JSON-LD type coercion leads to
+    // inconsistencies in datatype restrictions
+    'number': 'xsd:integer',
     'string': 'xsd:string',
     'label': 'rdfs:label',
     'comment': 'rdfs:comment',
@@ -270,11 +272,11 @@ function datatypeDefinitionOrRestriction(schema) {
         }
     });
 
-    if (restrictions.length > 0) {
-        return owl.datatypeRestriction(schema.type, restrictions);
-    } else {
+    // if (restrictions.length > 0) {
+    //     return owl.datatypeRestriction(schema.type, restrictions);
+    // } else {
         return owl.datatypeDefinition(schema.type);
-    }
+    // }
 }
 
 function dataOrObjectAllValuesFrom(name, schema) {

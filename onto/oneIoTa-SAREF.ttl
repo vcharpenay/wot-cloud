@@ -13,7 +13,7 @@
 @prefix : <file:///d:/wot-cloud/onto/> .
 
 <oneIoTa-SAREF.ttl> a owl:Ontology ;
-   rdfs:comment "Alignment of IPSO with SAREF/OM." ;
+   rdfs:comment "Alignment of OCF/oneIoTa with SAREF/OM." ;
    owl:imports om: ;
    owl:imports saref: ;
    #owl:imports sys: ;

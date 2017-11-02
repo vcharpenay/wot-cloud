@@ -29,7 +29,7 @@ om:Phenomenon rdfs:subClassOf seas:FeatureOfInterest .
 # Stated in SAREF, as annotation
 saref:UnitOfMeasure rdfs:subClassOf om:Unit_of_measure .
 
-# Not stated but straightforward (no alignment for Smoke/Price/Occupancy/Motion/Humidity)
+# Not stated but straightforward (no alignment for Smoke/Price/Occupancy/Motion)
 saref:Measurement rdfs:subClassOf om:Measure .
 saref:Energy rdfs:subClassOf om:Energy .
 saref:Light rdfs:subClassOf om:Illuminance .
@@ -37,3 +37,4 @@ saref:Power rdfs:subClassOf om:Power .
 saref:Pressure rdfs:subClassOf om:Pressure .
 saref:Temperature rdfs:subClassOf om:Temperature .
 saref:Time rdfs:subClassOf om:Time .
+saref:Humidity rdfs:subClassOf om:Relative_humidity .
