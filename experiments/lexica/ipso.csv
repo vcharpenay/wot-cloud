@@ -1,0 +1,151 @@
+term,label
+urn:oma:lwm2m:oma:res:5705,Compass Direction
+urn:oma:lwm2m:ext:3313,Accelerometer
+urn:oma:lwm2m:oma:res:5509,Max X Value
+urn:oma:lwm2m:oma:res:5515,Altitude
+urn:oma:lwm2m:oma:res:5900,Set Point Value
+urn:oma:lwm2m:oma:res:5546,Max Y Coordinate
+urn:oma:lwm2m:oma:res:5813,Min Range reactive power
+urn:oma:lwm2m:ext:3311,Light Control
+urn:oma:lwm2m:oma:res:5802,Max Measured  active power
+urn:oma:lwm2m:oma:res:5534,Counter
+urn:oma:lwm2m:oma:res:5822,Reset Cumulative energy
+urn:oma:lwm2m:ext:3327,Conductivity
+urn:oma:lwm2m:ext:3301,Illuminance
+urn:oma:lwm2m:oma:res:5706,Colour
+urn:oma:lwm2m:oma:res:5804,Max Range active power
+urn:oma:lwm2m:oma:res:5520,Max Limit
+urn:oma:lwm2m:oma:res:5517,Velocity
+urn:oma:lwm2m:oma:res:5851,Dimmer
+urn:oma:lwm2m:oma:res:5806,Active Power Calibration
+urn:oma:lwm2m:ext:3300,Generic Sensor
+urn:oma:lwm2m:oma:res:5510,Min Y Value
+urn:oma:lwm2m:oma:res:5821,Current Calibration
+urn:oma:lwm2m:oma:res:5541,Up Counter
+urn:oma:lwm2m:ext:3331,Energy
+urn:oma:lwm2m:oma:res:5538,Remaining Time
+urn:oma:lwm2m:oma:res:5501,Digital Input Counter
+urn:oma:lwm2m:ext:3333,Time
+urn:oma:lwm2m:ext:3347,Push button
+urn:oma:lwm2m:oma:res:5811,Min Measured reactive power
+urn:oma:lwm2m:ext:3328,Power
+urn:oma:lwm2m:ext:3341,Addressable Text Display
+urn:oma:lwm2m:oma:res:5605,Reset Min and Max Measured Values
+urn:oma:lwm2m:oma:res:5903,Busy to Clear delay
+urn:oma:lwm2m:ext:3308,Set Point
+urn:oma:lwm2m:oma:res:5525,Minimum Off-time
+urn:oma:lwm2m:oma:res:5548,Level
+urn:oma:lwm2m:oma:res:5910,Bitmap Input
+urn:oma:lwm2m:oma:res:5827,Avg Load Adj Pct
+urn:oma:lwm2m:ext:3349,Bitmap
+urn:oma:lwm2m:ext:3305,Power Measurement
+urn:oma:lwm2m:oma:res:5529,Y Coordinate
+urn:oma:lwm2m:oma:res:5519,Min Limit
+urn:oma:lwm2m:oma:res:5508,Min X Value
+urn:oma:lwm2m:oma:res:5604,Max Range Value
+urn:oma:lwm2m:oma:res:5704,Z Value
+urn:oma:lwm2m:oma:res:5814,Max Range reactive power
+urn:oma:lwm2m:ext:3339,Audio Clip
+urn:oma:lwm2m:ext:3319,Depth
+urn:oma:lwm2m:ext:3330,Distance
+urn:oma:lwm2m:ext:3316,Voltage
+urn:oma:lwm2m:ext:3203,Analog Output
+urn:oma:lwm2m:oma:res:5537,Transition Time
+urn:oma:lwm2m:ext:3302,Presence
+urn:oma:lwm2m:oma:res:5650,Analog Output Current Value
+urn:oma:lwm2m:oma:res:5805,Cumulative active power
+urn:oma:lwm2m:oma:res:5506,Current Time
+urn:oma:lwm2m:ext:3303,Temperature
+urn:oma:lwm2m:oma:res:5912,Element Description
+urn:oma:lwm2m:oma:res:5518,Timestamp
+urn:oma:lwm2m:ext:3321,Altitude
+urn:oma:lwm2m:ext:3322,Load
+urn:oma:lwm2m:oma:res:5823,Event Identifier
+urn:oma:lwm2m:oma:res:5603,Min Range Value
+urn:oma:lwm2m:ext:3201,Digital Output
+urn:oma:lwm2m:oma:res:5801,Min Measured active power
+urn:oma:lwm2m:ext:3346,Rate
+urn:oma:lwm2m:oma:res:5526,Mode
+urn:oma:lwm2m:oma:res:5528,X Coordinate
+urn:oma:lwm2m:ext:3312,Power Control
+urn:oma:lwm2m:ext:3340,Timer
+urn:oma:lwm2m:oma:res:5600,Analog Input Current Value
+urn:oma:lwm2m:oma:res:5524,Duration
+urn:oma:lwm2m:oma:res:5505,Digital Input Counter Reset
+urn:oma:lwm2m:ext:3306,Actuation
+urn:oma:lwm2m:ext:3200,Digital Input
+urn:oma:lwm2m:ext:3336,Location
+urn:oma:lwm2m:ext:3348,Multi-state Selector
+urn:oma:lwm2m:ext:3325,Concentration
+urn:oma:lwm2m:oma:res:5502,Digital Input Polarity
+urn:oma:lwm2m:oma:res:5703,Y Value
+urn:oma:lwm2m:oma:res:5511,Max Y Value
+urn:oma:lwm2m:oma:res:5853,Muti-state Output
+urn:oma:lwm2m:oma:res:5812,Max Measured reactive power
+urn:oma:lwm2m:ext:3342,On/Off switch
+urn:oma:lwm2m:oma:res:5531,Contrast
+urn:oma:lwm2m:oma:res:5828,Duty Cycle
+urn:oma:lwm2m:oma:res:5904,Clear to Busy delay
+urn:oma:lwm2m:ext:3314,Magnetometer
+urn:oma:lwm2m:oma:res:5543,Digital State
+urn:oma:lwm2m:ext:3326,Acidity
+urn:oma:lwm2m:ext:3202,Analog Input
+urn:oma:lwm2m:oma:res:5521,Delay Duration
+urn:oma:lwm2m:oma:res:5500,Digital Input State
+urn:oma:lwm2m:oma:res:5824,Start Time
+urn:oma:lwm2m:oma:res:5550,Digital Output State
+urn:oma:lwm2m:oma:res:5513,Max Z Value
+urn:oma:lwm2m:ext:3345,Multiple Axis Joystick
+urn:oma:lwm2m:oma:res:5852,On Time
+urn:oma:lwm2m:ext:3337,Positioner
+urn:oma:lwm2m:oma:res:5800,Instantaneous active power
+urn:oma:lwm2m:ext:3344,Up/Down Control
+urn:oma:lwm2m:oma:res:5826,Criticality Level
+urn:oma:lwm2m:oma:res:5527,Text
+urn:oma:lwm2m:ext:3332,Direction
+urn:oma:lwm2m:ext:3310,Load Control
+urn:oma:lwm2m:oma:res:5522,Clip
+urn:oma:lwm2m:oma:res:5516,Uncertainty
+urn:oma:lwm2m:oma:res:5750,Application Type
+urn:oma:lwm2m:oma:res:5530,Clear Display
+urn:oma:lwm2m:oma:res:5700,Sensor Value
+urn:oma:lwm2m:ext:3324,Loudness
+urn:oma:lwm2m:oma:res:5820,Power Factor
+urn:oma:lwm2m:oma:res:5810,Instantaneous reactive power
+urn:oma:lwm2m:ext:3350,Stopwatch
+urn:oma:lwm2m:oma:res:5507,Fractional Time
+urn:oma:lwm2m:ext:3334,Gyrometer
+urn:oma:lwm2m:oma:res:5602,Max Measured Value
+urn:oma:lwm2m:ext:3315,Barometer
+urn:oma:lwm2m:oma:res:5536,Current Position
+urn:oma:lwm2m:ext:3329,Power Factor
+urn:oma:lwm2m:ext:3323,Pressure
+urn:oma:lwm2m:oma:res:5504,Digital Input Edge Selection
+urn:oma:lwm2m:oma:res:5523,Trigger
+urn:oma:lwm2m:oma:res:5547,Multi-state Input
+urn:oma:lwm2m:oma:res:5815,Cumulative reactive power
+urn:oma:lwm2m:oma:res:5544,Cumulative Time
+urn:oma:lwm2m:oma:res:5542,Down Counter
+urn:oma:lwm2m:oma:res:5532,Increase Input State
+urn:oma:lwm2m:oma:res:5850,On/Off
+urn:oma:lwm2m:oma:res:5533,Decrease Input State
+urn:oma:lwm2m:ext:3317,Current
+urn:oma:lwm2m:ext:3343,Dimmer
+urn:oma:lwm2m:oma:res:5911,Bitmap Input Reset
+urn:oma:lwm2m:oma:res:5816,Reactive Power Calibration
+urn:oma:lwm2m:oma:res:5551,Digital Output Polarity
+urn:oma:lwm2m:ext:3320,Percentage
+urn:oma:lwm2m:oma:res:5702,X Value
+urn:oma:lwm2m:oma:res:5751,Sensor Type
+urn:oma:lwm2m:ext:3335,Colour
+urn:oma:lwm2m:oma:res:5512,Min Z Value
+urn:oma:lwm2m:oma:res:5803,Min Range active power
+urn:oma:lwm2m:ext:3304,Humidity
+urn:oma:lwm2m:oma:res:5601,Min Measured Value
+urn:oma:lwm2m:ext:3338,Buzzer
+urn:oma:lwm2m:oma:res:5545,Max X Coordinate
+urn:oma:lwm2m:oma:res:5503,Digital Input Debounce
+urn:oma:lwm2m:oma:res:5701,Sensor Units
+urn:oma:lwm2m:oma:res:5514,Longitude
+urn:oma:lwm2m:ext:3318,Frequency
+urn:oma:lwm2m:oma:res:5825,Duration In Min
