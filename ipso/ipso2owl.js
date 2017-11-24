@@ -1,8 +1,10 @@
 let fs = require('fs');
+let slash = require('path').sep;
 let cheerio = require('cheerio');
 
 const ctx = {
     '@vocab': 'http://openmobilealliance.org/tech/profiles/LWM2M#',
+    'xsd': 'http://www.w3.org/2001/XMLSchema#',
     'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',
     'rdfs:subClassOf': { '@type': '@vocab' },
     'owl': 'http://www.w3.org/2002/07/owl#',
@@ -27,8 +29,9 @@ let jsonld = {
 // reusable resources indexed by ID
 let resources = {};
 
-const dir = 'reg\\xml';
-fs.readdirSync(dir).forEach(filename => {
+const dir = 'models' + slash + 'reg' + slash + 'xml';
+let isext = f => f.replace('.xml', '') >= 2048; // non-OMA object IDs >= 2048
+fs.readdirSync(dir).filter(isext).forEach(filename => {
     const doc = fs.readFileSync(dir + '\\' + filename, 'utf-8');
     let $ = cheerio.load(doc);
 
