@@ -99,30 +99,24 @@
           ?term rdfs:subClassOf ?restriction .
           ?restriction owl:onProperty ?rel .
           ?restriction owl:someValuesFrom ?related .
-          BIND ("some" as ?type)
         } UNION {
           ?related rdfs:subClassOf ?restriction .
           ?restriction owl:onProperty ?rel .
           ?restriction owl:someValuesFrom ?term .
-          BIND ("inverse some" as ?type)
         } UNION {
           ?term rdfs:subClassOf ?restriction .
           ?restriction owl:onProperty ?rel .
           ?restriction owl:allValuesFrom ?related .
-          BIND ("only" as ?type)
         } UNION {
           ?related rdfs:subClassOf ?restriction .
           ?restriction owl:onProperty ?rel .
           ?restriction owl:allValuesFrom ?term .
-          BIND ("inverse only" as ?type)
         } UNION {
           ?rel rdfs:domain ?term .
           ?rel rdfs:range ?related .
-          BIND ("domain" as ?type)
         } UNION {
           ?rel rdfs:range ?term .
           ?rel rdfs:domain ?related .
-          BIND ("range" as ?type)
         }
         ?rel rdfs:label ?relLabel .
         ?related rdfs:label ?label .
@@ -131,6 +125,8 @@
     
     <script>
       function search(s) {
+        display('search-error', false);
+      
         let input = document.getElementById('search-input');
         input.value = s;
       
@@ -146,14 +142,30 @@
           .then(str => {
             ul.innerHTML = str;
             $('.ui.accordion').accordion();
+          })
+          .catch(err => {
+            console.log(err);
+            display('search-error', true);
           });
       }
       
-      function configure() {
-        let config = document.getElementById('config-ep');
+      function configure(ep) {
         let search = document.getElementById('search-ep');
         // TODO valid URI?
-        search.value = config.value;
+        search.value = ep;
+        
+        sttl.connect(ep);
+      }
+      
+      function showConfiguration(ep) {
+        let config = document.getElementById('config-ep');
+        config.value = ep;
+      }
+      
+      function display(id, bool) {
+        let m = $('#' + id);
+        m.removeClass('hidden').removeClass('visible');
+        m.addClass(bool ? 'visible' : 'hidden');
       }
     </script>
 	</head>
@@ -189,6 +201,10 @@
       
       <div id="main">
         <div class="ui items" id="search-results"></div>
+        <div id="search-error" class="ui negative message hidden">
+          <div class="header">Cannot connect to SPARQL endpoint.</div>
+          <p>Have you changed the endpoint URI (default: <code>localhost</code>)?</p>
+        </div>
       </div>
     </div>
     
@@ -200,11 +216,14 @@
           sttl.register(script);
         });
         
-      $('#config-modal').modal({ onApprove: configure });
+      $('#config-modal').modal({
+        onShow: () => showConfiguration($('#search-ep').val()),
+        onApprove: () => configure($('#config-ep').val())
+      });
       
       let url = new URL(document.documentURI);
       let params = url.searchParams;
-      if (params.has('ep')) sttl.connect(params.get('ep'));
+      if (params.has('ep')) configure(params.get('ep'));
       if (params.has('s')) search(params.get('s'));
     </script>
 	</body>
