@@ -1,6 +1,6 @@
 [submodule "oneiota/models"]
-	path = oneiota/models
+	path = models/oneiota/models
 	url = https://github.com/OpenInterConnect/IoTDataModels.git
 [submodule "ipso/models"]
-	path = ipso/models
+	path = models/ipso/models
 	url = https://github.com/IPSO-Alliance/pub.git
