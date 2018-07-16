@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="semantic-ui/semantic.min.css" />
+    
+    <style type="text/css">
+      #banner h1 {
+        padding: 2em 0em;
+      }
+      
+      #main {
+        padding-bottom: 2em;
+      }
+      
+      #search-config > p {
+        text-align: right;
+        color: rgba(0,0,0,.6);
+        cursor: pointer;
+      }
+      
+      #search-config > p:hover {
+        text-decoration-line: underline;
+      }
+    </style>
+    
+    <script src="jquery.min.js"></script>
+    <script src="semantic-ui/semantic.min.js"></script>
+    <script src="sttl-browser.js"></script>
+    
+    <script id="search-tpl" type="application/sparql-template">
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX st: <http://ns.inria.fr/sparql-template/>
+      
+      TEMPLATE <#search-tpl>(?keyword) {
+        "<div class=\"item\">"
+          "<div class=\"content\">"
+            "<div class=\"ui segment accordion\">"
+              "<div class=\"title\">"
+                format { "<h3 class=\"header\">%s</h3>" ?label }
+                format { "<p class=\"description\">%s</p>" ?comment }
+              "</div>"
+              "<div class=\"content\">"
+                format { "<p>IRI: <code><a href=\"%s\">%s</a></code></p>" ?term ?term }
+                "<p>" st:call-template(<#hierarchy-tpl>, ?term) "</p>"
+                "<p>" "Related concepts:"
+                  "<ul>"
+                    st:call-template(<#related-tpl>, ?term)
+                  "</ul>"
+                "</p>"
+              "</div>"
+            "</div>"
+          "</div>"
+        "</div>"
+      } WHERE {
+        ?term a ?cl .
+        VALUES ?cl { rdfs:Class owl:Class } . 
+        ?term rdfs:label ?label ;
+              rdfs:comment ?comment .
+        FILTER (contains(lcase(?label), ?keyword))
+      }
+    </script>
+    
+    <script id="hierarchy-tpl" type="application/sparql-template">
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX st: <http://ns.inria.fr/sparql-template/>
+      
+      TEMPLATE <#hierarchy-tpl>(?cl) {
+        "<p>"
+          "Hierarchy: "
+          st:call-template(<#hierarchy-tpl>, ?parent)
+          format { "> <span><a href=\"%s\">%s</a></span>" ?parent ?label }
+        "</p>"
+      } WHERE {
+        ?cl rdfs:subClassOf ?parent .
+        ?parent rdfs:label ?label .
+      } LIMIT 1
+    </script>
+    
+    <script id="related-tpl" type="application/sparql-template">
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX ssn: <http://www.w3.org/ns/ssn/>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      
+      TEMPLATE <#related-tpl>(?cl) {
+        "<li>"
+          format {
+            "<a href=\"%s\">%s</a> (via property <a href=\"%s\">%s</a>)"
+            ?related ?label ?rel ?relLabel
+          }
+        "</li>"
+      } WHERE {
+        BIND (?cl AS ?term)
+        {
+          ?term rdfs:subClassOf ?restriction .
+          ?restriction owl:onProperty ?rel .
+          ?restriction owl:someValuesFrom ?related .
+          BIND ("some" as ?type)
+        } UNION {
+          ?related rdfs:subClassOf ?restriction .
+          ?restriction owl:onProperty ?rel .
+          ?restriction owl:someValuesFrom ?term .
+          BIND ("inverse some" as ?type)
+        } UNION {
+          ?term rdfs:subClassOf ?restriction .
+          ?restriction owl:onProperty ?rel .
+          ?restriction owl:allValuesFrom ?related .
+          BIND ("only" as ?type)
+        } UNION {
+          ?related rdfs:subClassOf ?restriction .
+          ?restriction owl:onProperty ?rel .
+          ?restriction owl:allValuesFrom ?term .
+          BIND ("inverse only" as ?type)
+        } UNION {
+          ?rel rdfs:domain ?term .
+          ?rel rdfs:range ?related .
+          BIND ("domain" as ?type)
+        } UNION {
+          ?rel rdfs:range ?term .
+          ?rel rdfs:domain ?related .
+          BIND ("range" as ?type)
+        }
+        ?rel rdfs:label ?relLabel .
+        ?related rdfs:label ?label .
+      }
+    </script>
+    
+    <script>
+      function search(s) {
+        let input = document.getElementById('search-input');
+        input.value = s;
+      
+        let ul = document.getElementById('search-results');
+        
+        let keywords = s.toLowerCase().split(' ');
+        let arg = {
+          type: 'literal',
+          value: keywords[0] // TODO
+        };
+        
+        sttl.callTemplate(document.documentURI + '#search-tpl', arg)
+          .then(str => {
+            ul.innerHTML = str;
+            $('.ui.accordion').accordion();
+          });
+      }
+      
+      function configure() {
+        let config = document.getElementById('config-ep');
+        let search = document.getElementById('search-ep');
+        // TODO valid URI?
+        search.value = config.value;
+      }
+    </script>
+	</head>
+	<body>
+    <div class="ui text container">
+      <div id="banner">
+        <h1 class="ui center aligned header">
+          Web of Things Cloud
+          <div class="sub header">A collection of Web ontologies for semantic interoperability on the Web of Things</div>
+        </h1>
+        <form action="#" method="get">
+          <div class="ui action input fluid">
+            <input id="search-input" type="text" name="s" placeholder="Search for concepts..." />
+            <input id="search-ep" type="text" hidden name="ep" value="http://192.168.56.1:7200/repositories/noinf" />
+            <button class="ui button">Search</button>
+          </div>
+        </form>
+        <div id="search-config">
+          <p onclick="$('#config-modal').modal('show');">Change SPARQL endpoint...</p>
+          <div id="config-modal" class="ui small modal">
+            <div class="header">SPARQL Endpoint</div>
+            <div class="content">
+              <div class="ui input fluid">
+                <input id="config-ep" type="text" placeholder="Enter a URI..." />
+              </div>
+            </div>
+            <div class="actions">
+              <button class="ui positive button">OK</button>
+            </div>
+          <div/>
+        </div>
+      </div>
+      
+      <div id="main">
+        <div class="ui items" id="search-results"></div>
+      </div>
+    </div>
+    
+    <script>
+      document
+        .querySelectorAll('script[type="application/sparql-template"]')
+        .forEach(script => {
+          script = 'BASE <' + document.documentURI + '>' + script.text;
+          sttl.register(script);
+        });
+        
+      $('#config-modal').modal({ onApprove: configure });
+      
+      let url = new URL(document.documentURI);
+      let params = url.searchParams;
+      if (params.has('ep')) sttl.connect(params.get('ep'));
+      if (params.has('s')) search(params.get('s'));
+    </script>
+	</body>
+<html>

@@ -52,6 +52,7 @@ const operations = {
 };
 function owlOperationType(op, opType, spec) {
     let type = {
+        '@type': 'Class',
         'subClassOf': []
     };
     
@@ -78,6 +79,7 @@ function owlOperationType(op, opType, spec) {
         }
 
         type['subClassOf'].push({
+            '@type': 'Restriction',
             'onProperty': 'responses',
             'someValuesFrom': s2o.transform(schema)
         });
@@ -86,10 +88,11 @@ function owlOperationType(op, opType, spec) {
     return type;
 }
 
-function owlType(spec) {
+function owlType(spec) {    
     // 'title' is mandatory
     let type = {
-        '@id': encode(spec.info.title),
+        '@id': encode(spec.info.title), // TODO JSON pointer instead?
+        '@type': 'Class',
         'subClassOf': ['SwaggerAPI'],
         'label': spec.info.title,
     };
@@ -106,18 +109,25 @@ function owlType(spec) {
         let def = spec.paths[res];
         
         let path = {
+            '@id': '#/paths/' + encode(res),
+            '@type': 'Class',
             'subClassOf': ['Path']
         };
 
         Object.keys(def).forEach((op) => {
             // expected keys: get, post, put, ...
+            let operation = owlOperationType(def[op], op, spec);
+            operation['@id'] = path['@id'] + '/' + op;
+            
             path['subClassOf'].push({
+                '@type': 'Restriction',
                 'onProperty': 'operations',
-                'someValuesFrom': owlOperationType(def[op], op, spec)
+                'someValuesFrom': operation
             });
         });
 
         type['subClassOf'].push({
+            '@type': 'Restriction',
             'onProperty': 'paths',
             'someValuesFrom': path
         });
@@ -129,7 +139,11 @@ function owlType(spec) {
 const dir = 'models';
 const root = 'http://openconnectivity.org/iotdatamodels/schemas/';
 fs.readdir(dir, (err, files) => {
-    let allTypes = [];
+    let allTypes = [{
+        '@context': s2o.context,
+        '@type': 'Ontology',
+        'imports': 'http://swagger.io/v2/schema.json'
+    }];
     files.filter(f => f.endsWith('.swagger.json'))
         //  .filter((f, i) => i < 5) // TODO for test purposes
          .forEach(f => {

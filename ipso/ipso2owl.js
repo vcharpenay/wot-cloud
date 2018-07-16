@@ -43,9 +43,7 @@ fs.readdirSync(dir).filter(isext).forEach(filename => {
             'rdfs:label': $(o).children('Name').text(),
             'objectID': $(o).children('ObjectID').text(),
             'description1': $(o).children('Description1').text(),
-            'description2': $(o).children('Description2').text(),
-            // 'multipleInstances': $(o).children('MultipleInstances').text(),
-            // 'mandatory': $(o).children('Mandatory').text(),
+            'description2': $(o).children('Description2').text()
         };
 
         $(o).find('Resources Item').each((index, i) => {
@@ -62,6 +60,7 @@ fs.readdirSync(dir).filter(isext).forEach(filename => {
                             'owl:onProperty': 'resourceValue',
                             'owl:allValuesFrom': $(i).children('Type').text()
                             // TODO RangeEnumeration (datatype restriction)
+                            // TODO use v, bv, fv instead of resourceValue
                         },
                         {
                             '@type': 'owl:Restriction',
@@ -82,7 +81,7 @@ fs.readdirSync(dir).filter(isext).forEach(filename => {
 
             def['rdfs:subClassOf'].push({
                 '@type': 'owl:Restriction',
-                'owl:onProperty': 'resource',
+                'owl:onProperty': 'e',
                 'owl:allValuesFrom': resources[id]
             });
 
@@ -90,7 +89,7 @@ fs.readdirSync(dir).filter(isext).forEach(filename => {
             if ($(i).children('Mandatory').text() === 'Mandatory') {
                 def['rdfs:subClassOf'].push({
                     '@type': 'owl:Restriction',
-                    'owl:onProperty': 'resource',
+                    'owl:onProperty': 'e',
                     'owl:someValuesFrom': resources[id]
                 });
             }
@@ -99,7 +98,7 @@ fs.readdirSync(dir).filter(isext).forEach(filename => {
             if ($(i).children('MultipleInstances').text() == 'Single') {
                 def['rdfs:subClassOf'].push({
                     '@type': 'owl:Restriction',
-                    'owl:onProperty': 'resource',
+                    'owl:onProperty': 'e',
                     'owl:onClass': resources[id],
                     'owl:maxQualifiedCardinality': {
                         '@value': 1,

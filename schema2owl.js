@@ -14,11 +14,16 @@ const ctx = {
     'string': 'xsd:string',
     'label': 'rdfs:label',
     'comment': 'rdfs:comment',
+    'Ontology': 'owl:Ontology',
     'Datatype': 'rdfs:Datatype',
     'Class': 'owl:Class',
     'DatatypeProperty': 'owl:DatatypeProperty',
     'ObjectProperty': 'owl:ObjectProperty',
     'Restriction': 'owl:Restriction',
+    'imports': {
+        '@id': 'owl:imports',
+        '@type': '@vocab'
+    },
     'subClassOf': {
         '@id': 'rdfs:subClassOf',
         '@type': '@vocab'

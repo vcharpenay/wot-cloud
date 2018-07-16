@@ -42,6 +42,6 @@ saref:hasValue rdfs:subPropertyOf sosa:hasSimpleResult .
 saref:relatesToProperty rdfs:subPropertyOf sosa:observedProperty .
 saref:hasTimestamp rdfs:subPropertyOf sosa:resultTime .
 # note what about saref:isMeasuredIn? sosa:hasResult o qudt:unit?
-saref:Command rdfs:subClassOf sosa:Actuation .
+saref:Command rdfs:subClassOf sosa:Actuation . # FIXME except GetCommand
 saref:actsUpon rdfs:subPropertyOf sosa:actsOnProperty .
 saref:hasFunction rdfs:subPropertyOf ssn:implements .
