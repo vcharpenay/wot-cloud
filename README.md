@@ -21,4 +21,4 @@ These ontologies have been used as a reference model for semantic alignment with
 
 ## User interface
 
-Go https://vcharpenay.github.io/wot-cloud/ to search for concepts in the Web of Things cloud.
+Go to https://vcharpenay.github.io/wot-cloud/ to search for concepts in the Web of Things cloud.
