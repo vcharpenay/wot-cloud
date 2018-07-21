@@ -26,8 +26,8 @@ let jsonld = {
     ]
 };
 
-// reusable resources indexed by ID
-let resources = {};
+// reusable resources must be defined only once
+const resources = [];
 
 const dir = 'models' + slash + 'reg' + slash + 'xml';
 let isext = f => f.replace('.xml', '') >= 2048; // non-OMA object IDs >= 2048
@@ -48,11 +48,12 @@ fs.readdirSync(dir).filter(isext).forEach(filename => {
 
         $(o).find('Resources Item').each((index, i) => {
             let id = $(i).attr('id');
-
-            if (!resources[id]) {
-                let res = {
-                    // note: no URN for resources in LWM2M
-                    '@id': 'urn:oma:lwm2m:oma:res:' + id,
+			
+            // note: no URN for resources in LWM2M
+			let res = { '@id': 'urn:oma:lwm2m:oma:res:' + id };
+            if (resources.indexOf(id) === -1) {
+                jsonld['@graph'].push({
+                    '@id': res['@id'],
                     'rdfs:subClassOf': [
                         'IPSOResource',
                         {
@@ -73,16 +74,15 @@ fs.readdirSync(dir).filter(isext).forEach(filename => {
                     'name': $(i).children('Name').text(),
                     'rdfs:label': $(i).children('Name').text(),
                     'description': $(i).children('Description').text()
-                }
-
-                resources[id] = res;
-                jsonld['@graph'].push(res);
+                });
+				
+                resources.push(id);
             }
 
             def['rdfs:subClassOf'].push({
                 '@type': 'owl:Restriction',
                 'owl:onProperty': 'e',
-                'owl:allValuesFrom': resources[id]
+                'owl:allValuesFrom': res
             });
 
             // existential restriction
@@ -90,7 +90,7 @@ fs.readdirSync(dir).filter(isext).forEach(filename => {
                 def['rdfs:subClassOf'].push({
                     '@type': 'owl:Restriction',
                     'owl:onProperty': 'e',
-                    'owl:someValuesFrom': resources[id]
+                    'owl:someValuesFrom': res
                 });
             }
 
@@ -99,7 +99,7 @@ fs.readdirSync(dir).filter(isext).forEach(filename => {
                 def['rdfs:subClassOf'].push({
                     '@type': 'owl:Restriction',
                     'owl:onProperty': 'e',
-                    'owl:onClass': resources[id],
+                    'owl:onClass': res,
                     'owl:maxQualifiedCardinality': {
                         '@value': 1,
                         '@type': 'xsd:nonNegativeInteger'
