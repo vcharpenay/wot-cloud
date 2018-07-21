@@ -304,11 +304,23 @@ function dataOrObjectSomeValuesFrom(name, schema) {
     }
 }
 
+const defined = [];
+
 /**
  * Algorithm entry point
  */
 function classOrDatatype(schema) {
-    let def = {}; // OWL class or datatype
+	if (defined.indexOf(schema.id) > -1) {
+		// returns only a reference to the full definition
+		return {
+			'@id': schema.id
+		};
+	}
+	
+	defined.push(schema.id);
+	
+	// OWL class or datatype
+    let def = {};
 
     if (schema.enum) {
         def = owl.dataOneOf(schema.enum);
@@ -359,16 +371,23 @@ function classOrDatatype(schema) {
         }
     }
 
-    def['@id'] = schema.id;
+	def['@id'] = schema.id;
+	
     if (schema.description) {
         def['comment'] = schema.description;
     }
+	
     return def;
 }
 
 exports.context = ctx;
-exports.transform = classOrDatatype;
-exports.canonicalize = function(json, base) {
+exports.transform = (schema) => {
+	let def = classOrDatatype(schema);
+	// empty definition array before returning def
+	defined.splice(0, defined.length);
+	return def;
+};
+exports.canonicalize = (json, base) => {
     // recursive call
     return canonicalize(json, json, [], base);
-}
+};

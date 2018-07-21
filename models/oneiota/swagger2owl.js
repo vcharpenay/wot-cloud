@@ -4,7 +4,7 @@ const fs = require('fs');
 const url = require('url');
 const path = require('path');
 
-const s2o = require('..' + path.sep + 'schema2owl.js');
+const s2o = require('./schema2owl.js');
 
 const ctx = {
     // TODO extract OWL terms from the schema instead (#/properties, #/definitions, etc)
@@ -45,6 +45,19 @@ function canonicalize(json, base) {
     return json;
 }
 
+const schemas = [];
+function owlSchemaType(schema) {
+	let id = schema.id;
+	if (schemas.indexOf(id) > -1) {
+		return {
+			'@id': id
+		};
+	} else {
+		schemas.push(id);
+		return s2o.transform(schema);
+	}
+}
+
 const operations = {
     'get': 'GetOperation',
     'post': 'PostOperation',
@@ -81,7 +94,7 @@ function owlOperationType(op, opType, spec) {
         type['subClassOf'].push({
             '@type': 'Restriction',
             'onProperty': 'responses',
-            'someValuesFrom': s2o.transform(schema)
+            'someValuesFrom': owlSchemaType(schema)
         });
     }
 
@@ -157,6 +170,8 @@ fs.readdir(dir, (err, files) => {
                  { '@base': base }
              ];
              allTypes.push(type);
+			 // reinit schema array to avoid collision on relative JSON pointers
+			 schemas.splice(0, schemas.length);
          });
     console.log(JSON.stringify(allTypes));
 });
