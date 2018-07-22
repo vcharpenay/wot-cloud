@@ -59,6 +59,11 @@ function dataPointClass(row) {
 	
 	let def = {
 		'rdfs:label': name,
+		'rdfs:seeAlso': {
+			// datatype property used in payload
+			'@id': 'haim:' + name,
+			'@type': 'owl:DatatypeProperty'
+		},
 		'rdfs:subClassOf': ['sdt:DataPoint']
 	}
 	
@@ -95,6 +100,7 @@ function propertyClass(row) {
 		'rdfs:subClassOf': ['sdt:Property']
 	}
 	
+	// TODO not an operation?
 	// TODO relate property to datatype?
 	
 	return def;
@@ -176,13 +182,16 @@ let jsonld = {
 		'owl': 'http://www.w3.org/2002/07/owl#',
 		'base': 'http://www.onem2m.org/ontology/Base_Ontology#',
 		'sdt': 'http://www.onem2m.org/ontology/SDT#',
-		'haim': 'http://www.onem2m.org/ontology/HAIM#', # TODO proper ns
+		'haim': 'http://www.onem2m.org/ontology/HAIM#', // TODO proper ns
 		'hd': 'http://www.onem2m.org/ontology/HD#',
 		'owl:onProperty': { '@type': '@vocab' },
 		'owl:allValuesFrom': { '@type': '@vocab' },
 		'owl:someValuesFrom': { '@type': '@vocab' }
 	},
-	'@graph': sections.map(moduleClass)
+	'@graph': [{
+		'@type': 'owl:Ontology',
+		'owl:imports': 'base:'
+	}].concat(sections.map(moduleClass))
 }
 
 console.log(JSON.stringify(jsonld));
