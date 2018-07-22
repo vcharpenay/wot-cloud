@@ -1,0 +1,388 @@
+# Source: "oneM2M Home Appliances Information Model and Mapping"
+# TS-0023-V-2.0.0
+5.3 ModuleClasses
+
+5.3.1 alarmSpeaker
+This ModuleClass provides the capability to initiate an alarm.
+
+Table 5.3.1-1: DataPoints of alarmSpeaker ModuleClass
+Name Type Readable Writable Optional Documentation
+tone hd:tone true true true Representing the tones of the alarm
+light hd:alertColourCode true true true Representing the lighting mode of the alarm.
+alarmStatus xs:boolean true true false "True" indicates the alarm start while "False" indicates the alarm stop.
+
+5.3.2 audioVideoInput
+This ModuleClass provides capabilities to control and monitor audio video input source of device such as TV or SetTopBox.
+
+Table 5.3.2-1: DataPoints of audioVideoInput ModuleClass
+Name Type Readable Writable Optional Documentation
+inputSourceID xs:integer true true false Activated input source ID in the supported input source list, supportedInputSources.
+supportedInputSources list of hd:supportedInputSource true false false List of supported input sources for the given device (see clause 5.5.2).
+
+5.3.3 audioVolume
+This ModuleClass provides capabilities to control and monitor volume.
+
+Table 5.3.3-1: Actions of audioVolume
+Return Type Name Argument Optional Documentation
+none upVolume none true Increase volume by the amount of the stepValue up to the maxValue.
+none downVolume none true Decrease volume by the amount of the stepValue down to 0.
+
+Table 5.3.3-2: DataPoints of audioVolume
+Name Type Readable Writable Optional Documentation
+volumePercentage xs:integer true true false The rounded percentage of the current volume in the range of [0, maxValue]. 0 percentage shall mean no sound produced.
+stepValue xs:integer true false true Step value used by UpVolume and DownVolume Actions.
+maxValue xs:integer true false true Maximum value allowed for Volume.
+muteEnabled xs:boolean true true false The current status of the mute enablement. "True" indicates enabled, and "False" indicates not enabled.
+
+5.3.4 battery
+Battery indicates the detection of low battery and gives an alarm if triggering criterion is met. The charge value in the module shows the current battery charge level.
+
+Table 5.3.4-1: DataPoints of battery ModuleClass
+Name Type Readable Writable Optional Documentation
+level xs:integer true false false The rounded percentage of the current level of battery in the range of [0, 100]. 0 percentage shall mean no battery remained.
+capacity xs:integer true false true The total capacity of battery in mAh.
+charging xs:boolean true false true The status of charging. "True" indicates enabled, and "False" indicates not enabled.
+discharging xs:boolean true false true The status of discharging. "True" indicates enabled, and "False" indicates not enabled.
+lowBattery xs:boolean true false true To indicate that the battery is in low charge level.
+batteryThreshold xs:integer true true true When the battery level is less than batteryThreshold then the lowBattery is true (and optionally to generate an alarm, see clause 5.3.1).
+
+Table 5.3.4-2: Properties of battery ModuleClass
+Name Type Value Optional Documentation
+propElectricEnergy xs:integer true Rated electric energy.
+propVoltage xs:integer true Rated voltage.
+propMaterial xs:string true The material (e.g. lithium ion, nickel and lead) of the cell.
+
+5.3.5 binarySwitch
+This ModuleClass provides capabilities to control and monitor the state of power.
+
+Table 5.3.5-1: Actions of binarySwitch ModuleClass
+Return Type Name Argument Optional Documentation
+none toggle none true Toggle the switch.
+
+Table 5.3.5-2: DataPoints of binarySwitch ModuleClass
+Name Type Readable Writable Optional Documentation
+powerState xs:boolean true true false The current status of the binarySwitch. "True" indicates turned-on, and "False" indicates turnedoff.
+
+5.3.6 bioElectricalImpedanceAnalysis
+This ModuleClass provides the analysis of human body tissue based on impedance measurement.
+
+Table 5.3.6-1: DataPoints of bioElectricalImpedanceAnalysis ModuleClass
+Name Type Readable Writable Optional Documentation
+water xs:float true false false The water content measurement from the BIA; the common unit is percentage.
+fat xs:float true false false The fat content measurement from the BIA; the common unit is percentage.
+muscle xs:float true false false The muscle content measurement from the BIA; the common unit is percentage.
+bone xs:float true false false The bone content measurement from the BIA; the common unit is percentage.
+visceraFat xs:float true false false The viscera fat content measurement from the BIA; the common unit is percentage.
+kcal xs:float true false false The kcal (kilocalories) measurement from the BIA.
+resistance xs:float true false false The resistance of human body; the common unit is ohm.
+
+5.3.7 boiler
+This ModuleClass provides the status of boiling function for water heaters.
+
+Table 5.3.7-1: DataPoints of boiler ModuleClass
+Name Type Readable Writable Optional Documentation
+status xs:boolean true true false The status of boiling.
+
+5.3.8 brightness
+This ModuleClass describes the brightness of a light e.g. from a lamp. Brightness is scaled as a percentage. A lamp or a monitor can be adjusted to a level of light between very dim (0 % is the minimum brightness) and very bright (100 % is the maximum brightness).
+
+Table 5.3.8-1: DataPoints of brightness ModuleClass
+Name Type Readable Writable Optional Documentation
+brightness xs:integer true true false The status of brightness level in percentage.
+
+5.3.9 clock
+This ModuleClass provides the information about current date and time.
+
+Table 5.3.9-1: DataPoints of clock ModuleClass
+Name Type Readable Writable Optional Documentation
+currentTime xs:time true true false Information of the current time
+currentDate xs:date true true false Information of the current date
+
+5.3.10 colour
+This ModuleClass provides the capabilities to set the value of Red, Green, Blue for the colour device.
+
+Table 5.3.10-1: DataPoints of colour ModuleClass
+Name Type Readable Writable Optional Documentation
+red xs:integer true true false The R value of RGB; the range is [0,255]
+green xs:integer true true false The G value of RGB; the range is [0,255]
+blue xs:integer true true false The B value of RGB; the range is [0,255]
+
+5.3.11 colourSaturation
+This ModuleClass describes a colour saturation value. The value is an integer. A colourSaturation has a range of [0,100]. A colourSaturation value of 0 means producing black and white images. A colourSaturation value of 50 means producing device specific normal colour images. A colourSaturation value of 100 means producing device very colourfull images.
+
+Table 5.3.11-1: DataPoints of colourSaturation ModuleClass
+Name Type Readable Writable Optional Documentation
+colourSaturation xs:integer true true false The status of colour saturation level.
+
+5.3.12 doorStatus
+This ModuleClass provides the status of a door. It is intended to be part of a larger object such as a refrigerator and an oven that might have multiple doors.
+
+Table 5.3.12-1: DataPoints of doorStatus ModuleClass
+Name Type Readable Writable Optional Documentation
+doorState hd:doorState true false false "Closed" indicates that door is closed, "Open"indicates that the door is open, "Opening" indicates that the door is opening, "Closing" indicates that the door is closing, "Stopped" indicates that the door is in stationary state.
+openDuration m2m:timestamp true false true The time duration the door has been open.
+openAlarm xs:boolean true true true The state of the door open alarm. "True" indicates that the open alarm is active. "False" indicates that the open alarm is not active.
+
+5.3.13 electricVehicleConnector
+This ModuleClass provides the information about charging/discharging devices for electric vehicles.
+
+Table 5.3.13-1: DataPoints of electricVehicleConnector ModuleClass
+Name Type Readable Writable Optional Documentation
+status xs:boolean true false false The status of connection.
+
+Table 5.3.13-2: Properties of electricVehicleConnector ModuleClass
+Name Type Value Optional Documentation
+propChargingCapacity xs:integer true Rated charging capacity.
+propDischargingCapacity xs:integer true Rated discharging capacity.
+
+5.3.14 energyConsumption
+This ModuleClass describes the energy consumed by the device since power up. One particular use case for energyConsumption ModuleClass is smart meter.
+
+Table 5.3.14-1: DataPoints of energyConsumption ModuleClass
+Name Type Readable Writable Optional Documentation
+power xs:float true false false The power of the device. The common unit is Watt (W).
+absoluteEnergyConsumption xs:float true false true The absolute energy consumption, reflecting the real measurement of accumulative energy. The common unit is Watt-hour (Wh).
+roundingEnergyConsumption xs:integer true false true This energy consumption data can be calculated by using significantDigits and multiplyingFactors.
+significantDigits xs:integer true false true The number of effective digits for data.
+multiplyingFactors xs:floatr true false true The unit for data (multiplying factors), e.g. 1 kWh, 0,1 kWh, 0,01 kWh, etc.
+voltage xs:float true false true The voltage of the device. The common unit is volts (V).
+current xs:float true false true The current of the device. The common unit is ampere (A).
+frequency xs:float true false true The frequency of the device. The common unit is hertz (Hz).
+
+5.3.15 energyGeneration
+This ModuleClass provides information about generation data on electric generator devices such as a photo voltaic power system, fuel cells, or microgeneration.
+
+Table 5.3.15-1: DataPoints of energyGenerationModuleClass
+Name Type Readable Writable Optional Documentation
+powerGenerationData xs:float true false true Amount of instaneous generation data.
+roundingEnergyGeneration xs:integer true false true This energy generation data can be calculated by using significantFigures and multiplyingFactors.
+significantDigits xs:integer true false true The number of effective digits for data.
+multiplyingFactors xs:floatr true false true The unit for data (multiplying factors), e.g. 1 kWh, 0,1 kWh, 0,01 kWh, etc.
+
+5.3.16 faultDetection
+This ModuleClass provides information about whether a fault has occurred in the actual device.
+
+Table 5.3.16-1: DataPoints of faultDetection ModuleClass
+Name Type Readable Writable Optional Documentation
+status xs:boolean true false false Status of fault detection.
+code xs:integer true false true Code of the fault.
+description xs:string true false true Message of the fault.
+
+5.3.17 height
+This ModuleClass provides the capability to report the measurement of height.
+
+Table 5.3.17-1: DataPoints of height ModuleClass
+Name Type Readable Writable Optional Documentation
+height xs:float true false false The height measurement. The common unit is centimetre (cm).
+
+5.3.18 hotWaterSupply
+This ModuleClass provides information about the status of supplying hot water into tanks or bath tubs.
+
+Table 5.3.18-1: DataPoints of hotWaterSupply ModuleClass
+Name Type Readable Writable Optional Documentation
+status xs:boolean true false false The status of watering operation.
+bath xs:boolean true true true The status of filling bath tub.
+
+5.3.19 keypad
+This ModuleClass provides the capability to require a user defined service through the key-in number. For example, a user can define key 1 as "require a takeout from restaurant XXX with combo meal 1". The IoT service provider or user can define the services.
+
+Table 5.3.19-1: DataPoints of keypad ModuleClass
+Name Type Readable Writable Optional Documentation
+keyNumber xs:integer true false false The number of key.
+
+5.3.20 motionSensor
+This ModuleClass provides the capabilities to indicate the occurrence of motion and raises an alarm if the triggering criterion is met.
+
+Table 5.3.20-1: DataPoints of motionSensor ModuleClass
+Name Type Readable Writable Optional Documentation
+alarm xs:boolean true false false The detection of the motion occurrence.
+silentTime xs:integer true true true The time that the motionSensor restrains from sending an alarm in case continous motions are detected after one alarm is produced. This DataPoint can be used to avoid repeated alarm reports.
+sensitivity xs:integer true true true The level of the detection accuracy of the motion sensor. This DataPoint can be used to control the number of the report.
+
+5.3.21 oximeter
+This ModuleClass provides the capability to report the measurement of blood characteristics.
+
+Table 5.3.21-1: DataPoints of oximeter ModuleClass
+Name Type Readable Writable Optional Documentation
+diastolicPressure xs:integer true false false The measurement of diastolic pressure by Oximeter. The common unit is millimetre of mercury (mmHg).
+systolicPressure xs:integer true false false The measurement of systolic pressure by Oximeter. The common unit is millimetre of mercury (mmHg).
+pulseRate xs:integer true false false The measurement of pulserate by Oximeter. The common unit is in beats per minute.
+oxygenSaturation xs:integer true false false The measurement of oxygensaturation by Oximeter. The common unit is in percentage.
+
+5.3.22 powerSave
+This ModuleClass provides capabilities to enable power saving mode and monitor the current status.
+
+Table 5.3.22-1: DataPoints of powerSave ModuleClass
+Name Type Readable Writable Optional Documentation
+powerSaveEnabled xs:boolean true true false The current status of the Power Saving Mode. "True" indicates enabaled, and "false" indicates not enabled.
+
+5.3.23 pushButton
+This ModuleClass provides the capability to indicate the operation of a button style switch. A typical application can be an SOS button.
+
+Table 5.3.23-1: DataPoints of pushButton ModuleClass
+Name Type Readable Writable Optional Documentation
+pushed xs:boolean true false false To indicate the press of the button.
+
+5.3.24 recorder
+This ModuleClass provides the capability to record the video/audio for a defined duration.
+
+Table 5.3.24-1: DataPoints of recorder ModuleClass
+Name Type Readable Writable Optional Documentation
+duration xs:integer true true false The duration for video/audio recording. Set to trigger the recorder. The common unit is seconds.
+
+5.3.25 refrigeration
+This ModuleClass describes a refrigeration function. This is not a Refrigerator device. The filter state is a read-only value providing the percentage life time remaining for the water filter. RapidFreeze is a boolean that controls the rapid freeze capability if present. RapidCool is a boolean that controls the rapid cool capability if present. Defrost is a boolean that controls the defrost cycle if present.
+
+Table 5.3.25-1: DataPoints of refrigeration ModuleClass
+Name Type Readable Writable Optional Documentation
+filterLifetime xs:integer true false true Percentage life time remaining for the water filter.
+rapidFreeze xs:boolean true true true Indicates whether the unit has a rapid freeze capability active.
+rapidCool xs:boolean true true true Indicates whether the unit has a rapid cool capability active.
+defrost xs:boolean true true true Indicates whether a defrost cycle is currently active.
+
+5.3.26 relativeHumidity
+This ModuleClass provides the capability for the device to report the humidity based on a specified rule that is vendor discretionary.
+
+Table 5.3.26-1: DataPoints of relativeHumidity ModuleClass
+Name Type Readable Writable Optional Documentation
+relativeHumidity xs:float true false false The measurement of the relative humidity value; the common unit is percentage.
+desiredHumidity xs:float true true true Desired value for Humidity.
+
+5.3.27 rinseLevel
+This ModuleClass provides capabilities to control and monitor the level of rinse. It is intended to be part of object which uses rinse such as a washing machine.
+
+Table 5.3.27-1: DataPoints of rinseLevel ModuleClass
+Name Type Readable Writable Optional Documentation
+rinseLevel hd:liquidLevel true true false The level of rinse (see clause 5.5.3). A higher value indicates a higher rinse level.
+
+5.3.28 runMode
+This ModuleClasses provides capabilities to control and monitor the operational modes of appliances.
+
+Table 5.3.28-1: DataPoints of runMode ModuleClass
+Name Type Readable Writable Optional Documentation
+operationMode hd:supportedModes true true false Currently active mode.
+supportedModes list of hd:supportedModes true true false List of possible modes the device supports (see clause 5.5.7)
+
+5.3.29 signalStrength
+This ModuleClass provides the capability to monitor the strength of the signal.
+
+Table 5.3.29-1: DataPoints of signalStrength ModuleClass
+Name Type Readable Writable Optional Documentation
+lqi xs:integer true false false The current value of link quality indicator, which reflects the scaling of rssi by dividing the received signal strength over reference signal strength. The common unit for lqi is percentage [0,100]. For the detailed definition, please see IEEE 802.15.4 [i.4], clause 6.7.8.
+rssi xs:float true false true The current value of received signal strength indicator, which reflects the raw signal level.
+
+5.3.30 smokeSensor
+This ModuleClass provides the capabilities to indicate the detection of smoke and raises an alarm if the triggering criterion is met.
+
+Table 5.3.30-1: DataPoints of smokeSensor ModuleClass
+Name Type Readable Writable Optional Documentation
+alarm xs:boolean true false false The detection of smoke.
+detectedTime m2m:timestamp true true true The time the smoke is detected.
+
+5.3.31 spinLevel
+This ModuleClass provides capabilities to control and monitor the level of spin. It is intended to be part of objects which use spinning function such as a washing machine and a dryer.
+
+Table 5.3.31-1: DataPoints of spinLevel ModuleClass
+Name Type Readable Writable Optional Documentation
+spinLevelStrength hd:spinLevelStrength true true false The value of spin-dry level (see clause 5.5.4). A higher value indicates a higher spin level.
+
+5.3.32 televisionChannel
+This ModuleClass provides capabilities to set and get channels of a device that has a channel list.
+
+Table 5.3.32-1: Actions of televisionChannel ModuleClass
+Return Type Name Argument Optional Documentation
+none upChannel none true Change the current channel to the next channel in the stored list of available channels. If the current channel is the last one in the list, the new set channel may be the first one in the list.
+none downChannel none true Change the current channel to the previous channel in the stored list of available channels. If the current channel is the first one in the list, the new set channel may be the last one in the list.
+
+Table 5.3.32-2: DataPoints of televisionChannel ModuleClass
+Name Type Readable Writable Optional Documentation
+channelId xs:integer true true false Current channel ID.
+availableChannels list of xs:integer true false true The list of available channel numbers which may be build by automatic scan and/or manual selction.
+previousChannel xs:integer true false true The channel number which was selected previously.
+
+5.3.33 temperature
+This ModuleClass provides capabilities to represent the current temperature and target temperature of devices such as an air conditioner, refrigerator, oven and etc.
+
+Table 5.3.33-1: DataPoints of temperature ModuleClass
+Name Type Readable Writable Optional Documentation
+currentTemperature xs:float true false false The current temperature.
+targetTemperature xs:float true true true The desired temperature to reach.
+unit xs:string true false true The unit for the temperature values. The default is celsius (C).
+minValue xs:float true false true Minimum value of targetTemperature.
+maxValue xs:float true false true Maximum value of targetTemperature.
+stepValue xs:float true false true Step value allowed for targetTemperature.
+
+5.3.34 temperatureAlarm
+This ModuleClass provides the capabilities to indicate the detection of abnormal temperatures and raises an alarm if the triggering criterion is met.
+
+Table 5.3.34-1: DataPoints of temperatureAlarm ModuleClass
+Name Type Readable Writable Optional Documentation
+alarm xs:boolean true false false The detection of abnormal temperature.
+temperature xs:float true false true To report the value of the temperature. The common unit is celsius (C).
+temperatureThreshhold xs:integer true true true The threshhold to trigger the alarm.
+
+5.3.35 timer
+This ModuleClass provides capabilities to monitor and control the times when the appliance executes its operations (i.e. when it starts, when it ends…).
+
+Table 5.3.35-1: Actions of timer ModuleClass
+Return Type Name Argument Optional Documentation
+none activateClockTimer none true Activate current clock timer.
+none deactivateClockTimer none true Deactivate current clock timer.
+
+Table 5.3.35-2: DataPoints of timer ModuleClass
+Name Type Readable Writable Optional Documentation
+referenceTimer xs:integer true false true A Timer (e.g. a time-based value, App Defined Epoch, Progressive) expressed in seconds. The value indicates a time counter to be used as reference for the other time-based data points of this ModuleClass. Usually it is the time since the last event of power on of the producer (or more in detail the boot of its connectivity node).
+targetTimeToStart xs:integer true true true A TimeSpan (e.g. a time-based value, App Defined Epoch, Fixed) expressed in seconds. The value indicates the time when the appliance is expected to start its operation, starting counting from the last ReferenceTimer.
+targetTimeToStop xs:integer true true true A TimeSpan (e.g. a time-based value, App Defined Epoch, Fixed) expressed in seconds. The value indicates the time when the appliance is expected to stop its operation, starting counting from the last ReferenceTimer.
+estimatedTimeToEnd xs:integer true false true A Timer (e.g. a time-based value, App Defined Epoch, Progressive) expressed in seconds. The value indicates the time to the ends of appliance operations. It is calculated at runtime by device itself during the execution of its operation.
+runningTime xs:integer true false true It is a Timer (e.g. a time-based value, App Defined Epoch, Progressive) expressed in seconds. It indicates the time of the current operation. Usually its value is increasing of one value each second. It starts counting from 0 when the operation starts and stops counting when the operation ends.
+targetDuration xs:integer true false true A TimeSpan (e.g. a time-based value, App Defined Epoch, Fixed) expressed in seconds. The value indicates a time, representing the target duration of the operation as per user selection.
+absoluteStartTime m2m:timestamp true true true An absolute time to specify the start time.
+absoluteStopTime m2m:timestamp true true true An absolute time to specify the stop time.
+
+5.3.36 turbo
+This ModuleClass provides capabilities to enable turbo mode and monitor the current status of the turbo function. It is intended to be part of objects which use turbo function such as an air conditioner, a washing machine etc.
+
+Table 5.3.36-1: DataPoints of turbo ModuleClass
+Name Type Readable Writable Optional Documentation
+turboEnabled xs:boolean true true false The current status of the Turbo Mode. "True" indicates enabaled, and "False" indicates not enabled.
+
+5.3.37 waterFlow
+This ModuleClass is for controlling water strength of a device.
+
+Table 5.3.37-1: DataPoints of waterFlow ModuleClass
+Name Type Readable Writable Optional Documentation
+waterLevelStrength hd:waterFlowStrength true true false The desired level of water flow (see clause 5.5.8). A higher value indicates higher water flow.
+
+5.3.38 waterLevel
+This ModuleClass provides the level and supply source of water for an appliance.
+
+Table 5.3.38-1: DataPoints of waterLevel ModuleClass
+Name Type Readable Writable Optional Documentation
+liquidLevel hd:liquidLevel true true false The desired level of water (see clause 5.5.3).
+
+5.3.39 waterSensor
+This ModuleClass provides the capabilities to indicate whether or not water has been sensed and raises an alarm if the triggering criterion is met.
+
+Table 5.3.39-1: DataPoints of waterSensor ModuleClass
+Name Type Readable Writable Optional Documentation
+alarm xs:boolean true false false The detection of water.
+
+5.3.40 weight
+This ModuleClass provides the capability to report the measurement of weight.
+
+Table 5.3.40-1: DataPoints of weight ModuleClass
+Name Type Readable Writable Optional Documentation
+weight xs:float true false false The weight measurement. The common unit is kilogram (kg).
+
+5.3.41 wind
+This ModuleClass is for controlling wind strength and direction of a device.
+
+Table 5.3.41-1: DataPoints of wind ModuleClass
+Name Type Readable Writable Optional Documentation
+windStrength hd:windStrength true true false The current strength of the wind(see clause 5.5.9).
+directionUp xs:boolean true true true The current status of the upward blowing enablement. "True" indicates enabaled, and "False" indicates not enabled.
+directionDown xs:boolean true true true The current status of the downward blowing enablement. "True" indicates enabaled, and "False" indicates not enabled.
+directionRight xs:boolean true true true Right side enablement (0:off, 1:on) The current status of the rightward blowing enablement. "True" indicates enabaled, and "False" indicates not enabled.
+directionLeft xs:boolean true true true The current status of the leftward blowing enablement. "True" indicates enabaled, and "False" indicates not enabled.
+directionAuto xs:boolean true true true The current status of the automatic blowing enablement. "True" indicates enabaled, and "False" indicates not enabled.
