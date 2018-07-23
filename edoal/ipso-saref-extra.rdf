@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>http://openmobilealliance.org/tech/profiles/LWM2M</onto1>
+	<onto2>https://w3id.org/saref</onto2>
+	<uri1>http://openmobilealliance.org/tech/profiles/LWM2M</uri1>
+	<uri2>https://w3id.org/saref</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:5702"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/x_range"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+	
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:5703"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/y_range"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+	
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:5704"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/z_range"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+	
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:5528"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/x_range"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+	
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:5529"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/y_range"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

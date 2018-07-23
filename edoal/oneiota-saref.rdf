@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>http://swagger.io/v2/schema.json</onto1>
+	<onto2>https://w3id.org/saref</onto2>
+	<uri1>http://swagger.io/v2/schema.json</uri1>
+	<uri2>https://w3id.org/saref</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/ns/td#Property"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Property"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://schema.org/Person"/>
+			<entity2 rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Humidity"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Humidity"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9858</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.w3.org/ns/td#Action"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Action"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9853</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Height"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9843</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Energy"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Energy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Energy"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Energy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Temperature"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Temperature"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Temperature"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Temperature"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Weight"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Weight"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Smoke%20Sensor"/>
+			<entity2 rdf:resource="http://w3id.org/saref#SmokeSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Colour%20Temperature"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Colour_temperature"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Weight"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Mass"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9009</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/MotionResURI.swagger.json#/definitions/Motion"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Motion"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7001</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/SmokeSensorResURI.swagger.json#/definitions/smoke"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Smoke"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6964</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/AccelerationResURI.swagger.json#/definitions/acceleration"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Acceleration"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6831</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/WaterResURI.swagger.json#/definitions/Water"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Water"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6822</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/GenericSensorResURI.swagger.json#/definitions/Sensor"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Sensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6467</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Colour%20Space%20Coordinates"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Space_coordinates"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6174</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Brightness"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Brightness_temperature"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6077</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

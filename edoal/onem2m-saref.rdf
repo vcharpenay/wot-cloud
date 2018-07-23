@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>C:\Users\z003dp6d\Desktop\HAIM.nt</onto1>
+	<onto2>https://w3id.org/saref</onto2>
+	<uri1>C:\Users\z003dp6d\Desktop\HAIM.nt</uri1>
+	<uri2>https://w3id.org/saref</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.onem2m.org/ontology/SDT#Property"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Property"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.onem2m.org/ontology/SDT#Action"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Action"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9853</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.height.height"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.height"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.temperature"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Temperature"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.temperature"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Temperature"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.temperatureAlarm.temperature"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Temperature"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.temperatureAlarm.temperature"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Temperature"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.energyConsumption.frequency"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Frequency"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.weight.weight"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Weight"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.weight"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Weight"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.smokeSensor"/>
+			<entity2 rdf:resource="http://w3id.org/saref#SmokeSensor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.recorder.duration"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Duration"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.relativeHumidity"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Relative_humidity"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.relativeHumidity.relativeHumidity"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Relative_humidity"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.alarmSpeaker.light"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Light"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.energyConsumption.power"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Power"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.energyConsumption.power"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Power"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.water"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Water"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.energyConsumption.current"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Electric_current"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8836</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.energyConsumption.voltage"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Electric_potential"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8742</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.resistance"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Electrical_resistance"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8742</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.temperature.unit"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8742</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.weight.weight"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Mass"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8554</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.weight"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Mass"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8554</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.timer"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Time"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6948</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

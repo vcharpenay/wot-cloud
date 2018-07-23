@@ -184,6 +184,7 @@ let jsonld = {
 		'sdt': 'http://www.onem2m.org/ontology/SDT#',
 		'haim': 'http://www.onem2m.org/ontology/HAIM#', // TODO proper ns
 		'hd': 'http://www.onem2m.org/ontology/HD#',
+		'owl:imports': { '@type': '@vocab' },
 		'owl:onProperty': { '@type': '@vocab' },
 		'owl:allValuesFrom': { '@type': '@vocab' },
 		'owl:someValuesFrom': { '@type': '@vocab' }

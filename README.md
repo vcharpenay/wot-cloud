@@ -12,7 +12,8 @@ These ontologies have been used as a reference model for semantic alignment with
 
 | Path | Description |
 | ---- | ----------- |
-| [/shacl](shacl) | all SPARQL rules (Turtle format, using the SHACL vocabulary) |
+| [/edoal](edoal) | all entity-level alignments (RDF/XML format, using the [EDOAL](http://alignapi.gforge.inria.fr/edoal.html) vocabulary) |
+| [/shacl](shacl) | all SPARQL rules (Turtle format, using the [SHACL](https://www.w3.org/TR/shacl/) vocabulary) |
 | [/owl](owl) | all ontology axioms (Turtle format) |
 | [/models/onem2m](models/onem2m) | model transformation script and data for oneM2M (JavaScript, XML, Text) |
 | [/models/ipso](models/ipso) | model transformation script and data for IPSO (JavaScript, XML) |

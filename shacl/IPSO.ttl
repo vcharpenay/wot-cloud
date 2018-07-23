@@ -9,1050 +9,1051 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix lwm2m: <http://openmobilealliance.org/tech/profiles/LWM2M#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
 @prefix sesame: <http://www.openrdf.org/schema/sesame#> .
 @prefix fn: <http://www.w3.org/2005/xpath-functions#> .
 
-_:node521071 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3331> .
-
-_:node521072 a sh:SPARQLRule .
-
-_:node521073 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521074 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521075 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521072 sh:prefixes _:node521073 , _:node521074 , _:node521075 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Power> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3331>, <http://w3id.org/saref#EnergyRelated> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3331> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5805> ; lwm2m:v ?val . }" .
-
-_:node521071 sh:rule _:node521072 .
-
-_:node521076 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3331> .
-
-_:node521077 a sh:SPARQLRule .
-
-_:node521078 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521079 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521080 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521077 sh:prefixes _:node521078 , _:node521079 , _:node521080 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Power> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3331>, <http://w3id.org/saref#EnergyRelated> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3331> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5805> ; lwm2m:v ?val . }" .
-
-_:node521076 sh:rule _:node521077 .
-
-_:node521081 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3342> .
-
-_:node521082 a sh:SPARQLRule .
-
-_:node521083 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521084 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521085 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521082 sh:prefixes _:node521083 , _:node521084 , _:node521085 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#State> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3342>, <http://w3id.org/saref#Switch> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3342> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5500> ; lwm2m:v ?val . }" .
-
-_:node521081 sh:rule _:node521082 .
-
-_:node521086 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3300> .
-
-_:node521087 a sh:SPARQLRule .
-
-_:node521088 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521089 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521090 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521087 sh:prefixes _:node521088 , _:node521089 , _:node521090 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3300>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3300> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
-
-_:node521086 sh:rule _:node521087 .
-
-_:node521091 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3303> .
-
-_:node521092 a sh:SPARQLRule .
-
-_:node521093 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521094 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521095 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521092 sh:prefixes _:node521093 , _:node521094 , _:node521095 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3303>, <http://w3id.org/saref#TemperatureSensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3303> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
-
-_:node521091 sh:rule _:node521092 .
-
-_:node521096 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3306> .
-
-_:node521097 a sh:SPARQLRule .
-
-_:node521098 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521099 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521100 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521097 sh:prefixes _:node521098 , _:node521099 , _:node521100 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3306>, <http://w3id.org/saref#Actuator> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3306> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5850> ; lwm2m:v ?val . }" .
-
-_:node521096 sh:rule _:node521097 .
-
-_:node521101 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3311> .
-
-_:node521102 a sh:SPARQLRule .
-
-_:node521103 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521104 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521105 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521102 sh:prefixes _:node521103 , _:node521104 , _:node521105 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3311>, <http://w3id.org/saref#LightSwitch> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3311> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5850> ; lwm2m:v ?val . }" .
-
-_:node521101 sh:rule _:node521102 .
-
-_:node521106 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3311> .
-
-_:node521107 a sh:SPARQLRule .
-
-_:node521108 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521109 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521110 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521107 sh:prefixes _:node521108 , _:node521109 , _:node521110 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3311>, <http://w3id.org/saref#LightingDevice> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3311> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5850> ; lwm2m:v ?val . }" .
-
-_:node521106 sh:rule _:node521107 .
-
-_:node521111 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3305> .
-
-_:node521112 a sh:SPARQLRule .
-
-_:node521113 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521114 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521115 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521112 sh:prefixes _:node521113 , _:node521114 , _:node521115 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Power> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3305>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3305> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5800> ; lwm2m:v ?val . }" .
-
-_:node521111 sh:rule _:node521112 .
-
-_:node521116 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3305> .
-
-_:node521117 a sh:SPARQLRule .
-
-_:node521118 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521119 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521120 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521117 sh:prefixes _:node521118 , _:node521119 , _:node521120 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Power> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3305>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3305> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5800> ; lwm2m:v ?val . }" .
-
-_:node521116 sh:rule _:node521117 .
-
-_:node521121 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3313> .
-
-_:node521122 a sh:SPARQLRule .
-
-_:node521123 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521124 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521125 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521122 sh:prefixes _:node521123 , _:node521124 , _:node521125 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/x_range> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3313>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3313> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5702> ; lwm2m:v ?val . }" .
-
-_:node521121 sh:rule _:node521122 .
-
-_:node521126 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3314> .
-
-_:node521127 a sh:SPARQLRule .
-
-_:node521128 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521129 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521130 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521127 sh:prefixes _:node521128 , _:node521129 , _:node521130 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/x_range> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3314>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3314> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5702> ; lwm2m:v ?val . }" .
-
-_:node521126 sh:rule _:node521127 .
-
-_:node521131 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3334> .
-
-_:node521132 a sh:SPARQLRule .
-
-_:node521133 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521134 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521135 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521132 sh:prefixes _:node521133 , _:node521134 , _:node521135 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/x_range> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3334>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3334> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5702> ; lwm2m:v ?val . }" .
-
-_:node521131 sh:rule _:node521132 .
-
-_:node521136 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3348> .
-
-_:node521137 a sh:SPARQLRule .
-
-_:node521138 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521139 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521140 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521137 sh:prefixes _:node521138 , _:node521139 , _:node521140 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#MultiLevelState> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3348>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3348> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5547> ; lwm2m:v ?val . }" .
-
-_:node521136 sh:rule _:node521137 .
-
-_:node521141 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3200> .
-
-_:node521142 a sh:SPARQLRule .
-
-_:node521143 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521144 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521145 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521142 sh:prefixes _:node521143 , _:node521144 , _:node521145 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#State> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3200>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3200> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5500> ; lwm2m:v ?val . }" .
-
-_:node521141 sh:rule _:node521142 .
-
-_:node521146 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3302> .
-
-_:node521147 a sh:SPARQLRule .
-
-_:node521148 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521149 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521150 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521147 sh:prefixes _:node521148 , _:node521149 , _:node521150 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#State> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3302>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3302> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5500> ; lwm2m:v ?val . }" .
-
-_:node521146 sh:rule _:node521147 .
-
-_:node521151 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3347> .
-
-_:node521152 a sh:SPARQLRule .
-
-_:node521153 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521154 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521155 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521152 sh:prefixes _:node521153 , _:node521154 , _:node521155 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#State> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3347>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3347> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5500> ; lwm2m:v ?val . }" .
-
-_:node521151 sh:rule _:node521152 .
-
-_:node521156 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3344> .
-
-_:node521157 a sh:SPARQLRule .
-
-_:node521158 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521159 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521160 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521157 sh:prefixes _:node521158 , _:node521159 , _:node521160 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Density_of_states> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3344>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3344> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5533> ; lwm2m:v ?val . }" .
-
-_:node521156 sh:rule _:node521157 .
-
-_:node521161 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3337> .
-
-_:node521162 a sh:SPARQLRule .
-
-_:node521163 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521164 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521165 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521162 sh:prefixes _:node521163 , _:node521164 , _:node521165 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Position_vector> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3337>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3337> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5536> ; lwm2m:v ?val . }" .
-
-_:node521161 sh:rule _:node521162 .
-
-_:node521166 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3343> .
-
-_:node521167 a sh:SPARQLRule .
-
-_:node521168 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521169 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521170 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521167 sh:prefixes _:node521168 , _:node521169 , _:node521170 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Loudness_level> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3343>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3343> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5548> ; lwm2m:v ?val . }" .
-
-_:node521166 sh:rule _:node521167 .
-
-_:node521171 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3338> .
-
-_:node521172 a sh:SPARQLRule .
-
-_:node521173 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521174 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521175 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521172 sh:prefixes _:node521173 , _:node521174 , _:node521175 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Time> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3338>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3338> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5525> ; lwm2m:v ?val . }" .
-
-_:node521171 sh:rule _:node521172 .
-
-_:node521176 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3350> .
-
-_:node521177 a sh:SPARQLRule .
-
-_:node521178 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521179 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521180 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521177 sh:prefixes _:node521178 , _:node521179 , _:node521180 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Time> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3350>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3350> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5544> ; lwm2m:v ?val . }" .
-
-_:node521176 sh:rule _:node521177 .
-
-_:node521181 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3350> .
-
-_:node521182 a sh:SPARQLRule .
-
-_:node521183 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521184 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521185 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521182 sh:prefixes _:node521183 , _:node521184 , _:node521185 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Time> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3350>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3350> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5544> ; lwm2m:v ?val . }" .
-
-_:node521181 sh:rule _:node521182 .
-
-_:node521186 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3201> .
-
-_:node521187 a sh:SPARQLRule .
-
-_:node521188 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521189 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521190 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521187 sh:prefixes _:node521188 , _:node521189 , _:node521190 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#State> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3201>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3201> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5550> ; lwm2m:v ?val . }" .
-
-_:node521186 sh:rule _:node521187 .
-
-_:node521191 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3333> .
-
-_:node521192 a sh:SPARQLRule .
-
-_:node521193 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521194 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521195 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521192 sh:prefixes _:node521193 , _:node521194 , _:node521195 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Time> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3333>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3333> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5506> ; lwm2m:v ?val . }" .
-
-_:node521191 sh:rule _:node521192 .
-
-_:node521196 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3333> .
-
-_:node521197 a sh:SPARQLRule .
-
-_:node521198 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521199 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521200 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521197 sh:prefixes _:node521198 , _:node521199 , _:node521200 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Time> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3333>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3333> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5506> ; lwm2m:v ?val . }" .
-
-_:node521196 sh:rule _:node521197 .
-
-_:node521201 a sh:NodeShape ;
+_:node527134 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3202> .
 
-_:node521202 a sh:SPARQLRule .
+_:node527135 a sh:SPARQLRule .
 
-_:node521203 sh:prefix "sosa" ;
+_:node527136 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521204 sh:prefix "om" ;
+_:node527137 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521205 sh:prefix "lwm2m" ;
+_:node527138 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521202 sh:prefixes _:node521203 , _:node521204 , _:node521205 ;
+_:node527135 sh:prefixes _:node527136 , _:node527137 , _:node527138 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3202>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3202> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5600> ; lwm2m:v ?val . }" .
 
-_:node521201 sh:rule _:node521202 .
+_:node527134 sh:rule _:node527135 .
 
-_:node521206 a sh:NodeShape ;
+_:node527139 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3300> .
+
+_:node527140 a sh:SPARQLRule .
+
+_:node527141 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527142 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527143 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527140 sh:prefixes _:node527141 , _:node527142 , _:node527143 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3300>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3300> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+
+_:node527139 sh:rule _:node527140 .
+
+_:node527144 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3301> .
 
-_:node521207 a sh:SPARQLRule .
+_:node527145 a sh:SPARQLRule .
 
-_:node521208 sh:prefix "sosa" ;
+_:node527146 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521209 sh:prefix "om" ;
+_:node527147 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521210 sh:prefix "lwm2m" ;
+_:node527148 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521207 sh:prefixes _:node521208 , _:node521209 , _:node521210 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3301>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3301> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527145 sh:prefixes _:node527146 , _:node527147 , _:node527148 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Illuminance> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3301>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3301> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521206 sh:rule _:node521207 .
+_:node527144 sh:rule _:node527145 .
 
-_:node521211 a sh:NodeShape ;
+_:node527149 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3303> .
+
+_:node527150 a sh:SPARQLRule .
+
+_:node527151 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527152 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527153 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527150 sh:prefixes _:node527151 , _:node527152 , _:node527153 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Temperature> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3303>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3303> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+
+_:node527149 sh:rule _:node527150 .
+
+_:node527154 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3303> .
+
+_:node527155 a sh:SPARQLRule .
+
+_:node527156 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527157 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527158 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527155 sh:prefixes _:node527156 , _:node527157 , _:node527158 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Temperature> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3303>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3303> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+
+_:node527154 sh:rule _:node527155 .
+
+_:node527159 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3304> .
 
-_:node521212 a sh:SPARQLRule .
+_:node527160 a sh:SPARQLRule .
 
-_:node521213 sh:prefix "sosa" ;
+_:node527161 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521214 sh:prefix "om" ;
+_:node527162 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521215 sh:prefix "lwm2m" ;
+_:node527163 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521212 sh:prefixes _:node521213 , _:node521214 , _:node521215 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3304>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3304> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527160 sh:prefixes _:node527161 , _:node527162 , _:node527163 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Humidity> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3304>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3304> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521211 sh:rule _:node521212 .
+_:node527159 sh:rule _:node527160 .
 
-_:node521216 a sh:NodeShape ;
+_:node527164 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3305> .
+
+_:node527165 a sh:SPARQLRule .
+
+_:node527166 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527167 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527168 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527165 sh:prefixes _:node527166 , _:node527167 , _:node527168 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3305>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3305> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5800> ; lwm2m:v ?val . }" .
+
+_:node527164 sh:rule _:node527165 .
+
+_:node527169 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3313> .
+
+_:node527170 a sh:SPARQLRule .
+
+_:node527171 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527172 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527173 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527170 sh:prefixes _:node527171 , _:node527172 , _:node527173 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/x_range> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3313>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3313> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5702> ; lwm2m:v ?val . }" .
+
+_:node527169 sh:rule _:node527170 .
+
+_:node527174 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3314> .
+
+_:node527175 a sh:SPARQLRule .
+
+_:node527176 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527177 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527178 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527175 sh:prefixes _:node527176 , _:node527177 , _:node527178 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/x_range> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3314>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3314> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5702> ; lwm2m:v ?val . }" .
+
+_:node527174 sh:rule _:node527175 .
+
+_:node527179 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3315> .
 
-_:node521217 a sh:SPARQLRule .
+_:node527180 a sh:SPARQLRule .
 
-_:node521218 sh:prefix "sosa" ;
+_:node527181 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521219 sh:prefix "om" ;
+_:node527182 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521220 sh:prefix "lwm2m" ;
+_:node527183 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521217 sh:prefixes _:node521218 , _:node521219 , _:node521220 ;
+_:node527180 sh:prefixes _:node527181 , _:node527182 , _:node527183 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3315>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3315> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521216 sh:rule _:node521217 .
+_:node527179 sh:rule _:node527180 .
 
-_:node521221 a sh:NodeShape ;
+_:node527184 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3316> .
 
-_:node521222 a sh:SPARQLRule .
+_:node527185 a sh:SPARQLRule .
 
-_:node521223 sh:prefix "sosa" ;
+_:node527186 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521224 sh:prefix "om" ;
+_:node527187 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521225 sh:prefix "lwm2m" ;
+_:node527188 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521222 sh:prefixes _:node521223 , _:node521224 , _:node521225 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3316>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3316> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527185 sh:prefixes _:node527186 , _:node527187 , _:node527188 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Electric_potential> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3316>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3316> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521221 sh:rule _:node521222 .
+_:node527184 sh:rule _:node527185 .
 
-_:node521226 a sh:NodeShape ;
+_:node527189 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3317> .
 
-_:node521227 a sh:SPARQLRule .
+_:node527190 a sh:SPARQLRule .
 
-_:node521228 sh:prefix "sosa" ;
+_:node527191 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521229 sh:prefix "om" ;
+_:node527192 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521230 sh:prefix "lwm2m" ;
+_:node527193 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521227 sh:prefixes _:node521228 , _:node521229 , _:node521230 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3317>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3317> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527190 sh:prefixes _:node527191 , _:node527192 , _:node527193 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Electric_current> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3317>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3317> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521226 sh:rule _:node521227 .
+_:node527189 sh:rule _:node527190 .
 
-_:node521231 a sh:NodeShape ;
+_:node527194 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3318> .
 
-_:node521232 a sh:SPARQLRule .
+_:node527195 a sh:SPARQLRule .
 
-_:node521233 sh:prefix "sosa" ;
+_:node527196 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521234 sh:prefix "om" ;
+_:node527197 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521235 sh:prefix "lwm2m" ;
+_:node527198 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521232 sh:prefixes _:node521233 , _:node521234 , _:node521235 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3318>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3318> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527195 sh:prefixes _:node527196 , _:node527197 , _:node527198 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Frequency> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3318>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3318> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521231 sh:rule _:node521232 .
+_:node527194 sh:rule _:node527195 .
 
-_:node521236 a sh:NodeShape ;
+_:node527199 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3319> .
 
-_:node521237 a sh:SPARQLRule .
+_:node527200 a sh:SPARQLRule .
 
-_:node521238 sh:prefix "sosa" ;
+_:node527201 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521239 sh:prefix "om" ;
+_:node527202 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521240 sh:prefix "lwm2m" ;
+_:node527203 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521237 sh:prefixes _:node521238 , _:node521239 , _:node521240 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3319>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3319> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527200 sh:prefixes _:node527201 , _:node527202 , _:node527203 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Depth> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3319>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3319> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521236 sh:rule _:node521237 .
+_:node527199 sh:rule _:node527200 .
 
-_:node521241 a sh:NodeShape ;
+_:node527204 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3320> .
 
-_:node521242 a sh:SPARQLRule .
+_:node527205 a sh:SPARQLRule .
 
-_:node521243 sh:prefix "sosa" ;
+_:node527206 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521244 sh:prefix "om" ;
+_:node527207 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521245 sh:prefix "lwm2m" ;
+_:node527208 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521242 sh:prefixes _:node521243 , _:node521244 , _:node521245 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3320>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3320> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527205 sh:prefixes _:node527206 , _:node527207 , _:node527208 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Percentage> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3320>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3320> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521241 sh:rule _:node521242 .
+_:node527204 sh:rule _:node527205 .
 
-_:node521246 a sh:NodeShape ;
+_:node527209 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3321> .
 
-_:node521247 a sh:SPARQLRule .
+_:node527210 a sh:SPARQLRule .
 
-_:node521248 sh:prefix "sosa" ;
+_:node527211 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521249 sh:prefix "om" ;
+_:node527212 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521250 sh:prefix "lwm2m" ;
+_:node527213 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521247 sh:prefixes _:node521248 , _:node521249 , _:node521250 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3321>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3321> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527210 sh:prefixes _:node527211 , _:node527212 , _:node527213 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Altitude> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3321>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3321> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521246 sh:rule _:node521247 .
+_:node527209 sh:rule _:node527210 .
 
-_:node521251 a sh:NodeShape ;
+_:node527214 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3322> .
 
-_:node521252 a sh:SPARQLRule .
+_:node527215 a sh:SPARQLRule .
 
-_:node521253 sh:prefix "sosa" ;
+_:node527216 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521254 sh:prefix "om" ;
+_:node527217 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521255 sh:prefix "lwm2m" ;
+_:node527218 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521252 sh:prefixes _:node521253 , _:node521254 , _:node521255 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3322>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3322> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527215 sh:prefixes _:node527216 , _:node527217 , _:node527218 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3322>, <http://w3id.org/saref#Load> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3322> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521251 sh:rule _:node521252 .
+_:node527214 sh:rule _:node527215 .
 
-_:node521256 a sh:NodeShape ;
+_:node527219 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3323> .
 
-_:node521257 a sh:SPARQLRule .
+_:node527220 a sh:SPARQLRule .
 
-_:node521258 sh:prefix "sosa" ;
+_:node527221 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521259 sh:prefix "om" ;
+_:node527222 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521260 sh:prefix "lwm2m" ;
+_:node527223 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521257 sh:prefixes _:node521258 , _:node521259 , _:node521260 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3323>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3323> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527220 sh:prefixes _:node527221 , _:node527222 , _:node527223 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Pressure> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3323>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3323> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521256 sh:rule _:node521257 .
+_:node527219 sh:rule _:node527220 .
 
-_:node521261 a sh:NodeShape ;
+_:node527224 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3323> .
+
+_:node527225 a sh:SPARQLRule .
+
+_:node527226 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527227 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527228 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527225 sh:prefixes _:node527226 , _:node527227 , _:node527228 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Pressure> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3323>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3323> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+
+_:node527224 sh:rule _:node527225 .
+
+_:node527229 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3324> .
 
-_:node521262 a sh:SPARQLRule .
+_:node527230 a sh:SPARQLRule .
 
-_:node521263 sh:prefix "sosa" ;
+_:node527231 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521264 sh:prefix "om" ;
+_:node527232 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521265 sh:prefix "lwm2m" ;
+_:node527233 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521262 sh:prefixes _:node521263 , _:node521264 , _:node521265 ;
+_:node527230 sh:prefixes _:node527231 , _:node527232 , _:node527233 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3324>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3324> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521261 sh:rule _:node521262 .
+_:node527229 sh:rule _:node527230 .
 
-_:node521266 a sh:NodeShape ;
+_:node527234 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3325> .
 
-_:node521267 a sh:SPARQLRule .
+_:node527235 a sh:SPARQLRule .
 
-_:node521268 sh:prefix "sosa" ;
+_:node527236 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521269 sh:prefix "om" ;
+_:node527237 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521270 sh:prefix "lwm2m" ;
+_:node527238 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521267 sh:prefixes _:node521268 , _:node521269 , _:node521270 ;
+_:node527235 sh:prefixes _:node527236 , _:node527237 , _:node527238 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3325>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3325> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521266 sh:rule _:node521267 .
+_:node527234 sh:rule _:node527235 .
 
-_:node521271 a sh:NodeShape ;
+_:node527239 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3326> .
 
-_:node521272 a sh:SPARQLRule .
+_:node527240 a sh:SPARQLRule .
 
-_:node521273 sh:prefix "sosa" ;
+_:node527241 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521274 sh:prefix "om" ;
+_:node527242 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521275 sh:prefix "lwm2m" ;
+_:node527243 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521272 sh:prefixes _:node521273 , _:node521274 , _:node521275 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3326>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3326> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527240 sh:prefixes _:node527241 , _:node527242 , _:node527243 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Acidity> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3326>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3326> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521271 sh:rule _:node521272 .
+_:node527239 sh:rule _:node527240 .
 
-_:node521276 a sh:NodeShape ;
+_:node527244 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3327> .
 
-_:node521277 a sh:SPARQLRule .
+_:node527245 a sh:SPARQLRule .
 
-_:node521278 sh:prefix "sosa" ;
+_:node527246 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521279 sh:prefix "om" ;
+_:node527247 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521280 sh:prefix "lwm2m" ;
+_:node527248 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521277 sh:prefixes _:node521278 , _:node521279 , _:node521280 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3327>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3327> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527245 sh:prefixes _:node527246 , _:node527247 , _:node527248 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Electric_conductivity> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3327>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3327> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521276 sh:rule _:node521277 .
+_:node527244 sh:rule _:node527245 .
 
-_:node521281 a sh:NodeShape ;
+_:node527249 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3328> .
 
-_:node521282 a sh:SPARQLRule .
+_:node527250 a sh:SPARQLRule .
 
-_:node521283 sh:prefix "sosa" ;
+_:node527251 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521284 sh:prefix "om" ;
+_:node527252 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521285 sh:prefix "lwm2m" ;
+_:node527253 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521282 sh:prefixes _:node521283 , _:node521284 , _:node521285 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3328>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3328> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527250 sh:prefixes _:node527251 , _:node527252 , _:node527253 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Power> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3328>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3328> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521281 sh:rule _:node521282 .
+_:node527249 sh:rule _:node527250 .
 
-_:node521286 a sh:NodeShape ;
+_:node527254 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3328> .
+
+_:node527255 a sh:SPARQLRule .
+
+_:node527256 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527257 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527258 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527255 sh:prefixes _:node527256 , _:node527257 , _:node527258 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Power> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3328>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3328> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+
+_:node527254 sh:rule _:node527255 .
+
+_:node527259 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3329> .
 
-_:node521287 a sh:SPARQLRule .
+_:node527260 a sh:SPARQLRule .
 
-_:node521288 sh:prefix "sosa" ;
+_:node527261 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521289 sh:prefix "om" ;
+_:node527262 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521290 sh:prefix "lwm2m" ;
+_:node527263 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521287 sh:prefixes _:node521288 , _:node521289 , _:node521290 ;
+_:node527260 sh:prefixes _:node527261 , _:node527262 , _:node527263 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3329>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3329> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521286 sh:rule _:node521287 .
+_:node527259 sh:rule _:node527260 .
 
-_:node521291 a sh:NodeShape ;
+_:node527264 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3330> .
 
-_:node521292 a sh:SPARQLRule .
+_:node527265 a sh:SPARQLRule .
 
-_:node521293 sh:prefix "sosa" ;
+_:node527266 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521294 sh:prefix "om" ;
+_:node527267 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521295 sh:prefix "lwm2m" ;
+_:node527268 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521292 sh:prefixes _:node521293 , _:node521294 , _:node521295 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3330>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3330> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527265 sh:prefixes _:node527266 , _:node527267 , _:node527268 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Distance> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3330>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3330> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
 
-_:node521291 sh:rule _:node521292 .
+_:node527264 sh:rule _:node527265 .
 
-_:node521296 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3346> .
+_:node527269 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3331> .
 
-_:node521297 a sh:SPARQLRule .
+_:node527270 a sh:SPARQLRule .
 
-_:node521298 sh:prefix "sosa" ;
+_:node527271 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521299 sh:prefix "om" ;
+_:node527272 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521300 sh:prefix "lwm2m" ;
+_:node527273 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521297 sh:prefixes _:node521298 , _:node521299 , _:node521300 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3346>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3346> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+_:node527270 sh:prefixes _:node527271 , _:node527272 , _:node527273 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3331>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3331> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5805> ; lwm2m:v ?val . }" .
 
-_:node521296 sh:rule _:node521297 .
+_:node527269 sh:rule _:node527270 .
 
-_:node521301 a sh:NodeShape ;
+_:node527274 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3331> .
+
+_:node527275 a sh:SPARQLRule .
+
+_:node527276 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527277 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527278 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527275 sh:prefixes _:node527276 , _:node527277 , _:node527278 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3331>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3331> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5805> ; lwm2m:v ?val . }" .
+
+_:node527274 sh:rule _:node527275 .
+
+_:node527279 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3332> .
 
-_:node521302 a sh:SPARQLRule .
+_:node527280 a sh:SPARQLRule .
 
-_:node521303 sh:prefix "sosa" ;
+_:node527281 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521304 sh:prefix "om" ;
+_:node527282 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521305 sh:prefix "lwm2m" ;
+_:node527283 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521302 sh:prefixes _:node521303 , _:node521304 , _:node521305 ;
+_:node527280 sh:prefixes _:node527281 , _:node527282 , _:node527283 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3332>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3332> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5705> ; lwm2m:v ?val . }" .
 
-_:node521301 sh:rule _:node521302 .
+_:node527279 sh:rule _:node527280 .
 
-_:node521306 a sh:NodeShape ;
+_:node527284 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3334> .
+
+_:node527285 a sh:SPARQLRule .
+
+_:node527286 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527287 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527288 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527285 sh:prefixes _:node527286 , _:node527287 , _:node527288 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/x_range> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3334>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3334> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5702> ; lwm2m:v ?val . }" .
+
+_:node527284 sh:rule _:node527285 .
+
+_:node527289 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3336> .
 
-_:node521307 a sh:SPARQLRule .
+_:node527290 a sh:SPARQLRule .
 
-_:node521308 sh:prefix "sosa" ;
+_:node527291 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521309 sh:prefix "om" ;
+_:node527292 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521310 sh:prefix "lwm2m" ;
+_:node527293 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521307 sh:prefixes _:node521308 , _:node521309 , _:node521310 ;
+_:node527290 sh:prefixes _:node527291 , _:node527292 , _:node527293 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3336>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3336> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5513> ; lwm2m:v ?val . }" .
 
-_:node521306 sh:rule _:node521307 .
+_:node527289 sh:rule _:node527290 .
 
-_:node521311 a sh:NodeShape ;
+_:node527294 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3346> .
+
+_:node527295 a sh:SPARQLRule .
+
+_:node527296 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527297 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527298 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527295 sh:prefixes _:node527296 , _:node527297 , _:node527298 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3346>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3346> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5700> ; lwm2m:v ?val . }" .
+
+_:node527294 sh:rule _:node527295 .
+
+_:node527299 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3348> .
+
+_:node527300 a sh:SPARQLRule .
+
+_:node527301 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527302 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527303 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527300 sh:prefixes _:node527301 , _:node527302 , _:node527303 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3348>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3348> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5547> ; lwm2m:v ?val . }" .
+
+_:node527299 sh:rule _:node527300 .
+
+_:node527304 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3349> .
 
-_:node521312 a sh:SPARQLRule .
+_:node527305 a sh:SPARQLRule .
 
-_:node521313 sh:prefix "sosa" ;
+_:node527306 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521314 sh:prefix "om" ;
+_:node527307 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521315 sh:prefix "lwm2m" ;
+_:node527308 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521312 sh:prefixes _:node521313 , _:node521314 , _:node521315 ;
+_:node527305 sh:prefixes _:node527306 , _:node527307 , _:node527308 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3349>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3349> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5910> ; lwm2m:v ?val . }" .
 
-_:node521311 sh:rule _:node521312 .
+_:node527304 sh:rule _:node527305 .
 
-_:node521316 a sh:NodeShape ;
+_:node527309 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3200> .
+
+_:node527310 a sh:SPARQLRule .
+
+_:node527311 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527312 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527313 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527310 sh:prefixes _:node527311 , _:node527312 , _:node527313 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3200>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3200> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5500> ; lwm2m:v ?val . }" .
+
+_:node527309 sh:rule _:node527310 .
+
+_:node527314 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3302> .
+
+_:node527315 a sh:SPARQLRule .
+
+_:node527316 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527317 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527318 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527315 sh:prefixes _:node527316 , _:node527317 , _:node527318 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3302>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3302> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5500> ; lwm2m:v ?val . }" .
+
+_:node527314 sh:rule _:node527315 .
+
+_:node527319 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3342> .
+
+_:node527320 a sh:SPARQLRule .
+
+_:node527321 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527322 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527323 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527320 sh:prefixes _:node527321 , _:node527322 , _:node527323 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3342>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3342> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5500> ; lwm2m:v ?val . }" .
+
+_:node527319 sh:rule _:node527320 .
+
+_:node527324 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3344> .
 
-_:node521317 a sh:SPARQLRule .
+_:node527325 a sh:SPARQLRule .
 
-_:node521318 sh:prefix "sosa" ;
+_:node527326 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521319 sh:prefix "om" ;
+_:node527327 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521320 sh:prefix "lwm2m" ;
+_:node527328 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521317 sh:prefixes _:node521318 , _:node521319 , _:node521320 ;
+_:node527325 sh:prefixes _:node527326 , _:node527327 , _:node527328 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3344>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3344> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5532> ; lwm2m:v ?val . }" .
 
-_:node521316 sh:rule _:node521317 .
+_:node527324 sh:rule _:node527325 .
 
-_:node521321 a sh:NodeShape ;
+_:node527329 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3344> .
+
+_:node527330 a sh:SPARQLRule .
+
+_:node527331 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527332 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527333 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527330 sh:prefixes _:node527331 , _:node527332 , _:node527333 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3344>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3344> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5533> ; lwm2m:v ?val . }" .
+
+_:node527329 sh:rule _:node527330 .
+
+_:node527334 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3347> .
+
+_:node527335 a sh:SPARQLRule .
+
+_:node527336 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527337 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527338 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527335 sh:prefixes _:node527336 , _:node527337 , _:node527338 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3347>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3347> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5500> ; lwm2m:v ?val . }" .
+
+_:node527334 sh:rule _:node527335 .
+
+_:node527339 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3203> .
 
-_:node521322 a sh:SPARQLRule .
+_:node527340 a sh:SPARQLRule .
 
-_:node521323 sh:prefix "sosa" ;
+_:node527341 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521324 sh:prefix "om" ;
+_:node527342 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521325 sh:prefix "lwm2m" ;
+_:node527343 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521322 sh:prefixes _:node521323 , _:node521324 , _:node521325 ;
+_:node527340 sh:prefixes _:node527341 , _:node527342 , _:node527343 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3203>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3203> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5650> ; lwm2m:v ?val . }" .
 
-_:node521321 sh:rule _:node521322 .
+_:node527339 sh:rule _:node527340 .
 
-_:node521326 a sh:NodeShape ;
+_:node527344 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3308> .
 
-_:node521327 a sh:SPARQLRule .
+_:node527345 a sh:SPARQLRule .
 
-_:node521328 sh:prefix "sosa" ;
+_:node527346 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521329 sh:prefix "om" ;
+_:node527347 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521330 sh:prefix "lwm2m" ;
+_:node527348 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521327 sh:prefixes _:node521328 , _:node521329 , _:node521330 ;
+_:node527345 sh:prefixes _:node527346 , _:node527347 , _:node527348 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3308>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3308> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5900> ; lwm2m:v ?val . }" .
 
-_:node521326 sh:rule _:node521327 .
+_:node527344 sh:rule _:node527345 .
 
-_:node521331 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3340> .
+_:node527349 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3337> .
 
-_:node521332 a sh:SPARQLRule .
+_:node527350 a sh:SPARQLRule .
 
-_:node521333 sh:prefix "sosa" ;
+_:node527351 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521334 sh:prefix "om" ;
+_:node527352 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521335 sh:prefix "lwm2m" ;
+_:node527353 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521332 sh:prefixes _:node521333 , _:node521334 , _:node521335 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3340>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3340> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5521> ; lwm2m:v ?val . }" .
+_:node527350 sh:prefixes _:node527351 , _:node527352 , _:node527353 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3337>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3337> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5536> ; lwm2m:v ?val . }" .
 
-_:node521331 sh:rule _:node521332 .
+_:node527349 sh:rule _:node527350 .
 
-_:node521336 a sh:NodeShape ;
-	sh:targetNode <urn:oma:lwm2m:ext:3312> .
-
-_:node521337 a sh:SPARQLRule .
-
-_:node521338 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node521339 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node521340 sh:prefix "lwm2m" ;
-	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
-
-_:node521337 sh:prefixes _:node521338 , _:node521339 , _:node521340 ;
-	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3312>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3312> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5850> ; lwm2m:v ?val . }" .
-
-_:node521336 sh:rule _:node521337 .
-
-_:node521341 a sh:NodeShape ;
+_:node527354 a sh:NodeShape ;
 	sh:targetNode <urn:oma:lwm2m:ext:3338> .
 
-_:node521342 a sh:SPARQLRule .
+_:node527355 a sh:SPARQLRule .
 
-_:node521343 sh:prefix "sosa" ;
+_:node527356 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node521344 sh:prefix "om" ;
+_:node527357 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node521345 sh:prefix "lwm2m" ;
+_:node527358 sh:prefix "lwm2m" ;
 	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
 
-_:node521342 sh:prefixes _:node521343 , _:node521344 , _:node521345 ;
+_:node527355 sh:prefixes _:node527356 , _:node527357 , _:node527358 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3338>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3338> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5525> ; lwm2m:v ?val . }" .
+
+_:node527354 sh:rule _:node527355 .
+
+_:node527359 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3340> .
+
+_:node527360 a sh:SPARQLRule .
+
+_:node527361 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527362 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527363 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527360 sh:prefixes _:node527361 , _:node527362 , _:node527363 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3340>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3340> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5521> ; lwm2m:v ?val . }" .
+
+_:node527359 sh:rule _:node527360 .
+
+_:node527364 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3343> .
+
+_:node527365 a sh:SPARQLRule .
+
+_:node527366 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527367 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527368 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527365 sh:prefixes _:node527366 , _:node527367 , _:node527368 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3343>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3343> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5548> ; lwm2m:v ?val . }" .
+
+_:node527364 sh:rule _:node527365 .
+
+_:node527369 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3350> .
+
+_:node527370 a sh:SPARQLRule .
+
+_:node527371 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527372 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527373 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527370 sh:prefixes _:node527371 , _:node527372 , _:node527373 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3350>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3350> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5544> ; lwm2m:v ?val . }" .
+
+_:node527369 sh:rule _:node527370 .
+
+_:node527374 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3201> .
+
+_:node527375 a sh:SPARQLRule .
+
+_:node527376 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527377 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527378 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527375 sh:prefixes _:node527376 , _:node527377 , _:node527378 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3201>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3201> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5550> ; lwm2m:v ?val . }" .
+
+_:node527374 sh:rule _:node527375 .
+
+_:node527379 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3306> .
+
+_:node527380 a sh:SPARQLRule .
+
+_:node527381 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527382 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527383 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527380 sh:prefixes _:node527381 , _:node527382 , _:node527383 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3306>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3306> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5850> ; lwm2m:v ?val . }" .
+
+_:node527379 sh:rule _:node527380 .
+
+_:node527384 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3311> .
+
+_:node527385 a sh:SPARQLRule .
+
+_:node527386 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527387 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527388 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527385 sh:prefixes _:node527386 , _:node527387 , _:node527388 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3311>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3311> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5850> ; lwm2m:v ?val . }" .
+
+_:node527384 sh:rule _:node527385 .
+
+_:node527389 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3312> .
+
+_:node527390 a sh:SPARQLRule .
+
+_:node527391 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527392 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527393 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527390 sh:prefixes _:node527391 , _:node527392 , _:node527393 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3312>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3312> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5850> ; lwm2m:v ?val . }" .
+
+_:node527389 sh:rule _:node527390 .
+
+_:node527394 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3338> .
+
+_:node527395 a sh:SPARQLRule .
+
+_:node527396 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527397 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527398 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527395 sh:prefixes _:node527396 , _:node527397 , _:node527398 ;
 	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3338>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3338> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5850> ; lwm2m:v ?val . }" .
 
-_:node521341 sh:rule _:node521342 .
+_:node527394 sh:rule _:node527395 .
+
+_:node527399 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3333> .
+
+_:node527400 a sh:SPARQLRule .
+
+_:node527401 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527402 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527403 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527400 sh:prefixes _:node527401 , _:node527402 , _:node527403 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Time> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3333>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3333> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5506> ; lwm2m:v ?val . }" .
+
+_:node527399 sh:rule _:node527400 .
+
+_:node527404 a sh:NodeShape ;
+	sh:targetNode <urn:oma:lwm2m:ext:3333> .
+
+_:node527405 a sh:SPARQLRule .
+
+_:node527406 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node527407 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node527408 sh:prefix "lwm2m" ;
+	sh:namespace "http://openmobilealliance.org/tech/profiles/LWM2M#"^^xsd:anyURI .
+
+_:node527405 sh:prefixes _:node527406 , _:node527407 , _:node527408 ;
+	sh:construct "CONSTRUCT {[] a sosa:Observation ; sosa:observedProperty [ a <http://w3id.org/saref#Time> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:oma:lwm2m:ext:3333>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?o a <urn:oma:lwm2m:ext:3333> ; lwm2m:e ?r . ?r a <urn:oma:lwm2m:oma:res:5506> ; lwm2m:v ?val . }" .
+
+_:node527404 sh:rule _:node527405 .
