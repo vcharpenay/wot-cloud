@@ -21,14 +21,14 @@
 		</Cell>
 	</map>
 
-	<map>
+	<!-- <map>
 		<Cell>
 			<entity1 rdf:resource="http://www.onem2m.org/ontology/SDT#Action"/>
 			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Action"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9853</measure>
 			<relation>=</relation>
 		</Cell>
-	</map>
+	</map> -->
 
 	<map>
 		<Cell>
@@ -93,23 +93,23 @@
 		</Cell>
 	</map>
 
-	<map>
+	<!-- <map>
 		<Cell>
 			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.weight.weight"/>
 			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Weight"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
 			<relation>=</relation>
 		</Cell>
-	</map>
+	</map> -->
 
-	<map>
+	<!-- <map>
 		<Cell>
 			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.weight"/>
 			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Weight"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
 			<relation>=</relation>
 		</Cell>
-	</map>
+	</map> -->
 
 	<map>
 		<Cell>

@@ -14,36 +14,9 @@
 	<uri2>https://w3id.org/saref</uri2>
 	<map>
 		<Cell>
-			<entity1 rdf:resource="http://www.w3.org/ns/td#Property"/>
-			<entity2 rdf:resource="http://w3id.org/saref#Property"/>
-			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
-			<relation>=</relation>
-		</Cell>
-	</map>
-
-	<map>
-		<Cell>
-			<entity1 rdf:resource="http://schema.org/Person"/>
-			<entity2 rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
-			<relation>=</relation>
-		</Cell>
-	</map>
-
-	<map>
-		<Cell>
 			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Humidity"/>
 			<entity2 rdf:resource="http://w3id.org/saref#Humidity"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9858</measure>
-			<relation>=</relation>
-		</Cell>
-	</map>
-
-	<map>
-		<Cell>
-			<entity1 rdf:resource="http://www.w3.org/ns/td#Action"/>
-			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Action"/>
-			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9853</measure>
 			<relation>=</relation>
 		</Cell>
 	</map>
@@ -93,14 +66,14 @@
 		</Cell>
 	</map>
 
-	<map>
+	<!-- <map>
 		<Cell>
 			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Weight"/>
 			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Weight"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
 			<relation>=</relation>
 		</Cell>
-	</map>
+	</map> -->
 
 	<map>
 		<Cell>
@@ -183,14 +156,14 @@
 		</Cell>
 	</map>
 
-	<map>
+	<!-- <map>
 		<Cell>
 			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/Brightness"/>
 			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Brightness_temperature"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6077</measure>
 			<relation>=</relation>
 		</Cell>
-	</map>
+	</map> -->
 
 </Alignment>
 </rdf:RDF>

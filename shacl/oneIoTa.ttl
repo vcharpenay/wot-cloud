@@ -13,1370 +13,1408 @@
 @prefix sesame: <http://www.openrdf.org/schema/sesame#> .
 @prefix fn: <http://www.w3.org/2005/xpath-functions#> .
 
-_:node526340 a sh:NodeShape ;
+_:node531161 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Air%20Flow> .
 
-_:node526341 a sh:SPARQLRule .
+_:node531162 a sh:SPARQLRule .
 
-_:node526342 sh:prefix "sosa" ;
+_:node531163 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526343 sh:prefix "om" ;
+_:node531164 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526344 sh:prefix "sw" ;
+_:node531165 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526341 sh:prefixes _:node526342 , _:node526343 , _:node526344 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AirFlowResURI.swagger.json#/paths//AirFlowResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Air%20Flow>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AirFlowResURI.swagger.json#/paths//AirFlowResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/speed> ?val . }" .
+_:node531162 sh:prefixes _:node531163 , _:node531164 , _:node531165 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AirFlowResURI.swagger.json#/paths//AirFlowResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Volumetric_flow_rate> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Air%20Flow>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AirFlowResURI.swagger.json#/paths//AirFlowResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/speed> ?val . }" .
 
-_:node526340 sh:rule _:node526341 .
+_:node531161 sh:rule _:node531162 .
 
-_:node526345 a sh:NodeShape ;
+_:node531166 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Air%20Quality> .
 
-_:node526346 a sh:SPARQLRule .
+_:node531167 a sh:SPARQLRule .
 
-_:node526347 sh:prefix "sosa" ;
+_:node531168 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526348 sh:prefix "om" ;
+_:node531169 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526349 sh:prefix "sw" ;
+_:node531170 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526346 sh:prefixes _:node526347 , _:node526348 , _:node526349 ;
+_:node531167 sh:prefixes _:node531168 , _:node531169 , _:node531170 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AirQualityResURI.swagger.json#/paths//AirQualityResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Air%20Quality>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AirQualityResURI.swagger.json#/paths//AirQualityResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/contaminantvalue> ?val . }" .
 
-_:node526345 sh:rule _:node526346 .
+_:node531166 sh:rule _:node531167 .
 
-_:node526350 a sh:NodeShape ;
+_:node531171 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Air%20Quality> .
 
-_:node526351 a sh:SPARQLRule .
+_:node531172 a sh:SPARQLRule .
 
-_:node526352 sh:prefix "sosa" ;
+_:node531173 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526353 sh:prefix "om" ;
+_:node531174 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526354 sh:prefix "sw" ;
+_:node531175 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526351 sh:prefixes _:node526352 , _:node526353 , _:node526354 ;
+_:node531172 sh:prefixes _:node531173 , _:node531174 , _:node531175 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AirQualityResURI.swagger.json#/paths//AirQualityResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Air%20Quality>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AirQualityResURI.swagger.json#/paths//AirQualityResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/contaminanttype> ?val . }" .
 
-_:node526350 sh:rule _:node526351 .
+_:node531171 sh:rule _:node531172 .
 
-_:node526355 a sh:NodeShape ;
+_:node531176 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Air%20Quality> .
 
-_:node526356 a sh:SPARQLRule .
+_:node531177 a sh:SPARQLRule .
 
-_:node526357 sh:prefix "sosa" ;
+_:node531178 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526358 sh:prefix "om" ;
+_:node531179 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526359 sh:prefix "sw" ;
+_:node531180 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526356 sh:prefixes _:node526357 , _:node526358 , _:node526359 ;
+_:node531177 sh:prefixes _:node531178 , _:node531179 , _:node531180 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AirQualityResURI.swagger.json#/paths//AirQualityResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Air%20Quality>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AirQualityResURI.swagger.json#/paths//AirQualityResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/valuetype> ?val . }" .
 
-_:node526355 sh:rule _:node526356 .
+_:node531176 sh:rule _:node531177 .
 
-_:node526360 a sh:NodeShape ;
+_:node531181 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Air%20Quality> .
 
-_:node526361 a sh:SPARQLRule .
+_:node531182 a sh:SPARQLRule .
 
-_:node526362 sh:prefix "sosa" ;
+_:node531183 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526363 sh:prefix "om" ;
+_:node531184 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526364 sh:prefix "sw" ;
+_:node531185 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526361 sh:prefixes _:node526362 , _:node526363 , _:node526364 ;
+_:node531182 sh:prefixes _:node531183 , _:node531184 , _:node531185 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AirQualityResURI.swagger.json#/paths//AirQualityResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Air%20Quality>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AirQualityResURI.swagger.json#/paths//AirQualityResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/range> ?val . }" .
 
-_:node526360 sh:rule _:node526361 .
+_:node531181 sh:rule _:node531182 .
 
-_:node526365 a sh:NodeShape ;
+_:node531186 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Altimeter> .
 
-_:node526366 a sh:SPARQLRule .
+_:node531187 a sh:SPARQLRule .
 
-_:node526367 sh:prefix "sosa" ;
+_:node531188 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526368 sh:prefix "om" ;
+_:node531189 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526369 sh:prefix "sw" ;
+_:node531190 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526366 sh:prefixes _:node526367 , _:node526368 , _:node526369 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AltimeterResURI.swagger.json#/paths//AltimeterResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Altimeter>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AltimeterResURI.swagger.json#/paths//AltimeterResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/alt> ?val . }" .
+_:node531187 sh:prefixes _:node531188 , _:node531189 , _:node531190 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AltimeterResURI.swagger.json#/paths//AltimeterResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Altitude> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Altimeter>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AltimeterResURI.swagger.json#/paths//AltimeterResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/alt> ?val . }" .
 
-_:node526365 sh:rule _:node526366 .
+_:node531186 sh:rule _:node531187 .
 
-_:node526370 a sh:NodeShape ;
+_:node531191 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Audio%20Controls> .
 
-_:node526371 a sh:SPARQLRule .
+_:node531192 a sh:SPARQLRule .
 
-_:node526372 sh:prefix "sosa" ;
+_:node531193 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526373 sh:prefix "om" ;
+_:node531194 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526374 sh:prefix "sw" ;
+_:node531195 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526371 sh:prefixes _:node526372 , _:node526373 , _:node526374 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AudioResURI.swagger.json#/paths//AudioResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Audio%20Controls>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AudioResURI.swagger.json#/paths//AudioResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/volume> ?val . }" .
+_:node531192 sh:prefixes _:node531193 , _:node531194 , _:node531195 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AudioResURI.swagger.json#/paths//AudioResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Sound_power_level> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Audio%20Controls>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AudioResURI.swagger.json#/paths//AudioResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/volume> ?val . }" .
 
-_:node526370 sh:rule _:node526371 .
+_:node531191 sh:rule _:node531192 .
 
-_:node526375 a sh:NodeShape ;
+_:node531196 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Audio%20Controls> .
 
-_:node526376 a sh:SPARQLRule .
+_:node531197 a sh:SPARQLRule .
 
-_:node526377 sh:prefix "sosa" ;
+_:node531198 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526378 sh:prefix "om" ;
+_:node531199 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526379 sh:prefix "sw" ;
+_:node531200 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526376 sh:prefixes _:node526377 , _:node526378 , _:node526379 ;
+_:node531197 sh:prefixes _:node531198 , _:node531199 , _:node531200 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AudioResURI.swagger.json#/paths//AudioResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Audio%20Controls>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AudioResURI.swagger.json#/paths//AudioResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/mute> ?val . }" .
 
-_:node526375 sh:rule _:node526376 .
+_:node531196 sh:rule _:node531197 .
 
-_:node526380 a sh:NodeShape ;
+_:node531201 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Auto%20Focus> .
 
-_:node526381 a sh:SPARQLRule .
+_:node531202 a sh:SPARQLRule .
 
-_:node526382 sh:prefix "sosa" ;
+_:node531203 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526383 sh:prefix "om" ;
+_:node531204 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526384 sh:prefix "sw" ;
+_:node531205 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526381 sh:prefixes _:node526382 , _:node526383 , _:node526384 ;
+_:node531202 sh:prefixes _:node531203 , _:node531204 , _:node531205 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AutoFocusResURI.swagger.json#/paths//AutoFocusResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Auto%20Focus>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AutoFocusResURI.swagger.json#/paths//AutoFocusResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/autoFocus> ?val . }" .
 
-_:node526380 sh:rule _:node526381 .
+_:node531201 sh:rule _:node531202 .
 
-_:node526385 a sh:NodeShape ;
+_:node531206 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Automatic%20Document%20Feeder> .
 
-_:node526386 a sh:SPARQLRule .
+_:node531207 a sh:SPARQLRule .
 
-_:node526387 sh:prefix "sosa" ;
+_:node531208 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526388 sh:prefix "om" ;
+_:node531209 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526389 sh:prefix "sw" ;
+_:node531210 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526386 sh:prefixes _:node526387 , _:node526388 , _:node526389 ;
+_:node531207 sh:prefixes _:node531208 , _:node531209 , _:node531210 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AutomaticDocumentFeederResURI.swagger.json#/paths//AutomaticDocumentFeederResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Automatic%20Document%20Feeder>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AutomaticDocumentFeederResURI.swagger.json#/paths//AutomaticDocumentFeederResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/adfStates> ?val . }" .
 
-_:node526385 sh:rule _:node526386 .
+_:node531206 sh:rule _:node531207 .
 
-_:node526390 a sh:NodeShape ;
+_:node531211 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Automatic%20Document%20Feeder> .
 
-_:node526391 a sh:SPARQLRule .
+_:node531212 a sh:SPARQLRule .
 
-_:node526392 sh:prefix "sosa" ;
+_:node531213 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526393 sh:prefix "om" ;
+_:node531214 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526394 sh:prefix "sw" ;
+_:node531215 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526391 sh:prefixes _:node526392 , _:node526393 , _:node526394 ;
+_:node531212 sh:prefixes _:node531213 , _:node531214 , _:node531215 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AutomaticDocumentFeederResURI.swagger.json#/paths//AutomaticDocumentFeederResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Automatic%20Document%20Feeder>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AutomaticDocumentFeederResURI.swagger.json#/paths//AutomaticDocumentFeederResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/currentAdfState> ?val . }" .
 
-_:node526390 sh:rule _:node526391 .
+_:node531211 sh:rule _:node531212 .
 
-_:node526395 a sh:NodeShape ;
+_:node531216 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Auto%20White%20Balance> .
 
-_:node526396 a sh:SPARQLRule .
+_:node531217 a sh:SPARQLRule .
 
-_:node526397 sh:prefix "sosa" ;
+_:node531218 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526398 sh:prefix "om" ;
+_:node531219 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526399 sh:prefix "sw" ;
+_:node531220 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526396 sh:prefixes _:node526397 , _:node526398 , _:node526399 ;
+_:node531217 sh:prefixes _:node531218 , _:node531219 , _:node531220 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/AutoWhiteBalanceResURI.swagger.json#/paths//AutoWhiteBalanceResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Auto%20White%20Balance>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/AutoWhiteBalanceResURI.swagger.json#/paths//AutoWhiteBalanceResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/autoWhiteBalance> ?val . }" .
 
-_:node526395 sh:rule _:node526396 .
+_:node531216 sh:rule _:node531217 .
 
-_:node526400 a sh:NodeShape ;
+_:node531221 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/BatteryMaterial> .
 
-_:node526401 a sh:SPARQLRule .
+_:node531222 a sh:SPARQLRule .
 
-_:node526402 sh:prefix "sosa" ;
+_:node531223 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526403 sh:prefix "om" ;
+_:node531224 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526404 sh:prefix "sw" ;
+_:node531225 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526401 sh:prefixes _:node526402 , _:node526403 , _:node526404 ;
+_:node531222 sh:prefixes _:node531223 , _:node531224 , _:node531225 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/BatteryMaterialResURI.swagger.json#/paths//BatteryMaterialResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/BatteryMaterial>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/BatteryMaterialResURI.swagger.json#/paths//BatteryMaterialResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/material> ?val . }" .
 
-_:node526400 sh:rule _:node526401 .
+_:node531221 sh:rule _:node531222 .
 
-_:node526405 a sh:NodeShape ;
+_:node531226 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Battery> .
 
-_:node526406 a sh:SPARQLRule .
+_:node531227 a sh:SPARQLRule .
 
-_:node526407 sh:prefix "sosa" ;
+_:node531228 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526408 sh:prefix "om" ;
+_:node531229 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526409 sh:prefix "sw" ;
+_:node531230 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526406 sh:prefixes _:node526407 , _:node526408 , _:node526409 ;
+_:node531227 sh:prefixes _:node531228 , _:node531229 , _:node531230 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/BatteryResURI.swagger.json#/paths//BatteryResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Battery>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/BatteryResURI.swagger.json#/paths//BatteryResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/charge> ?val . }" .
 
-_:node526405 sh:rule _:node526406 .
+_:node531226 sh:rule _:node531227 .
 
-_:node526410 a sh:NodeShape ;
+_:node531231 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Binary%20Switch> .
 
-_:node526411 a sh:SPARQLRule .
+_:node531232 a sh:SPARQLRule .
 
-_:node526412 sh:prefix "sosa" ;
+_:node531233 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526413 sh:prefix "om" ;
+_:node531234 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526414 sh:prefix "sw" ;
+_:node531235 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526411 sh:prefixes _:node526412 , _:node526413 , _:node526414 ;
+_:node531232 sh:prefixes _:node531233 , _:node531234 , _:node531235 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/BinarySwitchResURI.swagger.json#/paths//BinarySwitchResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Binary%20Switch>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/BinarySwitchResURI.swagger.json#/paths//BinarySwitchResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/value> ?val . }" .
 
-_:node526410 sh:rule _:node526411 .
+_:node531231 sh:rule _:node531232 .
 
-_:node526415 a sh:NodeShape ;
+_:node531236 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Brewing> .
 
-_:node526416 a sh:SPARQLRule .
+_:node531237 a sh:SPARQLRule .
 
-_:node526417 sh:prefix "sosa" ;
+_:node531238 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526418 sh:prefix "om" ;
+_:node531239 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526419 sh:prefix "sw" ;
+_:node531240 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526416 sh:prefixes _:node526417 , _:node526418 , _:node526419 ;
+_:node531237 sh:prefixes _:node531238 , _:node531239 , _:node531240 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/BrewingResURI.swagger.json#/paths//BrewingResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Brewing>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/BrewingResURI.swagger.json#/paths//BrewingResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/amountrequested> ?val . }" .
 
-_:node526415 sh:rule _:node526416 .
+_:node531236 sh:rule _:node531237 .
 
-_:node526420 a sh:NodeShape ;
+_:node531241 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Brightness> .
 
-_:node526421 a sh:SPARQLRule .
+_:node531242 a sh:SPARQLRule .
 
-_:node526422 sh:prefix "sosa" ;
+_:node531243 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526423 sh:prefix "om" ;
+_:node531244 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526424 sh:prefix "sw" ;
+_:node531245 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526421 sh:prefixes _:node526422 , _:node526423 , _:node526424 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/BrightnessResURI.swagger.json#/paths//BrightnessResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Brightness_temperature> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Brightness>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/BrightnessResURI.swagger.json#/paths//BrightnessResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/brightness> ?val . }" .
+_:node531242 sh:prefixes _:node531243 , _:node531244 , _:node531245 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/BrightnessResURI.swagger.json#/paths//BrightnessResURI/get> ; sosa:observedProperty [ a <http://w3id.org/saref#Light> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Brightness>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/BrightnessResURI.swagger.json#/paths//BrightnessResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/brightness> ?val . }" .
 
-_:node526420 sh:rule _:node526421 .
+_:node531241 sh:rule _:node531242 .
 
-_:node526425 a sh:NodeShape ;
+_:node531246 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Clock> .
 
-_:node526426 a sh:SPARQLRule .
+_:node531247 a sh:SPARQLRule .
 
-_:node526427 sh:prefix "sosa" ;
+_:node531248 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526428 sh:prefix "om" ;
+_:node531249 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526429 sh:prefix "sw" ;
+_:node531250 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526426 sh:prefixes _:node526427 , _:node526428 , _:node526429 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ClockResURI.swagger.json#/paths//ClockResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Clock>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ClockResURI.swagger.json#/paths//ClockResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/datetime> ?val . }" .
+_:node531247 sh:prefixes _:node531248 , _:node531249 , _:node531250 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ClockResURI.swagger.json#/paths//ClockResURI/get> ; sosa:observedProperty [ a <http://w3id.org/saref#Time> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Clock>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ClockResURI.swagger.json#/paths//ClockResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/datetime> ?val . }" .
 
-_:node526425 sh:rule _:node526426 .
+_:node531246 sh:rule _:node531247 .
 
-_:node526430 a sh:NodeShape ;
+_:node531251 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Hue%20and%20Saturation> .
 
-_:node526431 a sh:SPARQLRule .
+_:node531252 a sh:SPARQLRule .
 
-_:node526432 sh:prefix "sosa" ;
+_:node531253 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526433 sh:prefix "om" ;
+_:node531254 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526434 sh:prefix "sw" ;
+_:node531255 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526431 sh:prefixes _:node526432 , _:node526433 , _:node526434 ;
+_:node531252 sh:prefixes _:node531253 , _:node531254 , _:node531255 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ColourHueSaturationResURI.swagger.json#/paths//example/ColourHueSaturationResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Hue%20and%20Saturation>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ColourHueSaturationResURI.swagger.json#/paths//example/ColourHueSaturationResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/hue> ?val . }" .
 
-_:node526430 sh:rule _:node526431 .
+_:node531251 sh:rule _:node531252 .
 
-_:node526435 a sh:NodeShape ;
+_:node531256 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Hue%20and%20Saturation> .
 
-_:node526436 a sh:SPARQLRule .
+_:node531257 a sh:SPARQLRule .
 
-_:node526437 sh:prefix "sosa" ;
+_:node531258 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526438 sh:prefix "om" ;
+_:node531259 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526439 sh:prefix "sw" ;
+_:node531260 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526436 sh:prefixes _:node526437 , _:node526438 , _:node526439 ;
+_:node531257 sh:prefixes _:node531258 , _:node531259 , _:node531260 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ColourHueSaturationResURI.swagger.json#/paths//example/ColourHueSaturationResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Hue%20and%20Saturation>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ColourHueSaturationResURI.swagger.json#/paths//example/ColourHueSaturationResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/saturation> ?val . }" .
 
-_:node526435 sh:rule _:node526436 .
+_:node531256 sh:rule _:node531257 .
 
-_:node526440 a sh:NodeShape ;
+_:node531261 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Colour%20RGB> .
 
-_:node526441 a sh:SPARQLRule .
+_:node531262 a sh:SPARQLRule .
 
-_:node526442 sh:prefix "sosa" ;
+_:node531263 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526443 sh:prefix "om" ;
+_:node531264 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526444 sh:prefix "sw" ;
+_:node531265 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526441 sh:prefixes _:node526442 , _:node526443 , _:node526444 ;
+_:node531262 sh:prefixes _:node531263 , _:node531264 , _:node531265 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ColourRGBResURI.swagger.json#/paths//ColourRGBResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Colour%20RGB>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ColourRGBResURI.swagger.json#/paths//ColourRGBResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/rgbValue> ?val . }" .
 
-_:node526440 sh:rule _:node526441 .
+_:node531261 sh:rule _:node531262 .
 
-_:node526445 a sh:NodeShape ;
+_:node531266 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Saturation> .
 
-_:node526446 a sh:SPARQLRule .
+_:node531267 a sh:SPARQLRule .
 
-_:node526447 sh:prefix "sosa" ;
+_:node531268 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526448 sh:prefix "om" ;
+_:node531269 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526449 sh:prefix "sw" ;
+_:node531270 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526446 sh:prefixes _:node526447 , _:node526448 , _:node526449 ;
+_:node531267 sh:prefixes _:node531268 , _:node531269 , _:node531270 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ColourSaturationResURI.swagger.json#/paths//ColourSaturationResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Saturation>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ColourSaturationResURI.swagger.json#/paths//ColourSaturationResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/colourSaturation> ?val . }" .
 
-_:node526445 sh:rule _:node526446 .
+_:node531266 sh:rule _:node531267 .
 
-_:node526450 a sh:NodeShape ;
+_:node531271 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Space%20Coordinates> .
 
-_:node526451 a sh:SPARQLRule .
+_:node531272 a sh:SPARQLRule .
 
-_:node526452 sh:prefix "sosa" ;
+_:node531273 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526453 sh:prefix "om" ;
+_:node531274 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526454 sh:prefix "sw" ;
+_:node531275 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526451 sh:prefixes _:node526452 , _:node526453 , _:node526454 ;
+_:node531272 sh:prefixes _:node531273 , _:node531274 , _:node531275 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ColourSpaceCoordinatesResURI.swagger.json#/paths//example/ColourSpaceCoordinatesResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Space_coordinates> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Space%20Coordinates>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ColourSpaceCoordinatesResURI.swagger.json#/paths//example/ColourSpaceCoordinatesResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/csc> ?val . }" .
 
-_:node526450 sh:rule _:node526451 .
+_:node531271 sh:rule _:node531272 .
 
-_:node526455 a sh:NodeShape ;
+_:node531276 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Temperature> .
 
-_:node526456 a sh:SPARQLRule .
+_:node531277 a sh:SPARQLRule .
 
-_:node526457 sh:prefix "sosa" ;
+_:node531278 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526458 sh:prefix "om" ;
+_:node531279 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526459 sh:prefix "sw" ;
+_:node531280 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526456 sh:prefixes _:node526457 , _:node526458 , _:node526459 ;
+_:node531277 sh:prefixes _:node531278 , _:node531279 , _:node531280 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ColourTemperatureResURI.swagger.json#/paths//example/ColourTemperatureResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Colour_temperature> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Colour%20Temperature>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ColourTemperatureResURI.swagger.json#/paths//example/ColourTemperatureResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/ct> ?val . }" .
 
-_:node526455 sh:rule _:node526456 .
+_:node531276 sh:rule _:node531277 .
 
-_:node526460 a sh:NodeShape ;
+_:node531281 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Consumable> .
 
-_:node526461 a sh:SPARQLRule .
+_:node531282 a sh:SPARQLRule .
 
-_:node526462 sh:prefix "sosa" ;
+_:node531283 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526463 sh:prefix "om" ;
+_:node531284 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526464 sh:prefix "sw" ;
+_:node531285 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526461 sh:prefixes _:node526462 , _:node526463 , _:node526464 ;
+_:node531282 sh:prefixes _:node531283 , _:node531284 , _:node531285 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ConsumableResURI.swagger.json#/paths//ConsumableResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Consumable>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ConsumableResURI.swagger.json#/paths//ConsumableResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/typeofconsumable> ?val . }" .
 
-_:node526460 sh:rule _:node526461 .
+_:node531281 sh:rule _:node531282 .
 
-_:node526465 a sh:NodeShape ;
+_:node531286 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Consumable> .
 
-_:node526466 a sh:SPARQLRule .
+_:node531287 a sh:SPARQLRule .
 
-_:node526467 sh:prefix "sosa" ;
+_:node531288 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526468 sh:prefix "om" ;
+_:node531289 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526469 sh:prefix "sw" ;
+_:node531290 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526466 sh:prefixes _:node526467 , _:node526468 , _:node526469 ;
+_:node531287 sh:prefixes _:node531288 , _:node531289 , _:node531290 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ConsumableResURI.swagger.json#/paths//ConsumableResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Consumable>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ConsumableResURI.swagger.json#/paths//ConsumableResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/remaining> ?val . }" .
 
-_:node526465 sh:rule _:node526466 .
+_:node531286 sh:rule _:node531287 .
 
-_:node526470 a sh:NodeShape ;
+_:node531291 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Dimming> .
 
-_:node526471 a sh:SPARQLRule .
+_:node531292 a sh:SPARQLRule .
 
-_:node526472 sh:prefix "sosa" ;
+_:node531293 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526473 sh:prefix "om" ;
+_:node531294 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526474 sh:prefix "sw" ;
+_:node531295 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526471 sh:prefixes _:node526472 , _:node526473 , _:node526474 ;
+_:node531292 sh:prefixes _:node531293 , _:node531294 , _:node531295 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/DimmingResURI.swagger.json#/paths//DimmingResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Dimming>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/DimmingResURI.swagger.json#/paths//DimmingResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/dimmingSetting> ?val . }" .
 
-_:node526470 sh:rule _:node526471 .
+_:node531291 sh:rule _:node531292 .
 
-_:node526475 a sh:NodeShape ;
+_:node531296 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Door> .
 
-_:node526476 a sh:SPARQLRule .
+_:node531297 a sh:SPARQLRule .
 
-_:node526477 sh:prefix "sosa" ;
+_:node531298 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526478 sh:prefix "om" ;
+_:node531299 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526479 sh:prefix "sw" ;
+_:node531300 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526476 sh:prefixes _:node526477 , _:node526478 , _:node526479 ;
+_:node531297 sh:prefixes _:node531298 , _:node531299 , _:node531300 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/DoorResURI.swagger.json#/paths//DoorResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Door>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/DoorResURI.swagger.json#/paths//DoorResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/openState> ?val . }" .
 
-_:node526475 sh:rule _:node526476 .
+_:node531296 sh:rule _:node531297 .
 
-_:node526480 a sh:NodeShape ;
+_:node531301 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Demand%20Response%20Load%20Control%20(DRLC).> .
 
-_:node526481 a sh:SPARQLRule .
+_:node531302 a sh:SPARQLRule .
 
-_:node526482 sh:prefix "sosa" ;
+_:node531303 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526483 sh:prefix "om" ;
+_:node531304 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526484 sh:prefix "sw" ;
+_:node531305 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526481 sh:prefixes _:node526482 , _:node526483 , _:node526484 ;
+_:node531302 sh:prefixes _:node531303 , _:node531304 , _:node531305 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/DRLCResURI.swagger.json#/paths//DRLCResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Demand%20Response%20Load%20Control%20(DRLC).>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/DRLCResURI.swagger.json#/paths//DRLCResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/DRType> ?val . }" .
 
-_:node526480 sh:rule _:node526481 .
+_:node531301 sh:rule _:node531302 .
 
-_:node526485 a sh:NodeShape ;
+_:node531306 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy%20Consumption> .
 
-_:node526486 a sh:SPARQLRule .
+_:node531307 a sh:SPARQLRule .
 
-_:node526487 sh:prefix "sosa" ;
+_:node531308 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526488 sh:prefix "om" ;
+_:node531309 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526489 sh:prefix "sw" ;
+_:node531310 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526486 sh:prefixes _:node526487 , _:node526488 , _:node526489 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/paths//EnergyConsumptionResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy%20Consumption>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/paths//EnergyConsumptionResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/power> ?val . }" .
+_:node531307 sh:prefixes _:node531308 , _:node531309 , _:node531310 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/paths//EnergyConsumptionResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Power> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy%20Consumption>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/paths//EnergyConsumptionResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/power> ?val . }" .
 
-_:node526485 sh:rule _:node526486 .
+_:node531306 sh:rule _:node531307 .
 
-_:node526490 a sh:NodeShape ;
+_:node531311 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy%20Consumption> .
 
-_:node526491 a sh:SPARQLRule .
+_:node531312 a sh:SPARQLRule .
 
-_:node526492 sh:prefix "sosa" ;
+_:node531313 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526493 sh:prefix "om" ;
+_:node531314 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526494 sh:prefix "sw" ;
+_:node531315 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526491 sh:prefixes _:node526492 , _:node526493 , _:node526494 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/paths//EnergyConsumptionResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy%20Consumption>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/paths//EnergyConsumptionResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/energy> ?val . }" .
+_:node531312 sh:prefixes _:node531313 , _:node531314 , _:node531315 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/paths//EnergyConsumptionResURI/get> ; sosa:observedProperty [ a <http://w3id.org/saref#Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy%20Consumption>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/paths//EnergyConsumptionResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/energy> ?val . }" .
 
-_:node526490 sh:rule _:node526491 .
+_:node531311 sh:rule _:node531312 .
 
-_:node526495 a sh:NodeShape ;
+_:node531316 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/EnergyGeneration> .
 
-_:node526496 a sh:SPARQLRule .
+_:node531317 a sh:SPARQLRule .
 
-_:node526497 sh:prefix "sosa" ;
+_:node531318 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526498 sh:prefix "om" ;
+_:node531319 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526499 sh:prefix "sw" ;
+_:node531320 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526496 sh:prefixes _:node526497 , _:node526498 , _:node526499 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyGenerationResURI.swagger.json#/paths//EnergyGenerationResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/EnergyGeneration>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyGenerationResURI.swagger.json#/paths//EnergyGenerationResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/energygenerated> ?val . }" .
+_:node531317 sh:prefixes _:node531318 , _:node531319 , _:node531320 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyGenerationResURI.swagger.json#/paths//EnergyGenerationResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/EnergyGeneration>, <http://w3id.org/saref#Generator> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyGenerationResURI.swagger.json#/paths//EnergyGenerationResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/energygenerated> ?val . }" .
 
-_:node526495 sh:rule _:node526496 .
+_:node531316 sh:rule _:node531317 .
 
-_:node526500 a sh:NodeShape ;
+_:node531321 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy> .
 
-_:node526501 a sh:SPARQLRule .
+_:node531322 a sh:SPARQLRule .
 
-_:node526502 sh:prefix "sosa" ;
+_:node531323 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526503 sh:prefix "om" ;
+_:node531324 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526504 sh:prefix "sw" ;
+_:node531325 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526501 sh:prefixes _:node526502 , _:node526503 , _:node526504 ;
+_:node531322 sh:prefixes _:node531323 , _:node531324 , _:node531325 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/voltage> ?val . }" .
 
-_:node526500 sh:rule _:node526501 .
+_:node531321 sh:rule _:node531322 .
 
-_:node526505 a sh:NodeShape ;
+_:node531326 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy> .
 
-_:node526506 a sh:SPARQLRule .
+_:node531327 a sh:SPARQLRule .
 
-_:node526507 sh:prefix "sosa" ;
+_:node531328 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526508 sh:prefix "om" ;
+_:node531329 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526509 sh:prefix "sw" ;
+_:node531330 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526506 sh:prefixes _:node526507 , _:node526508 , _:node526509 ;
+_:node531327 sh:prefixes _:node531328 , _:node531329 , _:node531330 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sosa:observedProperty [ a <http://w3id.org/saref#Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/voltage> ?val . }" .
 
-_:node526505 sh:rule _:node526506 .
+_:node531326 sh:rule _:node531327 .
 
-_:node526510 a sh:NodeShape ;
+_:node531331 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy> .
 
-_:node526511 a sh:SPARQLRule .
+_:node531332 a sh:SPARQLRule .
 
-_:node526512 sh:prefix "sosa" ;
+_:node531333 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526513 sh:prefix "om" ;
+_:node531334 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526514 sh:prefix "sw" ;
+_:node531335 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526511 sh:prefixes _:node526512 , _:node526513 , _:node526514 ;
+_:node531332 sh:prefixes _:node531333 , _:node531334 , _:node531335 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Electric_potential> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/voltage> ?val . }" .
+
+_:node531331 sh:rule _:node531332 .
+
+_:node531336 a sh:NodeShape ;
+	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy> .
+
+_:node531337 a sh:SPARQLRule .
+
+_:node531338 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node531339 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node531340 sh:prefix "sw" ;
+	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
+
+_:node531337 sh:prefixes _:node531338 , _:node531339 , _:node531340 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/current> ?val . }" .
 
-_:node526510 sh:rule _:node526511 .
+_:node531336 sh:rule _:node531337 .
 
-_:node526515 a sh:NodeShape ;
+_:node531341 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy> .
 
-_:node526516 a sh:SPARQLRule .
+_:node531342 a sh:SPARQLRule .
 
-_:node526517 sh:prefix "sosa" ;
+_:node531343 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526518 sh:prefix "om" ;
+_:node531344 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526519 sh:prefix "sw" ;
+_:node531345 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526516 sh:prefixes _:node526517 , _:node526518 , _:node526519 ;
+_:node531342 sh:prefixes _:node531343 , _:node531344 , _:node531345 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sosa:observedProperty [ a <http://w3id.org/saref#Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/current> ?val . }" .
 
-_:node526515 sh:rule _:node526516 .
+_:node531341 sh:rule _:node531342 .
 
-_:node526520 a sh:NodeShape ;
+_:node531346 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy> .
 
-_:node526521 a sh:SPARQLRule .
+_:node531347 a sh:SPARQLRule .
 
-_:node526522 sh:prefix "sosa" ;
+_:node531348 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526523 sh:prefix "om" ;
+_:node531349 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526524 sh:prefix "sw" ;
+_:node531350 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526521 sh:prefixes _:node526522 , _:node526523 , _:node526524 ;
+_:node531347 sh:prefixes _:node531348 , _:node531349 , _:node531350 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Electric_current> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/current> ?val . }" .
+
+_:node531346 sh:rule _:node531347 .
+
+_:node531351 a sh:NodeShape ;
+	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy> .
+
+_:node531352 a sh:SPARQLRule .
+
+_:node531353 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node531354 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node531355 sh:prefix "sw" ;
+	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
+
+_:node531352 sh:prefixes _:node531353 , _:node531354 , _:node531355 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/frequency> ?val . }" .
 
-_:node526520 sh:rule _:node526521 .
+_:node531351 sh:rule _:node531352 .
 
-_:node526525 a sh:NodeShape ;
+_:node531356 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy> .
 
-_:node526526 a sh:SPARQLRule .
+_:node531357 a sh:SPARQLRule .
 
-_:node526527 sh:prefix "sosa" ;
+_:node531358 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526528 sh:prefix "om" ;
+_:node531359 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526529 sh:prefix "sw" ;
+_:node531360 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526526 sh:prefixes _:node526527 , _:node526528 , _:node526529 ;
+_:node531357 sh:prefixes _:node531358 , _:node531359 , _:node531360 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sosa:observedProperty [ a <http://w3id.org/saref#Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/frequency> ?val . }" .
 
-_:node526525 sh:rule _:node526526 .
+_:node531356 sh:rule _:node531357 .
 
-_:node526530 a sh:NodeShape ;
+_:node531361 a sh:NodeShape ;
+	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Energy> .
+
+_:node531362 a sh:SPARQLRule .
+
+_:node531363 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node531364 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node531365 sh:prefix "sw" ;
+	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
+
+_:node531362 sh:prefixes _:node531363 , _:node531364 , _:node531365 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Frequency> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Energy>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/paths//EnergyResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/frequency> ?val . }" .
+
+_:node531361 sh:rule _:node531362 .
+
+_:node531366 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Foaming> .
 
-_:node526531 a sh:SPARQLRule .
+_:node531367 a sh:SPARQLRule .
 
-_:node526532 sh:prefix "sosa" ;
+_:node531368 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526533 sh:prefix "om" ;
+_:node531369 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526534 sh:prefix "sw" ;
+_:node531370 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526531 sh:prefixes _:node526532 , _:node526533 , _:node526534 ;
+_:node531367 sh:prefixes _:node531368 , _:node531369 , _:node531370 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/FoamingResURI.swagger.json#/paths//FoamingResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Foaming>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/FoamingResURI.swagger.json#/paths//FoamingResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/foamstrength> ?val . }" .
 
-_:node526530 sh:rule _:node526531 .
+_:node531366 sh:rule _:node531367 .
 
-_:node526535 a sh:NodeShape ;
+_:node531371 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Grinder> .
 
-_:node526536 a sh:SPARQLRule .
+_:node531372 a sh:SPARQLRule .
 
-_:node526537 sh:prefix "sosa" ;
+_:node531373 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526538 sh:prefix "om" ;
+_:node531374 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526539 sh:prefix "sw" ;
+_:node531375 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526536 sh:prefixes _:node526537 , _:node526538 , _:node526539 ;
+_:node531372 sh:prefixes _:node531373 , _:node531374 , _:node531375 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/GrinderResURI.swagger.json#/paths//GrinderResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Grinder>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/GrinderResURI.swagger.json#/paths//GrinderResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/coarseness> ?val . }" .
 
-_:node526535 sh:rule _:node526536 .
+_:node531371 sh:rule _:node531372 .
 
-_:node526540 a sh:NodeShape ;
+_:node531376 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Heating%20Zone> .
 
-_:node526541 a sh:SPARQLRule .
+_:node531377 a sh:SPARQLRule .
 
-_:node526542 sh:prefix "sosa" ;
+_:node531378 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526543 sh:prefix "om" ;
+_:node531379 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526544 sh:prefix "sw" ;
+_:node531380 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526541 sh:prefixes _:node526542 , _:node526543 , _:node526544 ;
+_:node531377 sh:prefixes _:node531378 , _:node531379 , _:node531380 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/HeatingZoneResURI.swagger.json#/paths//HeatingZoneResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Heating%20Zone>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/HeatingZoneResURI.swagger.json#/paths//HeatingZoneResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/maxheatinglevel> ?val . }" .
 
-_:node526540 sh:rule _:node526541 .
+_:node531376 sh:rule _:node531377 .
 
-_:node526545 a sh:NodeShape ;
+_:node531381 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Heating%20Zone> .
 
-_:node526546 a sh:SPARQLRule .
+_:node531382 a sh:SPARQLRule .
 
-_:node526547 sh:prefix "sosa" ;
+_:node531383 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526548 sh:prefix "om" ;
+_:node531384 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526549 sh:prefix "sw" ;
+_:node531385 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526546 sh:prefixes _:node526547 , _:node526548 , _:node526549 ;
+_:node531382 sh:prefixes _:node531383 , _:node531384 , _:node531385 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/HeatingZoneResURI.swagger.json#/paths//HeatingZoneResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Heating%20Zone>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/HeatingZoneResURI.swagger.json#/paths//HeatingZoneResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/heatinglevel> ?val . }" .
 
-_:node526545 sh:rule _:node526546 .
+_:node531381 sh:rule _:node531382 .
 
-_:node526550 a sh:NodeShape ;
+_:node531386 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Height> .
 
-_:node526551 a sh:SPARQLRule .
+_:node531387 a sh:SPARQLRule .
 
-_:node526552 sh:prefix "sosa" ;
+_:node531388 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526553 sh:prefix "om" ;
+_:node531389 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526554 sh:prefix "sw" ;
+_:node531390 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526551 sh:prefixes _:node526552 , _:node526553 , _:node526554 ;
+_:node531387 sh:prefixes _:node531388 , _:node531389 , _:node531390 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/HeightResURI.swagger.json#/paths//HeightResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Height> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Height>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/HeightResURI.swagger.json#/paths//HeightResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/height> ?val . }" .
 
-_:node526550 sh:rule _:node526551 .
+_:node531386 sh:rule _:node531387 .
 
-_:node526555 a sh:NodeShape ;
+_:node531391 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Humidity> .
 
-_:node526556 a sh:SPARQLRule .
+_:node531392 a sh:SPARQLRule .
 
-_:node526557 sh:prefix "sosa" ;
+_:node531393 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526558 sh:prefix "om" ;
+_:node531394 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526559 sh:prefix "sw" ;
+_:node531395 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526556 sh:prefixes _:node526557 , _:node526558 , _:node526559 ;
+_:node531392 sh:prefixes _:node531393 , _:node531394 , _:node531395 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/HumidityResURI.swagger.json#/paths//HumidityResURI/get> ; sosa:observedProperty [ a <http://w3id.org/saref#Humidity> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Humidity>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/HumidityResURI.swagger.json#/paths//HumidityResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/humidity> ?val . }" .
 
-_:node526555 sh:rule _:node526556 .
+_:node531391 sh:rule _:node531392 .
 
-_:node526560 a sh:NodeShape ;
+_:node531396 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Ice%20Maker> .
 
-_:node526561 a sh:SPARQLRule .
+_:node531397 a sh:SPARQLRule .
 
-_:node526562 sh:prefix "sosa" ;
+_:node531398 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526563 sh:prefix "om" ;
+_:node531399 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526564 sh:prefix "sw" ;
+_:node531400 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526561 sh:prefixes _:node526562 , _:node526563 , _:node526564 ;
+_:node531397 sh:prefixes _:node531398 , _:node531399 , _:node531400 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/IceMakerResURI.swagger.json#/paths//IceMakerResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Ice%20Maker>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/IceMakerResURI.swagger.json#/paths//IceMakerResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/status> ?val . }" .
 
-_:node526560 sh:rule _:node526561 .
+_:node531396 sh:rule _:node531397 .
 
-_:node526565 a sh:NodeShape ;
+_:node531401 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/LiquidLevel> .
 
-_:node526566 a sh:SPARQLRule .
+_:node531402 a sh:SPARQLRule .
 
-_:node526567 sh:prefix "sosa" ;
+_:node531403 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526568 sh:prefix "om" ;
+_:node531404 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526569 sh:prefix "sw" ;
+_:node531405 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526566 sh:prefixes _:node526567 , _:node526568 , _:node526569 ;
+_:node531402 sh:prefixes _:node531403 , _:node531404 , _:node531405 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/LiquidLevelResURI.swagger.json#/paths//LiquidLevelResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/LiquidLevel>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/LiquidLevelResURI.swagger.json#/paths//LiquidLevelResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/currentlevel> ?val . }" .
 
-_:node526565 sh:rule _:node526566 .
+_:node531401 sh:rule _:node531402 .
 
-_:node526570 a sh:NodeShape ;
+_:node531406 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Lock%20Code> .
 
-_:node526571 a sh:SPARQLRule .
+_:node531407 a sh:SPARQLRule .
 
-_:node526572 sh:prefix "sosa" ;
+_:node531408 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526573 sh:prefix "om" ;
+_:node531409 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526574 sh:prefix "sw" ;
+_:node531410 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526571 sh:prefixes _:node526572 , _:node526573 , _:node526574 ;
+_:node531407 sh:prefixes _:node531408 , _:node531409 , _:node531410 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/LockCodeResURI.swagger.json#/paths//LockCodeResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Lock%20Code>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/LockCodeResURI.swagger.json#/paths//LockCodeResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/lockCodeList> ?val . }" .
 
-_:node526570 sh:rule _:node526571 .
+_:node531406 sh:rule _:node531407 .
 
-_:node526575 a sh:NodeShape ;
+_:node531411 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Lock> .
 
-_:node526576 a sh:SPARQLRule .
+_:node531412 a sh:SPARQLRule .
 
-_:node526577 sh:prefix "sosa" ;
+_:node531413 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526578 sh:prefix "om" ;
+_:node531414 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526579 sh:prefix "sw" ;
+_:node531415 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526576 sh:prefixes _:node526577 , _:node526578 , _:node526579 ;
+_:node531412 sh:prefixes _:node531413 , _:node531414 , _:node531415 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/LockStatusResURI.swagger.json#/paths//LockStatusResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Lock>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/LockStatusResURI.swagger.json#/paths//LockStatusResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/lockState> ?val . }" .
 
-_:node526575 sh:rule _:node526576 .
+_:node531411 sh:rule _:node531412 .
 
-_:node526580 a sh:NodeShape ;
+_:node531416 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Mode> .
 
-_:node526581 a sh:SPARQLRule .
+_:node531417 a sh:SPARQLRule .
 
-_:node526582 sh:prefix "sosa" ;
+_:node531418 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526583 sh:prefix "om" ;
+_:node531419 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526584 sh:prefix "sw" ;
+_:node531420 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526581 sh:prefixes _:node526582 , _:node526583 , _:node526584 ;
+_:node531417 sh:prefixes _:node531418 , _:node531419 , _:node531420 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ModeResURI.swagger.json#/paths//ModeResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Mode>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ModeResURI.swagger.json#/paths//ModeResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/supportedModes> ?val . }" .
 
-_:node526580 sh:rule _:node526581 .
+_:node531416 sh:rule _:node531417 .
 
-_:node526585 a sh:NodeShape ;
+_:node531421 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Mode> .
 
-_:node526586 a sh:SPARQLRule .
+_:node531422 a sh:SPARQLRule .
 
-_:node526587 sh:prefix "sosa" ;
+_:node531423 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526588 sh:prefix "om" ;
+_:node531424 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526589 sh:prefix "sw" ;
+_:node531425 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526586 sh:prefixes _:node526587 , _:node526588 , _:node526589 ;
+_:node531422 sh:prefixes _:node531423 , _:node531424 , _:node531425 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/ModeResURI.swagger.json#/paths//ModeResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Mode>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/ModeResURI.swagger.json#/paths//ModeResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/modes> ?val . }" .
 
-_:node526585 sh:rule _:node526586 .
+_:node531421 sh:rule _:node531422 .
 
-_:node526590 a sh:NodeShape ;
+_:node531426 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Movement> .
 
-_:node526591 a sh:SPARQLRule .
+_:node531427 a sh:SPARQLRule .
 
-_:node526592 sh:prefix "sosa" ;
+_:node531428 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526593 sh:prefix "om" ;
+_:node531429 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526594 sh:prefix "sw" ;
+_:node531430 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526591 sh:prefixes _:node526592 , _:node526593 , _:node526594 ;
+_:node531427 sh:prefixes _:node531428 , _:node531429 , _:node531430 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/MovementResURI.swagger.json#/paths//MovementResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Movement>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/MovementResURI.swagger.json#/paths//MovementResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/movementSettings> ?val . }" .
 
-_:node526590 sh:rule _:node526591 .
+_:node531426 sh:rule _:node531427 .
 
-_:node526595 a sh:NodeShape ;
+_:node531431 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Movement> .
 
-_:node526596 a sh:SPARQLRule .
+_:node531432 a sh:SPARQLRule .
 
-_:node526597 sh:prefix "sosa" ;
+_:node531433 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526598 sh:prefix "om" ;
+_:node531434 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526599 sh:prefix "sw" ;
+_:node531435 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526596 sh:prefixes _:node526597 , _:node526598 , _:node526599 ;
+_:node531432 sh:prefixes _:node531433 , _:node531434 , _:node531435 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/MovementResURI.swagger.json#/paths//MovementResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Movement>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/MovementResURI.swagger.json#/paths//MovementResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/movement> ?val . }" .
 
-_:node526595 sh:rule _:node526596 .
+_:node531431 sh:rule _:node531432 .
 
-_:node526600 a sh:NodeShape ;
+_:node531436 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Night%20Mode> .
 
-_:node526601 a sh:SPARQLRule .
+_:node531437 a sh:SPARQLRule .
 
-_:node526602 sh:prefix "sosa" ;
+_:node531438 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526603 sh:prefix "om" ;
+_:node531439 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526604 sh:prefix "sw" ;
+_:node531440 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526601 sh:prefixes _:node526602 , _:node526603 , _:node526604 ;
+_:node531437 sh:prefixes _:node531438 , _:node531439 , _:node531440 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/NightModeResURI.swagger.json#/paths//NightModeResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Night%20Mode>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/NightModeResURI.swagger.json#/paths//NightModeResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/nightMode> ?val . }" .
 
-_:node526600 sh:rule _:node526601 .
+_:node531436 sh:rule _:node531437 .
 
-_:node526605 a sh:NodeShape ;
+_:node531441 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Open%20Level> .
 
-_:node526606 a sh:SPARQLRule .
+_:node531442 a sh:SPARQLRule .
 
-_:node526607 sh:prefix "sosa" ;
+_:node531443 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526608 sh:prefix "om" ;
+_:node531444 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526609 sh:prefix "sw" ;
+_:node531445 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526606 sh:prefixes _:node526607 , _:node526608 , _:node526609 ;
+_:node531442 sh:prefixes _:node531443 , _:node531444 , _:node531445 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/OpenLevelResURI.swagger.json#/paths//OpenLevelResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Open%20Level>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/OpenLevelResURI.swagger.json#/paths//OpenLevelResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/openLevel> ?val . }" .
 
-_:node526605 sh:rule _:node526606 .
+_:node531441 sh:rule _:node531442 .
 
-_:node526610 a sh:NodeShape ;
+_:node531446 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Operational%20State> .
 
-_:node526611 a sh:SPARQLRule .
+_:node531447 a sh:SPARQLRule .
 
-_:node526612 sh:prefix "sosa" ;
+_:node531448 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526613 sh:prefix "om" ;
+_:node531449 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526614 sh:prefix "sw" ;
+_:node531450 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526611 sh:prefixes _:node526612 , _:node526613 , _:node526614 ;
+_:node531447 sh:prefixes _:node531448 , _:node531449 , _:node531450 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/OperationalStateResURI.swagger.json#/paths//OperationalStateResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Operational%20State>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/OperationalStateResURI.swagger.json#/paths//OperationalStateResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/machineStates> ?val . }" .
 
-_:node526610 sh:rule _:node526611 .
+_:node531446 sh:rule _:node531447 .
 
-_:node526615 a sh:NodeShape ;
+_:node531451 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Operational%20State> .
 
-_:node526616 a sh:SPARQLRule .
+_:node531452 a sh:SPARQLRule .
 
-_:node526617 sh:prefix "sosa" ;
+_:node531453 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526618 sh:prefix "om" ;
+_:node531454 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526619 sh:prefix "sw" ;
+_:node531455 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526616 sh:prefixes _:node526617 , _:node526618 , _:node526619 ;
+_:node531452 sh:prefixes _:node531453 , _:node531454 , _:node531455 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/OperationalStateResURI.swagger.json#/paths//OperationalStateResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Operational%20State>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/OperationalStateResURI.swagger.json#/paths//OperationalStateResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/currentMachineState> ?val . }" .
 
-_:node526615 sh:rule _:node526616 .
+_:node531451 sh:rule _:node531452 .
 
-_:node526620 a sh:NodeShape ;
+_:node531456 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Pan%20Tilt%20Zoom%20Movement> .
 
-_:node526621 a sh:SPARQLRule .
+_:node531457 a sh:SPARQLRule .
 
-_:node526622 sh:prefix "sosa" ;
+_:node531458 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526623 sh:prefix "om" ;
+_:node531459 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526624 sh:prefix "sw" ;
+_:node531460 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526621 sh:prefixes _:node526622 , _:node526623 , _:node526624 ;
+_:node531457 sh:prefixes _:node531458 , _:node531459 , _:node531460 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/PanTiltZoomResURI.swagger.json#/paths//PanTiltZoomResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Pan%20Tilt%20Zoom%20Movement>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/PanTiltZoomResURI.swagger.json#/paths//PanTiltZoomResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/pan> ?val . }" .
 
-_:node526620 sh:rule _:node526621 .
+_:node531456 sh:rule _:node531457 .
 
-_:node526625 a sh:NodeShape ;
+_:node531461 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Pan%20Tilt%20Zoom%20Movement> .
 
-_:node526626 a sh:SPARQLRule .
+_:node531462 a sh:SPARQLRule .
 
-_:node526627 sh:prefix "sosa" ;
+_:node531463 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526628 sh:prefix "om" ;
+_:node531464 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526629 sh:prefix "sw" ;
+_:node531465 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526626 sh:prefixes _:node526627 , _:node526628 , _:node526629 ;
+_:node531462 sh:prefixes _:node531463 , _:node531464 , _:node531465 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/PanTiltZoomResURI.swagger.json#/paths//PanTiltZoomResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Pan%20Tilt%20Zoom%20Movement>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/PanTiltZoomResURI.swagger.json#/paths//PanTiltZoomResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/tilt> ?val . }" .
 
-_:node526625 sh:rule _:node526626 .
+_:node531461 sh:rule _:node531462 .
 
-_:node526630 a sh:NodeShape ;
+_:node531466 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Pan%20Tilt%20Zoom%20Movement> .
 
-_:node526631 a sh:SPARQLRule .
+_:node531467 a sh:SPARQLRule .
 
-_:node526632 sh:prefix "sosa" ;
+_:node531468 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526633 sh:prefix "om" ;
+_:node531469 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526634 sh:prefix "sw" ;
+_:node531470 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526631 sh:prefixes _:node526632 , _:node526633 , _:node526634 ;
+_:node531467 sh:prefixes _:node531468 , _:node531469 , _:node531470 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/PanTiltZoomResURI.swagger.json#/paths//PanTiltZoomResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Pan%20Tilt%20Zoom%20Movement>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/PanTiltZoomResURI.swagger.json#/paths//PanTiltZoomResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/zoomFactor> ?val . }" .
 
-_:node526630 sh:rule _:node526631 .
+_:node531466 sh:rule _:node531467 .
 
-_:node526635 a sh:NodeShape ;
+_:node531471 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Ramp%20Time> .
 
-_:node526636 a sh:SPARQLRule .
+_:node531472 a sh:SPARQLRule .
 
-_:node526637 sh:prefix "sosa" ;
+_:node531473 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526638 sh:prefix "om" ;
+_:node531474 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526639 sh:prefix "sw" ;
+_:node531475 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526636 sh:prefixes _:node526637 , _:node526638 , _:node526639 ;
+_:node531472 sh:prefixes _:node531473 , _:node531474 , _:node531475 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/RampTimeResURI.swagger.json#/paths//RampTimeResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Ramp%20Time>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/RampTimeResURI.swagger.json#/paths//RampTimeResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/rampTime> ?val . }" .
 
-_:node526635 sh:rule _:node526636 .
+_:node531471 sh:rule _:node531472 .
 
-_:node526640 a sh:NodeShape ;
+_:node531476 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Selectable%20Levels> .
 
-_:node526641 a sh:SPARQLRule .
+_:node531477 a sh:SPARQLRule .
 
-_:node526642 sh:prefix "sosa" ;
+_:node531478 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526643 sh:prefix "om" ;
+_:node531479 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526644 sh:prefix "sw" ;
+_:node531480 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526641 sh:prefixes _:node526642 , _:node526643 , _:node526644 ;
+_:node531477 sh:prefixes _:node531478 , _:node531479 , _:node531480 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/SelectableLevelsResURI.swagger.json#/paths//SelectableLevelsResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Selectable%20Levels>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/SelectableLevelsResURI.swagger.json#/paths//SelectableLevelsResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/availablelevels> ?val . }" .
 
-_:node526640 sh:rule _:node526641 .
+_:node531476 sh:rule _:node531477 .
 
-_:node526645 a sh:NodeShape ;
+_:node531481 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Selectable%20Levels> .
 
-_:node526646 a sh:SPARQLRule .
+_:node531482 a sh:SPARQLRule .
 
-_:node526647 sh:prefix "sosa" ;
+_:node531483 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526648 sh:prefix "om" ;
+_:node531484 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526649 sh:prefix "sw" ;
+_:node531485 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526646 sh:prefixes _:node526647 , _:node526648 , _:node526649 ;
+_:node531482 sh:prefixes _:node531483 , _:node531484 , _:node531485 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/SelectableLevelsResURI.swagger.json#/paths//SelectableLevelsResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Selectable%20Levels>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/SelectableLevelsResURI.swagger.json#/paths//SelectableLevelsResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/targetlevel> ?val . }" .
 
-_:node526645 sh:rule _:node526646 .
+_:node531481 sh:rule _:node531482 .
 
-_:node526650 a sh:NodeShape ;
+_:node531486 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Signal%20Strength> .
 
-_:node526651 a sh:SPARQLRule .
+_:node531487 a sh:SPARQLRule .
 
-_:node526652 sh:prefix "sosa" ;
+_:node531488 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526653 sh:prefix "om" ;
+_:node531489 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526654 sh:prefix "sw" ;
+_:node531490 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526651 sh:prefixes _:node526652 , _:node526653 , _:node526654 ;
+_:node531487 sh:prefixes _:node531488 , _:node531489 , _:node531490 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/SignalStrengthResURI.swagger.json#/paths//SignalStrengthResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Signal%20Strength>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/SignalStrengthResURI.swagger.json#/paths//SignalStrengthResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/lqi> ?val . }" .
 
-_:node526650 sh:rule _:node526651 .
+_:node531486 sh:rule _:node531487 .
 
-_:node526655 a sh:NodeShape ;
+_:node531491 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Signal%20Strength> .
 
-_:node526656 a sh:SPARQLRule .
+_:node531492 a sh:SPARQLRule .
 
-_:node526657 sh:prefix "sosa" ;
+_:node531493 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526658 sh:prefix "om" ;
+_:node531494 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526659 sh:prefix "sw" ;
+_:node531495 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526656 sh:prefixes _:node526657 , _:node526658 , _:node526659 ;
+_:node531492 sh:prefixes _:node531493 , _:node531494 , _:node531495 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/SignalStrengthResURI.swagger.json#/paths//SignalStrengthResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Signal%20Strength>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/SignalStrengthResURI.swagger.json#/paths//SignalStrengthResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/rssi> ?val . }" .
 
-_:node526655 sh:rule _:node526656 .
+_:node531491 sh:rule _:node531492 .
 
-_:node526660 a sh:NodeShape ;
+_:node531496 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Speech%20Synthesis-TTS> .
 
-_:node526661 a sh:SPARQLRule .
+_:node531497 a sh:SPARQLRule .
 
-_:node526662 sh:prefix "sosa" ;
+_:node531498 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526663 sh:prefix "om" ;
+_:node531499 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526664 sh:prefix "sw" ;
+_:node531500 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526661 sh:prefixes _:node526662 , _:node526663 , _:node526664 ;
+_:node531497 sh:prefixes _:node531498 , _:node531499 , _:node531500 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/SpeechTTSResURI.swagger.json#/paths//SpeechTTSResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Speech%20Synthesis-TTS>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/SpeechTTSResURI.swagger.json#/paths//SpeechTTSResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/utterance> ?val . }" .
 
-_:node526660 sh:rule _:node526661 .
+_:node531496 sh:rule _:node531497 .
 
-_:node526665 a sh:NodeShape ;
+_:node531501 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Temperature> .
 
-_:node526666 a sh:SPARQLRule .
+_:node531502 a sh:SPARQLRule .
 
-_:node526667 sh:prefix "sosa" ;
+_:node531503 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526668 sh:prefix "om" ;
+_:node531504 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526669 sh:prefix "sw" ;
+_:node531505 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526666 sh:prefixes _:node526667 , _:node526668 , _:node526669 ;
+_:node531502 sh:prefixes _:node531503 , _:node531504 , _:node531505 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/TemperatureResURI.swagger.json#/paths//TemperatureResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Temperature> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Temperature>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/TemperatureResURI.swagger.json#/paths//TemperatureResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/temperature> ?val . }" .
 
-_:node526665 sh:rule _:node526666 .
+_:node531501 sh:rule _:node531502 .
 
-_:node526670 a sh:NodeShape ;
+_:node531506 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Temperature> .
 
-_:node526671 a sh:SPARQLRule .
+_:node531507 a sh:SPARQLRule .
 
-_:node526672 sh:prefix "sosa" ;
+_:node531508 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526673 sh:prefix "om" ;
+_:node531509 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526674 sh:prefix "sw" ;
+_:node531510 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526671 sh:prefixes _:node526672 , _:node526673 , _:node526674 ;
+_:node531507 sh:prefixes _:node531508 , _:node531509 , _:node531510 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/TemperatureResURI.swagger.json#/paths//TemperatureResURI/get> ; sosa:observedProperty [ a <http://w3id.org/saref#Temperature> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Temperature>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/TemperatureResURI.swagger.json#/paths//TemperatureResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/temperature> ?val . }" .
 
-_:node526670 sh:rule _:node526671 .
+_:node531506 sh:rule _:node531507 .
 
-_:node526675 a sh:NodeShape ;
+_:node531511 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Time%20Period> .
 
-_:node526676 a sh:SPARQLRule .
+_:node531512 a sh:SPARQLRule .
 
-_:node526677 sh:prefix "sosa" ;
+_:node531513 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526678 sh:prefix "om" ;
+_:node531514 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526679 sh:prefix "sw" ;
+_:node531515 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526676 sh:prefixes _:node526677 , _:node526678 , _:node526679 ;
+_:node531512 sh:prefixes _:node531513 , _:node531514 , _:node531515 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/TimePeriodResURI.swagger.json#/paths//TimePeriodResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Time%20Period>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/TimePeriodResURI.swagger.json#/paths//TimePeriodResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/startTime> ?val . }" .
 
-_:node526675 sh:rule _:node526676 .
+_:node531511 sh:rule _:node531512 .
 
-_:node526680 a sh:NodeShape ;
+_:node531516 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/UV%20Radiation> .
 
-_:node526681 a sh:SPARQLRule .
+_:node531517 a sh:SPARQLRule .
 
-_:node526682 sh:prefix "sosa" ;
+_:node531518 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526683 sh:prefix "om" ;
+_:node531519 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526684 sh:prefix "sw" ;
+_:node531520 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526681 sh:prefixes _:node526682 , _:node526683 , _:node526684 ;
+_:node531517 sh:prefixes _:node531518 , _:node531519 , _:node531520 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/UVRadiationResURI.swagger.json#/paths//UVRadiationResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/UV%20Radiation>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/UVRadiationResURI.swagger.json#/paths//UVRadiationResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/measurement> ?val . }" .
 
-_:node526680 sh:rule _:node526681 .
+_:node531516 sh:rule _:node531517 .
 
-_:node526685 a sh:NodeShape ;
+_:node531521 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/VehicleConnector> .
 
-_:node526686 a sh:SPARQLRule .
+_:node531522 a sh:SPARQLRule .
 
-_:node526687 sh:prefix "sosa" ;
+_:node531523 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526688 sh:prefix "om" ;
+_:node531524 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526689 sh:prefix "sw" ;
+_:node531525 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526686 sh:prefixes _:node526687 , _:node526688 , _:node526689 ;
+_:node531522 sh:prefixes _:node531523 , _:node531524 , _:node531525 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/VehicleConnectorResURI.swagger.json#/paths//VehicleConnectorResURI/get> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/VehicleConnector>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/VehicleConnectorResURI.swagger.json#/paths//VehicleConnectorResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/connected> ?val . }" .
 
-_:node526685 sh:rule _:node526686 .
+_:node531521 sh:rule _:node531522 .
 
-_:node526690 a sh:NodeShape ;
+_:node531526 a sh:NodeShape ;
 	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Weight> .
 
-_:node526691 a sh:SPARQLRule .
+_:node531527 a sh:SPARQLRule .
 
-_:node526692 sh:prefix "sosa" ;
+_:node531528 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node526693 sh:prefix "om" ;
+_:node531529 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node526694 sh:prefix "sw" ;
+_:node531530 sh:prefix "sw" ;
 	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
 
-_:node526691 sh:prefixes _:node526692 , _:node526693 , _:node526694 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/WeightResURI.swagger.json#/paths//WeightResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Weight> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Weight>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/WeightResURI.swagger.json#/paths//WeightResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/weight> ?val . }" .
-
-_:node526690 sh:rule _:node526691 .
-
-_:node526695 a sh:NodeShape ;
-	sh:targetNode <http://openconnectivity.org/iotdatamodels/schemas/Weight> .
-
-_:node526696 a sh:SPARQLRule .
-
-_:node526697 sh:prefix "sosa" ;
-	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
-
-_:node526698 sh:prefix "om" ;
-	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
-
-_:node526699 sh:prefix "sw" ;
-	sh:namespace "http://swagger.io/v2/schema.json#"^^xsd:anyURI .
-
-_:node526696 sh:prefixes _:node526697 , _:node526698 , _:node526699 ;
+_:node531527 sh:prefixes _:node531528 , _:node531529 , _:node531530 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <http://openconnectivity.org/iotdatamodels/schemas/WeightResURI.swagger.json#/paths//WeightResURI/get> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Mass> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <http://openconnectivity.org/iotdatamodels/schemas/Weight>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?request a <http://openconnectivity.org/iotdatamodels/schemas/WeightResURI.swagger.json#/paths//WeightResURI/get> ; sw:responses ?data . ?data <http://openconnectivity.org/iotdatamodels/schemas/weight> ?val . }" .
 
-_:node526695 sh:rule _:node526696 .
+_:node531526 sh:rule _:node531527 .

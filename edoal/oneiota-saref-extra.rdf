@@ -15,11 +15,146 @@
 	<map>
 		<Cell>
 			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/AirFlowResURI.swagger.json#/definitions/AirFlow/speed"/>
-			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Speed"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Volumetric_flow_rate"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
 			<relation>=</relation>
 		</Cell>
 	</map>
-
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/PresenceResURI.swagger.json#/definitions/Presence/allOf/0/value"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Occupancy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/definitions/Consumption/energy"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Energy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/EnergyConsumptionResURI.swagger.json#/definitions/Consumption/power"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Power"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/BrightnessResURI.swagger.json#/definitions/Brightness/brightness"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Light"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/EnergyGeneration"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Generator"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/definitions/Energy/current"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Electric_current"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/definitions/Energy/frequency"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Frequency"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/EnergyResURI.swagger.json#/definitions/Energy/voltage"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Electric_potential"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/DoorResURI.swagger.json#/definitions/Door"/>
+			<entity2 rdf:resource="http://w3id.org/saref#DoorSwitch"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/AtmosphericPressureResURI.swagger.json#/definitions/atmosphericPressure"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Pressure"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/IlluminanceSensorResURI.swagger.json#/definitions/Illuminance"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Light"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/ClockResURI.swagger.json#/definitions/Clock/datetime"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Time"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemaBinary%20Switch"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Switch"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/AudioResURI.swagger.json#/definitions/Audio/volume"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Sound_power_level"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://openconnectivity.org/iotdatamodels/schemas/AltimeterResURI.swagger.json#/definitions/Altimeter/alt"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Altitude"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
 </Alignment>
 </rdf:RDF>

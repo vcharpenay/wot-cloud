@@ -1,3 +1,4 @@
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,853 +11,934 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix base: <http://www.onem2m.org/ontology/Base_Ontology#> .
 @prefix sdt: <http://www.onem2m.org/ontology/SDT#> .
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
 @prefix sesame: <http://www.openrdf.org/schema/sesame#> .
 @prefix fn: <http://www.w3.org/2005/xpath-functions#> .
 
-_:node522812 a sh:NodeShape ;
+_:node531763 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.alarmSpeaker> .
 
-_:node522813 a sh:SPARQLRule .
+_:node531764 a sh:SPARQLRule .
 
-_:node522814 sh:prefix "sosa" ;
+_:node531765 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522815 sh:prefix "om" ;
+_:node531766 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522813 sh:prefixes _:node522814 , _:node522815 ;
+_:node531764 sh:prefixes _:node531765 , _:node531766 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.alarmSpeaker.alarmStatus> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.alarmSpeaker>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.alarmSpeaker.alarmStatus> ; <http://www.onem2m.org/ontology/HAIM#alarmStatus> ?val . }" .
 
-_:node522812 sh:rule _:node522813 .
+_:node531763 sh:rule _:node531764 .
 
-_:node522816 a sh:NodeShape ;
+_:node531767 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.audioVideoInput> .
 
-_:node522817 a sh:SPARQLRule .
+_:node531768 a sh:SPARQLRule .
 
-_:node522818 sh:prefix "sosa" ;
+_:node531769 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522819 sh:prefix "om" ;
+_:node531770 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522817 sh:prefixes _:node522818 , _:node522819 ;
+_:node531768 sh:prefixes _:node531769 , _:node531770 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.audioVideoInput.inputSourceID> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.audioVideoInput>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.audioVideoInput.inputSourceID> ; <http://www.onem2m.org/ontology/HAIM#inputSourceID> ?val . }" .
 
-_:node522816 sh:rule _:node522817 .
+_:node531767 sh:rule _:node531768 .
 
-_:node522820 a sh:NodeShape ;
+_:node531771 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.audioVideoInput> .
 
-_:node522821 a sh:SPARQLRule .
+_:node531772 a sh:SPARQLRule .
 
-_:node522822 sh:prefix "sosa" ;
+_:node531773 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522823 sh:prefix "om" ;
+_:node531774 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522821 sh:prefixes _:node522822 , _:node522823 ;
+_:node531772 sh:prefixes _:node531773 , _:node531774 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.audioVideoInput.supportedInputSources> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.audioVideoInput>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.audioVideoInput.supportedInputSources> ; <http://www.onem2m.org/ontology/HAIM#supportedInputSources> ?val . }" .
 
-_:node522820 sh:rule _:node522821 .
+_:node531771 sh:rule _:node531772 .
 
-_:node522824 a sh:NodeShape ;
+_:node531775 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.audioVolume> .
 
-_:node522825 a sh:SPARQLRule .
+_:node531776 a sh:SPARQLRule .
 
-_:node522826 sh:prefix "sosa" ;
+_:node531777 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522827 sh:prefix "om" ;
+_:node531778 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522825 sh:prefixes _:node522826 , _:node522827 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.audioVolume.volumePercentage> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.audioVolume>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.audioVolume.volumePercentage> ; <http://www.onem2m.org/ontology/HAIM#volumePercentage> ?val . }" .
+_:node531776 sh:prefixes _:node531777 , _:node531778 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.audioVolume.volumePercentage> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Sound_pressure_level> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.audioVolume>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.audioVolume.volumePercentage> ; <http://www.onem2m.org/ontology/HAIM#volumePercentage> ?val . }" .
 
-_:node522824 sh:rule _:node522825 .
+_:node531775 sh:rule _:node531776 .
 
-_:node522828 a sh:NodeShape ;
+_:node531779 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.audioVolume> .
 
-_:node522829 a sh:SPARQLRule .
+_:node531780 a sh:SPARQLRule .
 
-_:node522830 sh:prefix "sosa" ;
+_:node531781 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522831 sh:prefix "om" ;
+_:node531782 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522829 sh:prefixes _:node522830 , _:node522831 ;
+_:node531780 sh:prefixes _:node531781 , _:node531782 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.audioVolume.muteEnabled> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.audioVolume>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.audioVolume.muteEnabled> ; <http://www.onem2m.org/ontology/HAIM#muteEnabled> ?val . }" .
 
-_:node522828 sh:rule _:node522829 .
+_:node531779 sh:rule _:node531780 .
 
-_:node522832 a sh:NodeShape ;
+_:node531783 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.battery> .
 
-_:node522833 a sh:SPARQLRule .
+_:node531784 a sh:SPARQLRule .
 
-_:node522834 sh:prefix "sosa" ;
+_:node531785 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522835 sh:prefix "om" ;
+_:node531786 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522833 sh:prefixes _:node522834 , _:node522835 ;
+_:node531784 sh:prefixes _:node531785 , _:node531786 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.battery.level> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.battery>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.battery.level> ; <http://www.onem2m.org/ontology/HAIM#level> ?val . }" .
 
-_:node522832 sh:rule _:node522833 .
+_:node531783 sh:rule _:node531784 .
 
-_:node522836 a sh:NodeShape ;
+_:node531787 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.binarySwitch> .
 
-_:node522837 a sh:SPARQLRule .
+_:node531788 a sh:SPARQLRule .
 
-_:node522838 sh:prefix "sosa" ;
+_:node531789 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522839 sh:prefix "om" ;
+_:node531790 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522837 sh:prefixes _:node522838 , _:node522839 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.binarySwitch.powerState> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.binarySwitch>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.binarySwitch.powerState> ; <http://www.onem2m.org/ontology/HAIM#powerState> ?val . }" .
+_:node531788 sh:prefixes _:node531789 , _:node531790 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.binarySwitch.powerState> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.binarySwitch>, <http://w3id.org/saref#Switch> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.binarySwitch.powerState> ; <http://www.onem2m.org/ontology/HAIM#powerState> ?val . }" .
 
-_:node522836 sh:rule _:node522837 .
+_:node531787 sh:rule _:node531788 .
 
-_:node522840 a sh:NodeShape ;
+_:node531791 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis> .
 
-_:node522841 a sh:SPARQLRule .
+_:node531792 a sh:SPARQLRule .
 
-_:node522842 sh:prefix "sosa" ;
+_:node531793 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522843 sh:prefix "om" ;
+_:node531794 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522841 sh:prefixes _:node522842 , _:node522843 ;
+_:node531792 sh:prefixes _:node531793 , _:node531794 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.water> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.water> ; <http://www.onem2m.org/ontology/HAIM#water> ?val . }" .
 
-_:node522840 sh:rule _:node522841 .
+_:node531791 sh:rule _:node531792 .
 
-_:node522844 a sh:NodeShape ;
+_:node531795 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis> .
 
-_:node522845 a sh:SPARQLRule .
+_:node531796 a sh:SPARQLRule .
 
-_:node522846 sh:prefix "sosa" ;
+_:node531797 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522847 sh:prefix "om" ;
+_:node531798 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522845 sh:prefixes _:node522846 , _:node522847 ;
+_:node531796 sh:prefixes _:node531797 , _:node531798 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.fat> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.fat> ; <http://www.onem2m.org/ontology/HAIM#fat> ?val . }" .
 
-_:node522844 sh:rule _:node522845 .
+_:node531795 sh:rule _:node531796 .
 
-_:node522848 a sh:NodeShape ;
+_:node531799 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis> .
 
-_:node522849 a sh:SPARQLRule .
+_:node531800 a sh:SPARQLRule .
 
-_:node522850 sh:prefix "sosa" ;
+_:node531801 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522851 sh:prefix "om" ;
+_:node531802 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522849 sh:prefixes _:node522850 , _:node522851 ;
+_:node531800 sh:prefixes _:node531801 , _:node531802 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.muscle> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.muscle> ; <http://www.onem2m.org/ontology/HAIM#muscle> ?val . }" .
 
-_:node522848 sh:rule _:node522849 .
+_:node531799 sh:rule _:node531800 .
 
-_:node522852 a sh:NodeShape ;
+_:node531803 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis> .
 
-_:node522853 a sh:SPARQLRule .
+_:node531804 a sh:SPARQLRule .
 
-_:node522854 sh:prefix "sosa" ;
+_:node531805 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522855 sh:prefix "om" ;
+_:node531806 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522853 sh:prefixes _:node522854 , _:node522855 ;
+_:node531804 sh:prefixes _:node531805 , _:node531806 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.bone> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.bone> ; <http://www.onem2m.org/ontology/HAIM#bone> ?val . }" .
 
-_:node522852 sh:rule _:node522853 .
+_:node531803 sh:rule _:node531804 .
 
-_:node522856 a sh:NodeShape ;
+_:node531807 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis> .
 
-_:node522857 a sh:SPARQLRule .
+_:node531808 a sh:SPARQLRule .
 
-_:node522858 sh:prefix "sosa" ;
+_:node531809 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522859 sh:prefix "om" ;
+_:node531810 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522857 sh:prefixes _:node522858 , _:node522859 ;
+_:node531808 sh:prefixes _:node531809 , _:node531810 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.visceraFat> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.visceraFat> ; <http://www.onem2m.org/ontology/HAIM#visceraFat> ?val . }" .
 
-_:node522856 sh:rule _:node522857 .
+_:node531807 sh:rule _:node531808 .
 
-_:node522860 a sh:NodeShape ;
+_:node531811 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis> .
 
-_:node522861 a sh:SPARQLRule .
+_:node531812 a sh:SPARQLRule .
 
-_:node522862 sh:prefix "sosa" ;
+_:node531813 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522863 sh:prefix "om" ;
+_:node531814 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522861 sh:prefixes _:node522862 , _:node522863 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.kcal> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.kcal> ; <http://www.onem2m.org/ontology/HAIM#kcal> ?val . }" .
+_:node531812 sh:prefixes _:node531813 , _:node531814 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.kcal> ; sosa:observedProperty [ a <http://w3id.org/saref#Energy> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.kcal> ; <http://www.onem2m.org/ontology/HAIM#kcal> ?val . }" .
 
-_:node522860 sh:rule _:node522861 .
+_:node531811 sh:rule _:node531812 .
 
-_:node522864 a sh:NodeShape ;
+_:node531815 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis> .
 
-_:node522865 a sh:SPARQLRule .
+_:node531816 a sh:SPARQLRule .
 
-_:node522866 sh:prefix "sosa" ;
+_:node531817 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522867 sh:prefix "om" ;
+_:node531818 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522865 sh:prefixes _:node522866 , _:node522867 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.resistance> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.resistance> ; <http://www.onem2m.org/ontology/HAIM#resistance> ?val . }" .
+_:node531816 sh:prefixes _:node531817 , _:node531818 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.resistance> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Electrical_resistance> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.resistance> ; <http://www.onem2m.org/ontology/HAIM#resistance> ?val . }" .
 
-_:node522864 sh:rule _:node522865 .
+_:node531815 sh:rule _:node531816 .
 
-_:node522868 a sh:NodeShape ;
+_:node531819 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.boiler> .
 
-_:node522869 a sh:SPARQLRule .
+_:node531820 a sh:SPARQLRule .
 
-_:node522870 sh:prefix "sosa" ;
+_:node531821 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522871 sh:prefix "om" ;
+_:node531822 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522869 sh:prefixes _:node522870 , _:node522871 ;
+_:node531820 sh:prefixes _:node531821 , _:node531822 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.boiler.status> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.boiler>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.boiler.status> ; <http://www.onem2m.org/ontology/HAIM#status> ?val . }" .
 
-_:node522868 sh:rule _:node522869 .
+_:node531819 sh:rule _:node531820 .
 
-_:node522872 a sh:NodeShape ;
+_:node531823 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.brightness> .
 
-_:node522873 a sh:SPARQLRule .
+_:node531824 a sh:SPARQLRule .
 
-_:node522874 sh:prefix "sosa" ;
+_:node531825 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522875 sh:prefix "om" ;
+_:node531826 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522873 sh:prefixes _:node522874 , _:node522875 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.brightness.brightness> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.brightness>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.brightness.brightness> ; <http://www.onem2m.org/ontology/HAIM#brightness> ?val . }" .
+_:node531824 sh:prefixes _:node531825 , _:node531826 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.brightness.brightness> ; sosa:observedProperty [ a <http://w3id.org/saref#Light> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.brightness>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.brightness.brightness> ; <http://www.onem2m.org/ontology/HAIM#brightness> ?val . }" .
 
-_:node522872 sh:rule _:node522873 .
+_:node531823 sh:rule _:node531824 .
 
-_:node522876 a sh:NodeShape ;
+_:node531827 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.clock> .
 
-_:node522877 a sh:SPARQLRule .
+_:node531828 a sh:SPARQLRule .
 
-_:node522878 sh:prefix "sosa" ;
+_:node531829 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522879 sh:prefix "om" ;
+_:node531830 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522877 sh:prefixes _:node522878 , _:node522879 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.clock.currentTime> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.clock>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.clock.currentTime> ; <http://www.onem2m.org/ontology/HAIM#currentTime> ?val . }" .
+_:node531828 sh:prefixes _:node531829 , _:node531830 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.clock.currentTime> ; sosa:observedProperty [ a <http://w3id.org/saref#Time> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.clock>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.clock.currentTime> ; <http://www.onem2m.org/ontology/HAIM#currentTime> ?val . }" .
 
-_:node522876 sh:rule _:node522877 .
+_:node531827 sh:rule _:node531828 .
 
-_:node522880 a sh:NodeShape ;
+_:node531831 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.clock> .
 
-_:node522881 a sh:SPARQLRule .
+_:node531832 a sh:SPARQLRule .
 
-_:node522882 sh:prefix "sosa" ;
+_:node531833 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522883 sh:prefix "om" ;
+_:node531834 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522881 sh:prefixes _:node522882 , _:node522883 ;
+_:node531832 sh:prefixes _:node531833 , _:node531834 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.clock.currentDate> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.clock>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.clock.currentDate> ; <http://www.onem2m.org/ontology/HAIM#currentDate> ?val . }" .
 
-_:node522880 sh:rule _:node522881 .
+_:node531831 sh:rule _:node531832 .
 
-_:node522884 a sh:NodeShape ;
+_:node531835 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.colour> .
 
-_:node522885 a sh:SPARQLRule .
+_:node531836 a sh:SPARQLRule .
 
-_:node522886 sh:prefix "sosa" ;
+_:node531837 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522887 sh:prefix "om" ;
+_:node531838 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522885 sh:prefixes _:node522886 , _:node522887 ;
+_:node531836 sh:prefixes _:node531837 , _:node531838 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.colour.red> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.colour>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.colour.red> ; <http://www.onem2m.org/ontology/HAIM#red> ?val . }" .
 
-_:node522884 sh:rule _:node522885 .
+_:node531835 sh:rule _:node531836 .
 
-_:node522888 a sh:NodeShape ;
+_:node531839 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.colour> .
 
-_:node522889 a sh:SPARQLRule .
+_:node531840 a sh:SPARQLRule .
 
-_:node522890 sh:prefix "sosa" ;
+_:node531841 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522891 sh:prefix "om" ;
+_:node531842 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522889 sh:prefixes _:node522890 , _:node522891 ;
+_:node531840 sh:prefixes _:node531841 , _:node531842 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.colour.green> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.colour>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.colour.green> ; <http://www.onem2m.org/ontology/HAIM#green> ?val . }" .
 
-_:node522888 sh:rule _:node522889 .
+_:node531839 sh:rule _:node531840 .
 
-_:node522892 a sh:NodeShape ;
+_:node531843 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.colour> .
 
-_:node522893 a sh:SPARQLRule .
+_:node531844 a sh:SPARQLRule .
 
-_:node522894 sh:prefix "sosa" ;
+_:node531845 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522895 sh:prefix "om" ;
+_:node531846 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522893 sh:prefixes _:node522894 , _:node522895 ;
+_:node531844 sh:prefixes _:node531845 , _:node531846 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.colour.blue> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.colour>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.colour.blue> ; <http://www.onem2m.org/ontology/HAIM#blue> ?val . }" .
 
-_:node522892 sh:rule _:node522893 .
+_:node531843 sh:rule _:node531844 .
 
-_:node522896 a sh:NodeShape ;
+_:node531847 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.colourSaturation> .
 
-_:node522897 a sh:SPARQLRule .
+_:node531848 a sh:SPARQLRule .
 
-_:node522898 sh:prefix "sosa" ;
+_:node531849 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522899 sh:prefix "om" ;
+_:node531850 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522897 sh:prefixes _:node522898 , _:node522899 ;
+_:node531848 sh:prefixes _:node531849 , _:node531850 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.colourSaturation.colourSaturation> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.colourSaturation>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.colourSaturation.colourSaturation> ; <http://www.onem2m.org/ontology/HAIM#colourSaturation> ?val . }" .
 
-_:node522896 sh:rule _:node522897 .
+_:node531847 sh:rule _:node531848 .
 
-_:node522900 a sh:NodeShape ;
+_:node531851 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.doorStatus> .
 
-_:node522901 a sh:SPARQLRule .
+_:node531852 a sh:SPARQLRule .
 
-_:node522902 sh:prefix "sosa" ;
+_:node531853 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522903 sh:prefix "om" ;
+_:node531854 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522901 sh:prefixes _:node522902 , _:node522903 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.doorStatus.doorState> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.doorStatus>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.doorStatus.doorState> ; <http://www.onem2m.org/ontology/HAIM#doorState> ?val . }" .
+_:node531852 sh:prefixes _:node531853 , _:node531854 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.doorStatus.doorState> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.doorStatus>, <http://w3id.org/saref#DoorSwitch> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.doorStatus.doorState> ; <http://www.onem2m.org/ontology/HAIM#doorState> ?val . }" .
 
-_:node522900 sh:rule _:node522901 .
+_:node531851 sh:rule _:node531852 .
 
-_:node522904 a sh:NodeShape ;
+_:node531855 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.electricVehicleConnector> .
 
-_:node522905 a sh:SPARQLRule .
+_:node531856 a sh:SPARQLRule .
 
-_:node522906 sh:prefix "sosa" ;
+_:node531857 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522907 sh:prefix "om" ;
+_:node531858 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522905 sh:prefixes _:node522906 , _:node522907 ;
+_:node531856 sh:prefixes _:node531857 , _:node531858 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.electricVehicleConnector.status> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.electricVehicleConnector>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.electricVehicleConnector.status> ; <http://www.onem2m.org/ontology/HAIM#status> ?val . }" .
 
-_:node522904 sh:rule _:node522905 .
+_:node531855 sh:rule _:node531856 .
 
-_:node522908 a sh:NodeShape ;
+_:node531859 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.energyConsumption> .
 
-_:node522909 a sh:SPARQLRule .
+_:node531860 a sh:SPARQLRule .
 
-_:node522910 sh:prefix "sosa" ;
+_:node531861 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522911 sh:prefix "om" ;
+_:node531862 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522909 sh:prefixes _:node522910 , _:node522911 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.energyConsumption.power> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.energyConsumption>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.energyConsumption.power> ; <http://www.onem2m.org/ontology/HAIM#power> ?val . }" .
+_:node531860 sh:prefixes _:node531861 , _:node531862 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.energyConsumption.power> ; sosa:observedProperty [ a <http://w3id.org/saref#Power> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.energyConsumption>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.energyConsumption.power> ; <http://www.onem2m.org/ontology/HAIM#power> ?val . }" .
 
-_:node522908 sh:rule _:node522909 .
+_:node531859 sh:rule _:node531860 .
 
-_:node522912 a sh:NodeShape ;
+_:node531863 a sh:NodeShape ;
+	sh:targetNode <urn:org.onem2m.home.moduleclass.energyConsumption> .
+
+_:node531864 a sh:SPARQLRule .
+
+_:node531865 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node531866 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node531864 sh:prefixes _:node531865 , _:node531866 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.energyConsumption.power> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Power> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.energyConsumption>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.energyConsumption.power> ; <http://www.onem2m.org/ontology/HAIM#power> ?val . }" .
+
+_:node531863 sh:rule _:node531864 .
+
+_:node531867 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.faultDetection> .
 
-_:node522913 a sh:SPARQLRule .
+_:node531868 a sh:SPARQLRule .
 
-_:node522914 sh:prefix "sosa" ;
+_:node531869 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522915 sh:prefix "om" ;
+_:node531870 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522913 sh:prefixes _:node522914 , _:node522915 ;
+_:node531868 sh:prefixes _:node531869 , _:node531870 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.faultDetection.status> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.faultDetection>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.faultDetection.status> ; <http://www.onem2m.org/ontology/HAIM#status> ?val . }" .
 
-_:node522912 sh:rule _:node522913 .
+_:node531867 sh:rule _:node531868 .
 
-_:node522916 a sh:NodeShape ;
+_:node531871 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.height> .
 
-_:node522917 a sh:SPARQLRule .
+_:node531872 a sh:SPARQLRule .
 
-_:node522918 sh:prefix "sosa" ;
+_:node531873 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522919 sh:prefix "om" ;
+_:node531874 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522917 sh:prefixes _:node522918 , _:node522919 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.height.height> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.height>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.height.height> ; <http://www.onem2m.org/ontology/HAIM#height> ?val . }" .
+_:node531872 sh:prefixes _:node531873 , _:node531874 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.height.height> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Height> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.height>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.height.height> ; <http://www.onem2m.org/ontology/HAIM#height> ?val . }" .
 
-_:node522916 sh:rule _:node522917 .
+_:node531871 sh:rule _:node531872 .
 
-_:node522920 a sh:NodeShape ;
+_:node531875 a sh:NodeShape ;
+	sh:targetNode <urn:org.onem2m.home.moduleclass.height> .
+
+_:node531876 a sh:SPARQLRule .
+
+_:node531877 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node531878 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node531876 sh:prefixes _:node531877 , _:node531878 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.height.height> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Height> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.height>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.height.height> ; <http://www.onem2m.org/ontology/HAIM#height> ?val . }" .
+
+_:node531875 sh:rule _:node531876 .
+
+_:node531879 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.hotWaterSupply> .
 
-_:node522921 a sh:SPARQLRule .
+_:node531880 a sh:SPARQLRule .
 
-_:node522922 sh:prefix "sosa" ;
+_:node531881 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522923 sh:prefix "om" ;
+_:node531882 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522921 sh:prefixes _:node522922 , _:node522923 ;
+_:node531880 sh:prefixes _:node531881 , _:node531882 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.hotWaterSupply.status> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.hotWaterSupply>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.hotWaterSupply.status> ; <http://www.onem2m.org/ontology/HAIM#status> ?val . }" .
 
-_:node522920 sh:rule _:node522921 .
+_:node531879 sh:rule _:node531880 .
 
-_:node522924 a sh:NodeShape ;
+_:node531883 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.keypad> .
 
-_:node522925 a sh:SPARQLRule .
+_:node531884 a sh:SPARQLRule .
 
-_:node522926 sh:prefix "sosa" ;
+_:node531885 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522927 sh:prefix "om" ;
+_:node531886 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522925 sh:prefixes _:node522926 , _:node522927 ;
+_:node531884 sh:prefixes _:node531885 , _:node531886 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.keypad.keyNumber> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.keypad>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.keypad.keyNumber> ; <http://www.onem2m.org/ontology/HAIM#keyNumber> ?val . }" .
 
-_:node522924 sh:rule _:node522925 .
+_:node531883 sh:rule _:node531884 .
 
-_:node522928 a sh:NodeShape ;
+_:node531887 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.motionSensor> .
 
-_:node522929 a sh:SPARQLRule .
+_:node531888 a sh:SPARQLRule .
 
-_:node522930 sh:prefix "sosa" ;
+_:node531889 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522931 sh:prefix "om" ;
+_:node531890 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522929 sh:prefixes _:node522930 , _:node522931 ;
+_:node531888 sh:prefixes _:node531889 , _:node531890 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.motionSensor.alarm> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.motionSensor>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.motionSensor.alarm> ; <http://www.onem2m.org/ontology/HAIM#alarm> ?val . }" .
 
-_:node522928 sh:rule _:node522929 .
+_:node531887 sh:rule _:node531888 .
 
-_:node522932 a sh:NodeShape ;
+_:node531891 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.oximeter> .
 
-_:node522933 a sh:SPARQLRule .
+_:node531892 a sh:SPARQLRule .
 
-_:node522934 sh:prefix "sosa" ;
+_:node531893 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522935 sh:prefix "om" ;
+_:node531894 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522933 sh:prefixes _:node522934 , _:node522935 ;
+_:node531892 sh:prefixes _:node531893 , _:node531894 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.oximeter.diastolicPressure> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.oximeter>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.oximeter.diastolicPressure> ; <http://www.onem2m.org/ontology/HAIM#diastolicPressure> ?val . }" .
 
-_:node522932 sh:rule _:node522933 .
+_:node531891 sh:rule _:node531892 .
 
-_:node522936 a sh:NodeShape ;
+_:node531895 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.oximeter> .
 
-_:node522937 a sh:SPARQLRule .
+_:node531896 a sh:SPARQLRule .
 
-_:node522938 sh:prefix "sosa" ;
+_:node531897 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522939 sh:prefix "om" ;
+_:node531898 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522937 sh:prefixes _:node522938 , _:node522939 ;
+_:node531896 sh:prefixes _:node531897 , _:node531898 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.oximeter.systolicPressure> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.oximeter>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.oximeter.systolicPressure> ; <http://www.onem2m.org/ontology/HAIM#systolicPressure> ?val . }" .
 
-_:node522936 sh:rule _:node522937 .
+_:node531895 sh:rule _:node531896 .
 
-_:node522940 a sh:NodeShape ;
+_:node531899 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.oximeter> .
 
-_:node522941 a sh:SPARQLRule .
+_:node531900 a sh:SPARQLRule .
 
-_:node522942 sh:prefix "sosa" ;
+_:node531901 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522943 sh:prefix "om" ;
+_:node531902 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522941 sh:prefixes _:node522942 , _:node522943 ;
+_:node531900 sh:prefixes _:node531901 , _:node531902 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.oximeter.pulseRate> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.oximeter>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.oximeter.pulseRate> ; <http://www.onem2m.org/ontology/HAIM#pulseRate> ?val . }" .
 
-_:node522940 sh:rule _:node522941 .
+_:node531899 sh:rule _:node531900 .
 
-_:node522944 a sh:NodeShape ;
+_:node531903 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.oximeter> .
 
-_:node522945 a sh:SPARQLRule .
+_:node531904 a sh:SPARQLRule .
 
-_:node522946 sh:prefix "sosa" ;
+_:node531905 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522947 sh:prefix "om" ;
+_:node531906 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522945 sh:prefixes _:node522946 , _:node522947 ;
+_:node531904 sh:prefixes _:node531905 , _:node531906 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.oximeter.oxygenSaturation> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.oximeter>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.oximeter.oxygenSaturation> ; <http://www.onem2m.org/ontology/HAIM#oxygenSaturation> ?val . }" .
 
-_:node522944 sh:rule _:node522945 .
+_:node531903 sh:rule _:node531904 .
 
-_:node522948 a sh:NodeShape ;
+_:node531907 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.powerSave> .
 
-_:node522949 a sh:SPARQLRule .
+_:node531908 a sh:SPARQLRule .
 
-_:node522950 sh:prefix "sosa" ;
+_:node531909 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522951 sh:prefix "om" ;
+_:node531910 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522949 sh:prefixes _:node522950 , _:node522951 ;
+_:node531908 sh:prefixes _:node531909 , _:node531910 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.powerSave.powerSaveEnabled> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.powerSave>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.powerSave.powerSaveEnabled> ; <http://www.onem2m.org/ontology/HAIM#powerSaveEnabled> ?val . }" .
 
-_:node522948 sh:rule _:node522949 .
+_:node531907 sh:rule _:node531908 .
 
-_:node522952 a sh:NodeShape ;
+_:node531911 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.pushButton> .
 
-_:node522953 a sh:SPARQLRule .
+_:node531912 a sh:SPARQLRule .
 
-_:node522954 sh:prefix "sosa" ;
+_:node531913 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522955 sh:prefix "om" ;
+_:node531914 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522953 sh:prefixes _:node522954 , _:node522955 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.pushButton.pushed> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.pushButton>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.pushButton.pushed> ; <http://www.onem2m.org/ontology/HAIM#pushed> ?val . }" .
+_:node531912 sh:prefixes _:node531913 , _:node531914 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.pushButton.pushed> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.pushButton>, <http://w3id.org/saref#Switch> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.pushButton.pushed> ; <http://www.onem2m.org/ontology/HAIM#pushed> ?val . }" .
 
-_:node522952 sh:rule _:node522953 .
+_:node531911 sh:rule _:node531912 .
 
-_:node522956 a sh:NodeShape ;
+_:node531915 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.recorder> .
 
-_:node522957 a sh:SPARQLRule .
+_:node531916 a sh:SPARQLRule .
 
-_:node522958 sh:prefix "sosa" ;
+_:node531917 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522959 sh:prefix "om" ;
+_:node531918 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522957 sh:prefixes _:node522958 , _:node522959 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.recorder.duration> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.recorder>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.recorder.duration> ; <http://www.onem2m.org/ontology/HAIM#duration> ?val . }" .
+_:node531916 sh:prefixes _:node531917 , _:node531918 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.recorder.duration> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Duration> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.recorder>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.recorder.duration> ; <http://www.onem2m.org/ontology/HAIM#duration> ?val . }" .
 
-_:node522956 sh:rule _:node522957 .
+_:node531915 sh:rule _:node531916 .
 
-_:node522960 a sh:NodeShape ;
+_:node531919 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.relativeHumidity> .
 
-_:node522961 a sh:SPARQLRule .
+_:node531920 a sh:SPARQLRule .
 
-_:node522962 sh:prefix "sosa" ;
+_:node531921 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522963 sh:prefix "om" ;
+_:node531922 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522961 sh:prefixes _:node522962 , _:node522963 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.relativeHumidity.relativeHumidity> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.relativeHumidity>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.relativeHumidity.relativeHumidity> ; <http://www.onem2m.org/ontology/HAIM#relativeHumidity> ?val . }" .
+_:node531920 sh:prefixes _:node531921 , _:node531922 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.relativeHumidity.relativeHumidity> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Relative_humidity> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.relativeHumidity>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.relativeHumidity.relativeHumidity> ; <http://www.onem2m.org/ontology/HAIM#relativeHumidity> ?val . }" .
 
-_:node522960 sh:rule _:node522961 .
+_:node531919 sh:rule _:node531920 .
 
-_:node522964 a sh:NodeShape ;
+_:node531923 a sh:NodeShape ;
+	sh:targetNode <urn:org.onem2m.home.moduleclass.relativeHumidity> .
+
+_:node531924 a sh:SPARQLRule .
+
+_:node531925 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node531926 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node531924 sh:prefixes _:node531925 , _:node531926 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.relativeHumidity.relativeHumidity> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Relative_humidity> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.relativeHumidity>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.relativeHumidity.relativeHumidity> ; <http://www.onem2m.org/ontology/HAIM#relativeHumidity> ?val . }" .
+
+_:node531923 sh:rule _:node531924 .
+
+_:node531927 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.rinseLevel> .
 
-_:node522965 a sh:SPARQLRule .
+_:node531928 a sh:SPARQLRule .
 
-_:node522966 sh:prefix "sosa" ;
+_:node531929 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522967 sh:prefix "om" ;
+_:node531930 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522965 sh:prefixes _:node522966 , _:node522967 ;
+_:node531928 sh:prefixes _:node531929 , _:node531930 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.rinseLevel.rinseLevel> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.rinseLevel>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.rinseLevel.rinseLevel> ; <http://www.onem2m.org/ontology/HAIM#rinseLevel> ?val . }" .
 
-_:node522964 sh:rule _:node522965 .
+_:node531927 sh:rule _:node531928 .
 
-_:node522968 a sh:NodeShape ;
+_:node531931 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.runMode> .
 
-_:node522969 a sh:SPARQLRule .
+_:node531932 a sh:SPARQLRule .
 
-_:node522970 sh:prefix "sosa" ;
+_:node531933 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522971 sh:prefix "om" ;
+_:node531934 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522969 sh:prefixes _:node522970 , _:node522971 ;
+_:node531932 sh:prefixes _:node531933 , _:node531934 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.runMode.operationMode> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.runMode>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.runMode.operationMode> ; <http://www.onem2m.org/ontology/HAIM#operationMode> ?val . }" .
 
-_:node522968 sh:rule _:node522969 .
+_:node531931 sh:rule _:node531932 .
 
-_:node522972 a sh:NodeShape ;
+_:node531935 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.runMode> .
 
-_:node522973 a sh:SPARQLRule .
+_:node531936 a sh:SPARQLRule .
 
-_:node522974 sh:prefix "sosa" ;
+_:node531937 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522975 sh:prefix "om" ;
+_:node531938 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522973 sh:prefixes _:node522974 , _:node522975 ;
+_:node531936 sh:prefixes _:node531937 , _:node531938 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.runMode.supportedModes> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.runMode>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.runMode.supportedModes> ; <http://www.onem2m.org/ontology/HAIM#supportedModes> ?val . }" .
 
-_:node522972 sh:rule _:node522973 .
+_:node531935 sh:rule _:node531936 .
 
-_:node522976 a sh:NodeShape ;
+_:node531939 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.signalStrength> .
 
-_:node522977 a sh:SPARQLRule .
+_:node531940 a sh:SPARQLRule .
 
-_:node522978 sh:prefix "sosa" ;
+_:node531941 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522979 sh:prefix "om" ;
+_:node531942 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522977 sh:prefixes _:node522978 , _:node522979 ;
+_:node531940 sh:prefixes _:node531941 , _:node531942 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.signalStrength.lqi> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.signalStrength>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.signalStrength.lqi> ; <http://www.onem2m.org/ontology/HAIM#lqi> ?val . }" .
 
-_:node522976 sh:rule _:node522977 .
+_:node531939 sh:rule _:node531940 .
 
-_:node522980 a sh:NodeShape ;
+_:node531943 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.smokeSensor> .
 
-_:node522981 a sh:SPARQLRule .
+_:node531944 a sh:SPARQLRule .
 
-_:node522982 sh:prefix "sosa" ;
+_:node531945 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522983 sh:prefix "om" ;
+_:node531946 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522981 sh:prefixes _:node522982 , _:node522983 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.smokeSensor.alarm> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.smokeSensor>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.smokeSensor.alarm> ; <http://www.onem2m.org/ontology/HAIM#alarm> ?val . }" .
+_:node531944 sh:prefixes _:node531945 , _:node531946 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.smokeSensor.alarm> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.smokeSensor>, <http://w3id.org/saref#SmokeSensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.smokeSensor.alarm> ; <http://www.onem2m.org/ontology/HAIM#alarm> ?val . }" .
 
-_:node522980 sh:rule _:node522981 .
+_:node531943 sh:rule _:node531944 .
 
-_:node522984 a sh:NodeShape ;
+_:node531947 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.spinLevel> .
 
-_:node522985 a sh:SPARQLRule .
+_:node531948 a sh:SPARQLRule .
 
-_:node522986 sh:prefix "sosa" ;
+_:node531949 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522987 sh:prefix "om" ;
+_:node531950 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522985 sh:prefixes _:node522986 , _:node522987 ;
+_:node531948 sh:prefixes _:node531949 , _:node531950 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.spinLevel.spinLevelStrength> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.spinLevel>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.spinLevel.spinLevelStrength> ; <http://www.onem2m.org/ontology/HAIM#spinLevelStrength> ?val . }" .
 
-_:node522984 sh:rule _:node522985 .
+_:node531947 sh:rule _:node531948 .
 
-_:node522988 a sh:NodeShape ;
+_:node531951 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.televisionChannel> .
 
-_:node522989 a sh:SPARQLRule .
+_:node531952 a sh:SPARQLRule .
 
-_:node522990 sh:prefix "sosa" ;
+_:node531953 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522991 sh:prefix "om" ;
+_:node531954 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522989 sh:prefixes _:node522990 , _:node522991 ;
+_:node531952 sh:prefixes _:node531953 , _:node531954 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.televisionChannel.channelId> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.televisionChannel>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.televisionChannel.channelId> ; <http://www.onem2m.org/ontology/HAIM#channelId> ?val . }" .
 
-_:node522988 sh:rule _:node522989 .
+_:node531951 sh:rule _:node531952 .
 
-_:node522992 a sh:NodeShape ;
+_:node531955 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.temperature> .
 
-_:node522993 a sh:SPARQLRule .
+_:node531956 a sh:SPARQLRule .
 
-_:node522994 sh:prefix "sosa" ;
+_:node531957 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522995 sh:prefix "om" ;
+_:node531958 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522993 sh:prefixes _:node522994 , _:node522995 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.temperature.currentTemperature> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.temperature>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.temperature.currentTemperature> ; <http://www.onem2m.org/ontology/HAIM#currentTemperature> ?val . }" .
+_:node531956 sh:prefixes _:node531957 , _:node531958 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.temperature.currentTemperature> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Temperature> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.temperature>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.temperature.currentTemperature> ; <http://www.onem2m.org/ontology/HAIM#currentTemperature> ?val . }" .
 
-_:node522992 sh:rule _:node522993 .
+_:node531955 sh:rule _:node531956 .
 
-_:node522996 a sh:NodeShape ;
+_:node531959 a sh:NodeShape ;
+	sh:targetNode <urn:org.onem2m.home.moduleclass.temperature> .
+
+_:node531960 a sh:SPARQLRule .
+
+_:node531961 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node531962 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node531960 sh:prefixes _:node531961 , _:node531962 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.temperature.currentTemperature> ; sosa:observedProperty [ a <http://w3id.org/saref#Temperature> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.temperature>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.temperature.currentTemperature> ; <http://www.onem2m.org/ontology/HAIM#currentTemperature> ?val . }" .
+
+_:node531959 sh:rule _:node531960 .
+
+_:node531963 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.temperatureAlarm> .
 
-_:node522997 a sh:SPARQLRule .
+_:node531964 a sh:SPARQLRule .
 
-_:node522998 sh:prefix "sosa" ;
+_:node531965 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node522999 sh:prefix "om" ;
+_:node531966 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node522997 sh:prefixes _:node522998 , _:node522999 ;
+_:node531964 sh:prefixes _:node531965 , _:node531966 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.temperatureAlarm.alarm> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.temperatureAlarm>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.temperatureAlarm.alarm> ; <http://www.onem2m.org/ontology/HAIM#alarm> ?val . }" .
 
-_:node522996 sh:rule _:node522997 .
+_:node531963 sh:rule _:node531964 .
 
-_:node523000 a sh:NodeShape ;
+_:node531967 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.turbo> .
 
-_:node523001 a sh:SPARQLRule .
+_:node531968 a sh:SPARQLRule .
 
-_:node523002 sh:prefix "sosa" ;
+_:node531969 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node523003 sh:prefix "om" ;
+_:node531970 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node523001 sh:prefixes _:node523002 , _:node523003 ;
+_:node531968 sh:prefixes _:node531969 , _:node531970 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.turbo.turboEnabled> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.turbo>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.turbo.turboEnabled> ; <http://www.onem2m.org/ontology/HAIM#turboEnabled> ?val . }" .
 
-_:node523000 sh:rule _:node523001 .
+_:node531967 sh:rule _:node531968 .
 
-_:node523004 a sh:NodeShape ;
+_:node531971 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.waterFlow> .
 
-_:node523005 a sh:SPARQLRule .
+_:node531972 a sh:SPARQLRule .
 
-_:node523006 sh:prefix "sosa" ;
+_:node531973 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node523007 sh:prefix "om" ;
+_:node531974 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node523005 sh:prefixes _:node523006 , _:node523007 ;
+_:node531972 sh:prefixes _:node531973 , _:node531974 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.waterFlow.waterLevelStrength> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.waterFlow>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.waterFlow.waterLevelStrength> ; <http://www.onem2m.org/ontology/HAIM#waterLevelStrength> ?val . }" .
 
-_:node523004 sh:rule _:node523005 .
+_:node531971 sh:rule _:node531972 .
 
-_:node523008 a sh:NodeShape ;
+_:node531975 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.waterLevel> .
 
-_:node523009 a sh:SPARQLRule .
+_:node531976 a sh:SPARQLRule .
 
-_:node523010 sh:prefix "sosa" ;
+_:node531977 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node523011 sh:prefix "om" ;
+_:node531978 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node523009 sh:prefixes _:node523010 , _:node523011 ;
+_:node531976 sh:prefixes _:node531977 , _:node531978 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.waterLevel.liquidLevel> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.waterLevel>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.waterLevel.liquidLevel> ; <http://www.onem2m.org/ontology/HAIM#liquidLevel> ?val . }" .
 
-_:node523008 sh:rule _:node523009 .
+_:node531975 sh:rule _:node531976 .
 
-_:node523012 a sh:NodeShape ;
+_:node531979 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.waterSensor> .
 
-_:node523013 a sh:SPARQLRule .
+_:node531980 a sh:SPARQLRule .
 
-_:node523014 sh:prefix "sosa" ;
+_:node531981 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node523015 sh:prefix "om" ;
+_:node531982 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node523013 sh:prefixes _:node523014 , _:node523015 ;
+_:node531980 sh:prefixes _:node531981 , _:node531982 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.waterSensor.alarm> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.waterSensor>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.waterSensor.alarm> ; <http://www.onem2m.org/ontology/HAIM#alarm> ?val . }" .
 
-_:node523012 sh:rule _:node523013 .
+_:node531979 sh:rule _:node531980 .
 
-_:node523016 a sh:NodeShape ;
+_:node531983 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.weight> .
 
-_:node523017 a sh:SPARQLRule .
+_:node531984 a sh:SPARQLRule .
 
-_:node523018 sh:prefix "sosa" ;
+_:node531985 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node523019 sh:prefix "om" ;
+_:node531986 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node523017 sh:prefixes _:node523018 , _:node523019 ;
-	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.weight.weight> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.weight>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.weight.weight> ; <http://www.onem2m.org/ontology/HAIM#weight> ?val . }" .
+_:node531984 sh:prefixes _:node531985 , _:node531986 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.weight.weight> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Mass> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.weight>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.weight.weight> ; <http://www.onem2m.org/ontology/HAIM#weight> ?val . }" .
 
-_:node523016 sh:rule _:node523017 .
+_:node531983 sh:rule _:node531984 .
 
-_:node523020 a sh:NodeShape ;
+_:node531987 a sh:NodeShape ;
+	sh:targetNode <urn:org.onem2m.home.moduleclass.weight> .
+
+_:node531988 a sh:SPARQLRule .
+
+_:node531989 sh:prefix "sosa" ;
+	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
+
+_:node531990 sh:prefix "om" ;
+	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
+
+_:node531988 sh:prefixes _:node531989 , _:node531990 ;
+	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.weight.weight> ; sosa:observedProperty [ a <http://www.wurvoc.org/vocabularies/om-1.8/Mass> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.weight>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.weight.weight> ; <http://www.onem2m.org/ontology/HAIM#weight> ?val . }" .
+
+_:node531987 sh:rule _:node531988 .
+
+_:node531991 a sh:NodeShape ;
 	sh:targetNode <urn:org.onem2m.home.moduleclass.wind> .
 
-_:node523021 a sh:SPARQLRule .
+_:node531992 a sh:SPARQLRule .
 
-_:node523022 sh:prefix "sosa" ;
+_:node531993 sh:prefix "sosa" ;
 	sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI .
 
-_:node523023 sh:prefix "om" ;
+_:node531994 sh:prefix "om" ;
 	sh:namespace "http://www.wurvoc.org/vocabularies/om-1.8/"^^xsd:anyURI .
 
-_:node523021 sh:prefixes _:node523022 , _:node523023 ;
+_:node531992 sh:prefixes _:node531993 , _:node531994 ;
 	sh:construct "CONSTRUCT { [] a sosa:Observation, <urn:org.onem2m.home.moduleclass.wind.windStrength> ; sosa:observedProperty [ a <http://www.w3.org/ns/sosa/ObservableProperty> ] ; sosa:hasResult [ om:numerical_value ?val ] ; sosa:madeBySensor [ a <urn:org.onem2m.home.moduleclass.wind>, <http://w3id.org/saref#Sensor> ] . } WHERE { ?container a <urn:org.onem2m.home.moduleclass.wind.windStrength> ; <http://www.onem2m.org/ontology/HAIM#windStrength> ?val . }" .
 
-_:node523020 sh:rule _:node523021 .
+_:node531991 sh:rule _:node531992 .

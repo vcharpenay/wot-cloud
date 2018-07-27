@@ -12,32 +12,14 @@
 	<onto2>https://w3id.org/saref</onto2>
 	<uri1>http://openmobilealliance.org/tech/profiles/LWM2M</uri1>
 	<uri2>https://w3id.org/saref</uri2>
-	<map>
-		<Cell>
-			<entity1 rdf:resource="http://www.w3.org/ns/td#Property"/>
-			<entity2 rdf:resource="http://w3id.org/saref#Property"/>
-			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
-			<relation>=</relation>
-		</Cell>
-	</map>
-
-	<map>
-		<Cell>
-			<entity1 rdf:resource="http://www.w3.org/ns/td#Action"/>
-			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Action"/>
-			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9853</measure>
-			<relation>=</relation>
-		</Cell>
-	</map>
-
-	<map>
+	<!-- <map>
 		<Cell>
 			<entity1 rdf:resource="http://openmobilealliance.org/tech/profiles/LWM2M#Resource"/>
 			<entity2 rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
 			<relation>=</relation>
 		</Cell>
-	</map>
+	</map> -->
 
 	<map>
 		<Cell>
@@ -120,14 +102,14 @@
 		</Cell>
 	</map>
 
-	<map>
+	<!-- <map>
 		<Cell>
 			<entity1 rdf:resource="urn:oma:lwm2m:ext:3322"/>
 			<entity2 rdf:resource="http://w3id.org/saref#Load"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9306</measure>
 			<relation>=</relation>
 		</Cell>
-	</map>
+	</map> -->
 
 	<map>
 		<Cell>

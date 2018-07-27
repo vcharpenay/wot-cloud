@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>C:\Users\z003dp6d\Desktop\HAIM.nt</onto1>
+	<onto2>https://w3id.org/saref</onto2>
+	<uri1>C:\Users\z003dp6d\Desktop\HAIM.nt</uri1>
+	<uri2>https://w3id.org/saref</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.audioVolume.volumePercentage"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Sound_pressure_level"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.binarySwitch"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Switch"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.bioElectricalImpedanceAnalysis.kcal"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Energy"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.brightness.brightness"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Light"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.clock.currentTime"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Time"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.doorStatus"/>
+			<entity2 rdf:resource="http://w3id.org/saref#DoorSwitch"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.energyGeneration"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Generator"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.motionSensor.alarm"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Motion"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.pushButton"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Switch"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:org.onem2m.home.moduleclass.smokeSensor.alarm"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Smoke"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

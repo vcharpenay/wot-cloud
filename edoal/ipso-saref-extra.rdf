@@ -14,6 +14,60 @@
 	<uri2>https://w3id.org/saref</uri2>
 	<map>
 		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:3342"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Switch"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:3313"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Acceleration"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:3324"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Sound_power_level"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:3325"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Amount_of_substance_concentration"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:3327"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Electric_conductivity"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:3332"/>
+			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Plane_angle"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+    
+	<map>
+		<Cell>
 			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:5702"/>
 			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/x_range"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
@@ -52,6 +106,15 @@
 		<Cell>
 			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:5529"/>
 			<entity2 rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/y_range"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+	
+	<map>
+		<Cell>
+			<entity1 rdf:resource="urn:oma:lwm2m:oma:res:5506"/>
+			<entity2 rdf:resource="http://w3id.org/saref#Time"/>
 			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
 			<relation>=</relation>
 		</Cell>
