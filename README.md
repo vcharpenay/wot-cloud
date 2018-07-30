@@ -18,8 +18,7 @@ These ontologies have been used as a reference model for semantic alignment with
 | [/models/onem2m](models/onem2m) | model transformation script and data for oneM2M (JavaScript, XML, Text) |
 | [/models/ipso](models/ipso) | model transformation script and data for IPSO (JavaScript, XML) |
 | [/models/oneiota](models/oneiota) | model transformation script and data for OCF/oneIoTa (JavaScript, JSON) |
-| [/experiments/lexica](experiments/lexica) | lexica (sets of words) extracted from the WoT cloud and each industrial standard (CSV format) |
-| [/experiments/similarities](/experiments/similarities) | semantic similarity measurements between industrial standards (CSV format) |
+| [/lexica](lexica) | lexica (sets of words) extracted from the each industrial standard (CSV format) |
 
 ## User interface
 
